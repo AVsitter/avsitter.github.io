@@ -1,0 +1,43 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: Sidebar
+  product: Welcome
+  levels: one
+  folders:
+
+  - title: AVsitter Documentation
+    output: web
+    folderitems:
+    - title: Introduction
+      url: /index.html
+      output: web
+    - title: AVsitter2
+      url: /avsitter2_home.html
+      output: web
+    - title: AVsitter1
+      url: /avsitter1_home.html
+      output: web
+      
+  - title: News & Updates
+    output: web
+    folderitems:
+    - title: News Archive
+      url: /news_archive.html
+      output: web
+    - title: In-world Updates
+      url: /updates.html
+      output: web
+
+  - title: Other
+    output: web
+    folderitems:
+    - title: Support
+      url: /support.html
+      output: web
+    - title: Contributor Guidelines
+      url: /contribute.html
+      output: web
+    - title: Theme instructions
+      url: /mydoc_introduction.html
+      output: web

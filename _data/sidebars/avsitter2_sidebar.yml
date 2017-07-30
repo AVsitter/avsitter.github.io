@@ -1,0 +1,86 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: AVsitter2
+  product: AVsitter2&trade;
+  version: 2.2
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Core System
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: /avsitter2_home.html
+      output: web
+      
+    - title: AVpos
+      url: /avsitter2_avpos.html
+      output: web
+
+    - title: Utilities
+      url: /avsitter2_utilities.html
+      output: web
+      
+    - title: SitTargets
+      url: /avsitter2_sittargets.html
+      output: web
+      
+    - title: Scripting
+      url: /avsitter2_scripting.html
+      output: web
+      
+    - title: Example Items
+      url: /avsitter2_examples.html
+      output: web, pdf
+      
+    - title: LSL Examples (Beginner)
+      url: /avsitter2_lsl_examples_beginner.html
+      output: web, pdf
+      
+    - title: LSL Examples (Advanced)
+      url: /avsitter2_lsl_examples_advanced.html
+      output: web, pdf
+      
+  - title: Plugins
+    output: web, pdf
+    folderitems:
+
+    - title: AVprop
+      url: /avsitter2_prop.html
+      output: web, pdf
+
+    - title: AVfaces
+      url: /avsitter2_faces.html
+      output: web, pdf
+
+    - title: AVcamera
+      url: /avsitter2_camera.html
+      output: web, pdf
+
+    - title: AVsequence
+      url: /avsitter2_sequence.html
+      output: web, pdf
+      
+    - title: AVcontrol
+      url: /avsitter2_control.html
+      output: web, pdf
+
+    - title: LSL Examples (AVprop)
+      url: /avsitter2_lsl_examples_avprop.html
+      output: web, pdf
+

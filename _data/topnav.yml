@@ -1,0 +1,24 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: GitHub
+      external_url: https://github.com/AVsitter
+    - title: In-world Updates
+      url: updates.html
+    - title: Support
+      url: support.html
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: Links
+      folderitems:
+        - title: AVsitter on SL Marketplace
+          external_url: https://marketplace.secondlife.com/stores/79645
+        - title: AVsitter on Kitely Market
+          external_url: https://www.kitely.com/market
+        - title: AVsitter2 Q&A website archive
+          external_url: https://avsitter.com/qa

@@ -1,0 +1,36 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: AVsitter1&trade;
+  product: AVsitter1
+  version: 1.3
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: AVsitter1
+    output: web, pdf
+    folderitems:
+    - title: AVsitter1 Instructions
+      url: /avsitter1_home.html
+      output: web
+
+    - title: LSL Examples (Beginner)
+      url: /avsitter1_lsl_examples_beginner.html
+      output: web, pdf
+      
+    - title: LSL Examples (Advanced)
+      url: /avsitter1_lsl_examples_advanced.html
+      output: web, pdf
