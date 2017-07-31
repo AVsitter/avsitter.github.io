@@ -7,7 +7,7 @@ toc: false
 
 <img src="{{ "images/AVsitter-logo.jpg" }}">
 <br><br>
-Welcome to the instructions for the AVsitter&trade; pose system, as available in <a href="{{ site.marketplace }}">Second Life<sup>&reg;</sup></a> and <a href="{{ site.kitely }}">OpenSim</a>.
+Welcome to the instructions for the AVsitter&trade; pose system, as available in <a href="{{ site.marketplace }}">Second Life<sup>&reg;</sup></a> and <a href="{{ site.kitely }}">OpenSim</a> (soon).
 
 The AVsitter scripts are available <a href="https://github.com/AVsitter/AVsitter">here on GitHub</a> and licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License, Version 2.0</a>.
 
@@ -19,7 +19,7 @@ The AVsitter Documentation covers the following topics:
 - <a href="/support.html">AVsitter support options</a>.
 
 <br>
-The AVsitter scripts can be freely obtained from the <a href='{{ site.script_github }}'>GitHub repository</a>, however if you would like to receive packaged "ready to go" versions of the latest release in-world, and to receive <a href='/updates.html'>in-world updates</a> of future releases, visit <a href='{{ site.marketplace }}'>SL Marketplace</a> or <a href='{{ site.kitely }}'>Kitely Market</a>.
+The AVsitter scripts can be freely obtained from the <a href='{{ site.script_github }}'>GitHub repository</a>, however if you would like to receive packaged "ready to go" versions of the latest release in-world, and to receive <a href='/updates.html'>in-world updates</a> of future releases, visit <a href='{{ site.marketplace }}'>SL Marketplace</a> or <a href='{{ site.kitely }}'>Kitely Market</a> (soon).
 
 Proceeds are shared with open-source contributors and will help support continued development of AVsitter. Those who purchased AVsitter in the past will continue to receive <a href="/updates.html">in-world updates</a> without needing to purchase it again.
 
