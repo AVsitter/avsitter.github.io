@@ -16,10 +16,10 @@ If you need advice with using AVsitter, we suggest:
 -  Join <a href="secondlife:///app/group/ccd07e24-4fdd-750f-f28f-fadd795d32ca/about">Unofficial AVsitter Support Group</a> in Second Life, where community members may be able to help. If you don't receive an immediate answer, try again at another time when other users are online.
 -  Follow the <a href="/news_archive.html">news page</a> for information about future development.
 
-## Reporting issues
+## Reporting code & documentation bugs
 
--  Bugs and feature requests can be reported on the <a href="https://github.com/AVsitter/AVsitter/issues">AVsitter GitHub issues page</a>.
--  For AVsitter Documentation requests please use the <a href="https://github.com/AVsitter/avsitter.github.io/issues">AVsitter Documentation GitHub issues page</a>.
+-  Code bugs can be reported on the <a href="https://github.com/AVsitter/AVsitter/issues">AVsitter GitHub issues page</a>.
+-  For AVsitter Documentation issues please use the <a href="https://github.com/AVsitter/avsitter.github.io/issues">AVsitter Documentation GitHub issues page</a>.
 
 ## Purchase enquiries
 If you have a Marketplace or purchase related enquiry please contact <u>AVsitter Resident</u> with a full description. Messages will be checked every 3-4 days, so please be patient awaiting a response.
