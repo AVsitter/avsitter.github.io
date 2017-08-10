@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: GitHub
-      external_url: https://github.com/AVsitter
+      external_url: https://github.com/AVsitter/AVsitter/releases
     - title: In-world Updates
       url: updates.html
     - title: Support
