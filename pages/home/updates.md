@@ -22,6 +22,11 @@ If you have purchased AVsitter in Second Life, please collect the latest package
 
 ## Release history
 
+{% include important.html content="Release notes can now be found <a href='https://github.com/AVsitter/AVsitter/releases'>on the project release page</a>." %}
+
+### AVsitter2, box 2.2-01 - 10 Aug 2017
+- Scripts in the SL package updated to sync with <a href="https://github.com/AVsitter/AVsitter/releases/tag/2.2-01">first GitHub release</a>.
+
 ### AVsitter2, box 2.2 - 31 Jul 2017
 - Scripts have been made full-perm in this latest release. For details click <a href="/news-2017-07-31.html">here</a>.
 
@@ -189,6 +194,4 @@ If you have purchased AVsitter in Second Life, please collect the latest package
 ### AVsitter2, box 2.0-04 - 29 Jan 2014
 - [AV]adjuster - shortens selection menu text if too long for llDialog.
 - [AV]adjuster - for more compact settings, [DUMP] rounds position to 1/10 millimeter & rotation to 1/100 degree.
-
-
 
