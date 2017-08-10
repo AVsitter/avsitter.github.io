@@ -14,7 +14,7 @@ If you have purchased AVsitter in Second Life, please collect the latest package
 
 ## Notes about updates
 
-{% include note.html content="Before starting a new project, it is a good idea to check this page for the latest version." %}
+{% include note.html content="Before starting a new project, it is a good idea to check <a href='https://github.com/AVsitter/AVsitter/releases'>the project release page</a> for the latest version." %}
 
 {% include tip.html content="When a script is updated, the current box number is placed in the description of the script." %}
 
