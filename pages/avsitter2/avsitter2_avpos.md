@@ -219,7 +219,7 @@ POSE Sit1|animation1
 
 
 ### SET
-Placed once at the top of the notecard, this assigns a SET # to all SITTERs. Use only if you need to <a href="/avsitter2_sittargets.html#assigningsittargets">assign SitTargets</a>.
+Placed once at the top of the notecard, this assigns a SET # to all SITTERs. Use only if you need to <a href="/avsitter2_sittargets.html">assign SitTargets</a>.
 
 i.e.
 
