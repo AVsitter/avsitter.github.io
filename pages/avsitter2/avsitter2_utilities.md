@@ -41,12 +41,6 @@ If you have a setup with more than one SITTER then you may prefer to offer a men
 
 {% include tip.html content="For working examples, see the [AV]select examples provided to you in the Examples [BOX]." %}
 
-### [AV]sequence
-This script allows you to sequence animations, sounds and other actions in a notecard. See the <a href="/avsitter2_sequence.html">AVsequence&trade; instructions</a>.
-
-### [AV]camera
-Optional script to set a different camera position for each pose. There is also a built-in camera option that sets the camera for all poses as a prim property. For more info see <a href="/avsitter2_home.html#camera">here</a>.
-
 ### AVhipfix animation
 Some animations in SL are not properly designed for furniture, made especially clear when there is no "Hip-Joint" rotation in the animation. In this case the animation will adopt the hip rotation of whichever animation was played last, causing unreliable rotation. If you are experiencing this problem with an animation, you can drop the AVhipfix animation into your setup. AVsitter will automatically recognize this animation and apply a neutral rotation to the "Hip-Joint".
 
