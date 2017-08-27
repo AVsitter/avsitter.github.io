@@ -10,6 +10,34 @@ folder: avsitter2
 
 ## Inside the AVsitter2 Package
 
+### If you obtained the package from GitHub:
+
+- In your computer, locate where you'll be keeping your AVsitter distributions and create a folder for it.
+- Download and unpack the file you downloaded in a folder inside your main AVsitter distributions folder.
+- In your inventory, locate a suitable place and create an AVsitter folder where you'll save all the scripts and needed objects.
+
+Let's see how to save one of the scripts as an example. The rest are created the same way.
+
+- Create a new script in your inventory, in the AVsitter folder you've created, and rename it like this:
+
+  **[AV]sitA**
+
+  The name of the script is important! Do not add .lslo at the end of the name. The script sould be named simply **[AV]sitA**
+
+- Now open the **[AV]sitA.lslo** file in your computer with a plain text editor. Select the entire text of it (Select All), Copy (CTRL C).
+- In SL, open the **[AV]sitA** script and replace its content with the entirety of the text you've copied, deleting the text of the default script and pasting the code you've copied from your text editor (CTRL V)
+- Once you do this, hit **Save** to compile the script. No errors? Then you can repeat with the rest of the scripts. For example, for **[AV]sitB.lslo**, the corresponding script in LSL should be named **[AV]sitB**.
+- Proceed similarly with the rest of the scripts. As you can see, the most important thing is that the name should **not** contain the final .lslo (or .lsl) in its name.
+
+There's still one thing to do to have the distribution working.
+
+- Inworld, rez a box and name it **[AV]helper**. Turn it into a Sphere.
+- Inside its contents, drop the **[AV]helper** script that, at this point, you must have created by following the previous procedure.
+
+After doing this, you can continue following the directions for those that have purchased the package from Marketplace/Inworld. Where it mentions the **[AV]helper** object, it refers to the object we've just created with the script inside.
+
+### If you purchased the package from Marketplace/Inworld
+
 The main AVsitter package contains:
 
 -  <b>[AV]sitA & [AV]sitB scripts</b>
