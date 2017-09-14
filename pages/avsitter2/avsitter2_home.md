@@ -12,7 +12,7 @@ folder: avsitter2
 
 AVsitter2 can be freely obtained from GitHub and imported into Second Life by following our <a href='https://github.com/AVsitter/AVsitter/blob/master/AVsitter2/IMPORT_GUIDE.md'>import guide</a>.
 
-{% include tip.html content="If you would prefer a packaged version of the latest release, and to receive packaged in-world updates of future releases, visit the <a href='https://marketplace.secondlife.com/stores/79645'>SL Marketplace</a>. Proceeds from marketplace sales are shared with open-source contributors and help support continued development." %}
+{% include tip.html content="If you would prefer a packaged version of the latest release, and to receive in-world updates of future releases, visit the <a href='https://marketplace.secondlife.com/stores/79645'>SL Marketplace</a> or <a href='https://www.kitely.com/market?store=15535242'>Kitely Market</a>. Proceeds from marketplace sales are shared with open-source contributors and help support continued development." %}
 
 ## Inside the AVsitter2 Package
 

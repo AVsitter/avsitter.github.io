@@ -18,5 +18,7 @@ topnav_dropdowns:
       folderitems:
         - title: AVsitter on SL Marketplace
           external_url: https://marketplace.secondlife.com/stores/79645
+        - title: AVsitter on Kitely Market
+          external_url: https://www.kitely.com/market?store=15535242
         - title: AVsitter2 Q&A website archive
           external_url: https://avsitter.com/qa
