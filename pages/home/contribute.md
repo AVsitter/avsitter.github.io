@@ -23,3 +23,22 @@ folder: contribute
 - AVsitter Documentation uses the [Jekyll Documentation Theme](http://idratherbewriting.com/documentation-theme-jekyll/mydoc_pages.html) ([see template guidelines](/mydoc_introduction.html)).
 - AVsitter Documentation is released under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 - LSL example scripts provided in the AVsitter Documentation are released under the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+
+## Contributor guidelines for Commits in Pull Requests
+
+- Commits should change one "atomic feature" at a time so that the repository is in a working state after every commit, but trying to avoid commits that make several unrelated changes. There are several purposes: to ease review by others to ensure there are no new problems, to ease checking the history and to ease rolling back a commit, should that be necessary. Do not squash commits.
+
+- The commit message should describe the change as best as possible. The first line is the title and should summarize the commit in about 70 chars if possible; if more explanations or some clarifications are necessary, leave a blank line under the title and add the details below that.
+
+- Indentation and formatting changes cause very messy diffs, because they tend to sync with the wrong lines. It's best to separate those changes from the functionality-changing ones, while announcing that there are no code changes otherwise, in order for the reviewer to focus on what's important without having to decipher the messy diffs.
+
+- Sometimes, while making a change we spot a part of the code that needs an unrelated change, and we go ahead and fix it before we forget. For those cases, git provides the `-p` flag for the `commit` and `add` commands, which allows selecting which changed lines go into the commit and which ones don't, or even editing the diff of what goes into the commit. To avoid mixing unrelated changes, you can make use of that.
+
+- File renames should have their own separate commit. Don't rename and change a file in the same commit; otherwise it's nearly impossible to see what changed.
+
+### Guidelines for those with Commit access
+
+- In order to ease checking the history and to ease rolling back a commit, it's best if PRs (Pull Requests) are not squashed. We can use "Rebase and merge", though "Merge" would work as well.
+
+- For small amendments to the PR, e.g. something that was overlooked in one of the commits, it's best if the submitter amends the commits as necessary and force-pushes.
+
