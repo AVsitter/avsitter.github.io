@@ -35,7 +35,7 @@ entries:
     - title: Utilities
       url: /avsitter2_utilities.html
       output: web
-      
+
     - title: SitTargets
       url: /avsitter2_sittargets.html
       output: web
@@ -84,3 +84,10 @@ entries:
       url: /avsitter2_lsl_examples_avprop.html
       output: web, pdf
 
+  - title: Step By Step Guides
+    output: web, pdf
+    folderitems:
+
+    - title: MLP Converter
+      url: /avsitter2_StepByStepGuides_MLPconverter.html
+      output: web, pdf

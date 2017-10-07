@@ -65,4 +65,6 @@ When placed inside a prim that contains an MLP setup, this script will read thro
 
 {% include important.html content="When using the MLP-converter script you can enter a position vector in the prim description e.g. &lt;0,0,0.5&gt; and this will offset the converter's position results by that amount." %}
 
+Follow this step by step guide for more details: [MLP-converter step-by-step guide](avsitter2_StepByStepGuides_MLPconverter.html)
+
 {% include links.html %}
