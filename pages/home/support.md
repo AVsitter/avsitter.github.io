@@ -27,14 +27,28 @@ If you have a Marketplace or purchase related enquiry please contact <a href="ht
 # Development/Support Team
 The current Development/Support Team consists of the following members:
 
-* <i>(wanted)</i> - Inworld Group Moderators
-* <i>(wanted)</i> - Code Developers
-* <i>(wanted)</i> - Second Life Release Tester
-* <i>(wanted)</i> - OpenSim Release Tester
-* <a href="http://world.secondlife.com/resident/766f3817-2f2a-469d-acfa-9789080ecc85">Auryn Beorn</a> - Documentation Maintainer
-* <a href="http://world.secondlife.com/resident/3c5aaad5-8c66-46a3-b574-cad02acf520d">Sei Lisa</a> - Lead Developer / Project Maintainer 
-* <a href="http://world.secondlife.com/resident/b30c9262-9abf-4cd1-9476-adcf5723c029">Code Violet</a> - Project Management / Project Creator
-* <a href="http://world.secondlife.com/resident/8c24c939-bbe9-4bd0-8868-b5b92cc90bc9">AVsitter Resident</a> - Marketplace Enquiries
+### Inworld Group Support:
+  * *(wanted)*
+
+### Second Life Release Tester:
+  * *(wanted)*
+
+### OpenSim Release Tester:
+  * *(wanted)*
+
+### Code Developers:
+  * [Sei Lisa](http://world.secondlife.com/resident/3c5aaad5-8c66-46a3-b574-cad02acf520d) (Lead Developer / Project Maintainer)
+  * *(wanted)*
+
+### Documentation Maintainer:
+  * [Auryn Beorn](http://world.secondlife.com/resident/766f3817-2f2a-469d-acfa-9789080ecc85)
+
+### Project Management:
+  * [Code Violet](http://world.secondlife.com/resident/b30c9262-9abf-4cd1-9476-adcf5723c029)
+
+### Marketplace Enquiries:
+  * [AVsitter Resident](http://world.secondlife.com/resident/8c24c939-bbe9-4bd0-8868-b5b92cc90bc9)
+
 
 {% include important.html content="Team members work on a voluntary basis and are not required to assist you with your project. If you are reaching out for help please ask nicely and respect their time!" %}
 
