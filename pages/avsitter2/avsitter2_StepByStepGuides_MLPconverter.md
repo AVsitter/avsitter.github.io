@@ -8,6 +8,8 @@ folder: avsitter2
 
 ### MLP-converter script
 
+MLP (Multi-Love Pose) is a pose engine similar to AVsitter that uses pose balls. It was the choice in the past for many engines, but it has now become obsolete. We may have engines made in MLP that we want to convert to AVsitter. This tool will help with the process.
+
 Before detailing the process, it's important to make clear that this tool **only** converts the POSE lines. Props, facial expressions, and others like sequences and swaps will not be converted by this script. You also must manually add your MENU & TOMENU lines by <a href="/avsitter2_avpos.html">editing the `AVpos` notecard</a>.
 
 Let's now detail the process:
@@ -19,8 +21,7 @@ Let's now detail the process:
 - Drop this script in the contents of the prim with the MLP notecards
 - Wait a bit. It will read all the `.MENUITEMS` and `.POSITIONS` notecards, and output lines with the POSE lines corresponding to the separate sitters.
 - Once it's done, it will remove itself from the object. Copy all the lines it has output into an `AVpos` notecard.
-- Drop the necessary AVsitter scripts into your object as well as this AVpos notecard.
-- Don't forget adding the `[AV]adjuster` script and the `[AV]helper` object.
+- Follow the instructions for a normal set-up, using the new AVpos notecard, dropping the necessary AVsitter scripts into your object, etc.
 
 Sit on your object. Observe that the positions aren't the same ones you had. Likely, all the problem is that you are showing *below* the item, this is, the Z coordinate isn't correct. Follow these steps to fix it:
 
@@ -31,7 +32,7 @@ Sit on your object. Observe that the positions aren't the same ones you had. Lik
 - Write that vector, `<0, 0, -0.5>` in the description of the prim with all the scripts.
 - Drop again the `MLP-converter` script and let it do its job.
 - Copy all the lines it has output into your existing `AVpos` notecard. Replace it in your object, which will force the scripts to read all the configuration, now corrected.
-- You may now delete the notecards beginning by `.MENUITEMS` and `.POSITIONS`.
+- When you are satisfied with the result, you may delete the notecards beginning by `.MENUITEMS` and `.POSITIONS`.
 
 Sit again on your object. The position issue is fixed and the description of the prim is free for us to be rewritten if needed by other scripts.
 
