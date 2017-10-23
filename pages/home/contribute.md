@@ -36,9 +36,11 @@ folder: contribute
 
 - File renames should have their own separate commit. Don't rename and change a file in the same commit; otherwise it's nearly impossible to see what changed.
 
+- For small amendments to the PR prior to being reviewed, e.g. something that was overlooked in one of the commits, it’s best to amend the commits as necessary and force-push. But if the code has already been reviewed, submit it as new commit(s) instead, unless instructed otherwise. This will allow the reviewers to easily check what exactly has changed between the changes that were already reviewed and the new ones, without needing to go over the full set of changes. If the original changes were small and the new ones are assumed to be small, or cover the majority of the other ones, the reviewer may choose to indicate to amend the commit instead.
+
 ### Guidelines for those with Commit access
 
 - In order to ease checking the history and to ease rolling back a commit, it's best if PRs (Pull Requests) are not squashed. We can use "Rebase and merge", though "Merge" would work as well.
 
-- For small amendments to the PR, e.g. something that was overlooked in one of the commits, it's best if the submitter amends the commits as necessary and force-pushes.
+- Pull requests should preferably be merged only after they have been greenlighted by at least two developers. This may change to mandatory in future as we have more developers, and the number may change to three depending on the size of the team.
 
