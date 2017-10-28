@@ -28,6 +28,7 @@ If you have a Marketplace or purchase related enquiry please contact <a href="ht
 The current Development/Support Team consists of the following members:
 
 ### Inworld Group Support:
+  * [Kyra Ishtari](http://world.secondlife.com/resident/e20a9909-3a42-4c0a-8c1d-ddf8bed72d0e)
   * *(wanted)*
 
 ### Second Life Release Tester:
