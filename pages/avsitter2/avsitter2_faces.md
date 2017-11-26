@@ -78,7 +78,7 @@ You can use 'none' for the name of an animation file if you need to create a pau
 
 	ANIM Happy|express_laugh_emote|-5|none|5
 
-The facial expresssions available in SL include:
+The facial expressions available in SL include:
 
 	express_afraid_emote, express_anger_emote, express_laugh_emote, express_bored_emote, express_cry_emote, express_embarrassed_emote, express_sad_emote, express_toothsmile, express_smile, express_surprise_emote, express_worry_emote, express_repulsed_emote, express_shrug_emote, express_wink_emote, express_disdain, express_frown, express_kiss, express_open_mouth, express_tongue_out
 
