@@ -91,3 +91,10 @@ entries:
     - title: MLP Converter
       url: /avsitter2_StepByStepGuides_MLPconverter.html
       output: web, pdf
+  - title: Special Commands
+    output: web, pdf
+    folderitems:
+
+    - title: AVpos
+      url: avsitter2_SpecialCommands_AVpos.html
+      output: web, pdf
