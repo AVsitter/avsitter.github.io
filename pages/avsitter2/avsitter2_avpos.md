@@ -497,7 +497,7 @@ Pressing the << Softer & Harder >> buttons will change the speed to the slower/f
 
 
 ## Extra notecard commands
-Some additional notecard commands exist:
+Some additional notecard commands exist _([read here for more information](avsitter2_SpecialCommands_AVpos.html))_:
 
 <ul>
 <li/><a href="http://avsitter.com/qa/49">HELPER</a> - use the AVsitter1 style helper system, where you sit on the helper sticks.
