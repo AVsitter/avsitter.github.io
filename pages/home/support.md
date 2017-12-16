@@ -29,6 +29,7 @@ The current Development/Support Team consists of the following members:
 
 ### Inworld Group Support:
   * [Kyra Ishtari](http://world.secondlife.com/resident/e20a9909-3a42-4c0a-8c1d-ddf8bed72d0e)
+  * [Laz Longfall](http://world.secondlife.com/resident/637249f8-40ab-4a0b-be68-94c5f1e165bd)
   * *(wanted)*
 
 ### Second Life Release Tester:
