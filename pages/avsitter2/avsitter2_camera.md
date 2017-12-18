@@ -9,30 +9,21 @@ folder: avsitter2
 ## [AV]camera script
 The [AV]camera script allows creators to set the camera position for each pose.
 
-Please note AVsitter also has a <a href="/avsitter2_home.html#camera">built-in camera setting</a> that can set the camera prim property. Only use the [AV]camera script if you need different camera settings for different poses, or want to set different camera positions chosen by menu button.
+Please note AVsitter also has a [built-in camera setting](/avsitter2_home.html#camera) that can set the camera prim property. Only use the [AV]camera script if you need different camera settings for different poses, or want to set different camera positions chosen by menu button.
 
 {% include important.html content="The [AV]camera script is provided in the Plugins [BOX]." %}
 
 ### Adding Camera Settings
-To add camera settings to your furniture, start with the <a href="/avsitter2_home.html#setup">normal setup</a> procedure, then:
+To add camera settings to your furniture, start with the [normal setup](/avsitter2_home.html#setup) procedure, then:
 
-<ol>
-<li/>Ensure the [AV]helper and [AV]adjuster are in the prim.
-
-<li/>Drop an [AV]camera script into the prim for <u>each</u> sitter. If your furniture is for 2 avatars you'll need 2 x [AV]camera scripts.
-
-<li/>Sit on the furniture, then choose a pose from the menu that you want to add a camera setting to.
-
-<li/>Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
-
-<li/>Choose [NEW] from the menu, then choose [CAMERA] and select [SAVE].
-
-<li/>Repeat for each pose you want to give a camera setting.
-
-<li/>When you have finished adding all your camera settings, click [DUMP] to output your settings into chat.
-
-<li/>Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
-</ol>
+- Ensure the [AV]helper and [AV]adjuster are in the prim.
+- Drop an [AV]camera script into the prim for <ins>each</ins> sitter. If your furniture is for 2 avatars you'll need 2 x [AV]camera scripts.
+- Sit on the furniture, then choose a pose from the menu that you want to add a camera setting to.
+- Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
+- Choose [NEW] from the menu, then choose [CAMERA] and select [SAVE].
+- Repeat for each pose you want to give a camera setting.
+- When you have finished adding all your camera settings, click [DUMP] to output your settings into chat.
+- Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
 
 {% include important.html content="Camera settings are defined separately for each SITTER." %}
 
@@ -92,6 +83,6 @@ SYNC Couples2|ml-entwine
 CAMERA DEFAULT|<-0.09605, -2.75508, 1.23718>|<-0.07217, -1.81931, 0.88538>
 CAMERA Sit2|<0.12466, -1.65931, 3.34216>|<0.12805, -1.20604, 2.45079>
 ```
-{% include important.html content="If you want the user to select camera position with menu buttons then see <a href='//avsitter.com/qa/939'>here</a>." %}
+{% include important.html content="If you want the user to select camera position with menu buttons then see [here](http://avsitter.com/qa/939)." %}
 
 {% include links.html %}
