@@ -8,7 +8,7 @@ folder: avsitter2
 
 ## The AVpos Notecard
 
-Nearly every feature of AVsitter can be controlled by editing the AVpos notecard. It defines everything about each SITTERs menu and poses. Much more is possible when you learn to manually write and edit the notecard yourself, rather than using only the [NEW] menu as described in the <a href="/avsitter2_home.html#setup">Setup</a> section.
+Nearly every feature of AVsitter can be controlled by editing the AVpos notecard. It defines everything about each SITTERs menu and poses. Much more is possible when you learn to manually write and edit the notecard yourself, rather than using only the [NEW] menu as described in the [Setup](/avsitter2_home.html#setup) section.
 
 {% include note.html content="Your AVpos notecard should always be left as 'full perm', otherwise scripts can not read the notecard with the next owner." %}
 
@@ -36,7 +36,7 @@ Note that position settings for the poses will be added by the script after you 
 
 This section outlines each of the notecard commands you can use.
 
-{% include important.html content="Make sure to see the next section that shows <a href='/avsitter2_avpos.html#example-notecards'>notecard examples</a> and examine the contents of the Examples [BOX]." %}
+{% include important.html content="Make sure to see the next section that shows [notecard examples](/avsitter2_avpos.html#example-notecards) and examine the contents of the Examples [BOX]." %}
 
 ### POSE
 Use the POSE command to add an animation to the menu. The format is:
@@ -47,10 +47,10 @@ i.e.
 
 	POSE Sit1|animation1
 
-{% include note.html content="<a href='http://wiki.secondlife.com/wiki/Internal_Animations'>Internal SL animations</a> can be used in AVsitter without the animation file existing in the furniture." %}
+{% include note.html content="[Internal SL animations](http://wiki.secondlife.com/wiki/Internal_Animations) can be used in AVsitter without the animation file existing in the furniture." %}
 
 ### SYNC
-Use the SYNC command for couple/group animations (e.g. cuddles). When a SYNC animation is played it will play all SYNC poses of the same &lt;menu_name&gt; in all SITTERs within the prim. Usually you would add a SYNC of the same name to each SITTER, using different animations for each SITTER (e.g. Female in <i>first</i> SITTER, male in <i>second</i> SITTER). The format is: 
+Use the SYNC command for couple/group animations (e.g. cuddles). When a SYNC animation is played it will play all SYNC poses of the same &lt;menu_name&gt; in all SITTERs within the prim. Usually you would add a SYNC of the same name to each SITTER, using different animations for each SITTER (e.g. Female in *first* SITTER, male in *second* SITTER). The format is: 
 
 	SYNC <menu_name>|<animation_filename>
 
@@ -76,19 +76,18 @@ i.e.
 
 	MENU SITS
 
-{% include note.html content="To hide poses from the menu (e.g. because they are triggered by a sequence or script and you don't want them to appear individually), place them under a MENU line that has no corresponding TOMENU line (e.g. <a href='/avsitter2_sequence.html#hiding-poses'>MENU HIDDEN</a>)." %}
+{% include note.html content="To hide poses from the menu (e.g. because they are triggered by a sequence or script and you don't want them to appear individually), place them under a MENU line that has no corresponding TOMENU line (e.g. [MENU HIDDEN](/avsitter2_sequence.html#hiding-poses))." %}
 
 ### BUTTON
 This creates a button that can be used for customization of your creations, so users can do more than just choose animations with your menus. When selected by an avatar, a button will send a "link message" that can be received by your own scripts. The format is: 
 
 	BUTTON <menu_name>|<custom_integer>|<custom_string>|<custom_key>
 
-<ul>
-<li/>If &lt;custom_string&gt; is empty then &lt;menu_name&gt; will be used as the string.
-<li/>If &lt;custom_integer&gt; is empty then 90200 will be used (90200 is used specifically by the <a href="/avsitter2_prop.html">AVprop plugin</a>).
-<li/>If &lt;custom_integer&gt; is set to <a href="/avsitter2_scripting.html#message-90005">90005</a> then the menu will be returned automatically.
-<li/>If &lt;custom_key&gt; is empty then the avatar's UUID will be used as the key. If a different avatar is controlling the menu with <a href="/avsitter2_control.html">AVcontrol</a> then the key will include the controller and sitter UUIDs, separated by the pipe ( | ) character. 
-</ul>
+
+- If &lt;custom_string&gt; is empty then &lt;menu_name&gt; will be used as the string.
+- If &lt;custom_integer&gt; is empty then 90200 will be used (90200 is used specifically by the [AVprop plugin](/avsitter2_prop.html)).
+- If &lt;custom_integer&gt; is set to [90005](/avsitter2_scripting.html#message-90005) then the menu will be returned automatically.
+- If &lt;custom_key&gt; is empty then the avatar's UUID will be used as the key. If a different avatar is controlling the menu with [AVcontrol](/avsitter2_control.html) then the key will include the controller and sitter UUIDs, separated by the pipe (`|`) character. 
 
 e.g.
 
@@ -96,7 +95,7 @@ e.g.
 
 Will send a link message with integer 99, string "Press Me" and the avatar's UUID.
 
-Same as: <code>llMessageLinked(LINK_SET,99,"Press Me",&lt;avatar_uuid&gt;);</code>
+Same as: `llMessageLinked(LINK_SET,99,"Press Me",&lt;avatar_uuid&gt;);`
 
 e.g.
 
@@ -109,23 +108,24 @@ e.g.
 
 Will send a link message with integer 99, string "Hello" and the avatar's UUID.
 
-Same as: <code>llMessageLinked(LINK_SET,99,"Hello",&lt;avatar_uuid&gt;);</code>
+Same as: `llMessageLinked(LINK_SET,99,"Hello",&lt;avatar_uuid&gt;);`
 
 e.g.
 
 	BUTTON Press Me|90030|0|1
 
-Will send a link message with integer <a href="/avsitter2_scripting.html#message-90030">90030</a>, string "0" and key "1".
+Will send a link message with integer [90030](/avsitter2_scripting.html#message-90030), string "0" and key "1".
 
-Same as: <code>llMessageLinked(LINK_SET,90030,"0","1");</code>
+Same as: `llMessageLinked(LINK_SET,90030,"0","1");`
 
 e.g.
 
 	BUTTON Press Me
 	
-Will send a link message with integer <a href="/avsitter2_prop.html#message-90200--90220">90200</a>, string "Press Me" and the avatar's UUID.
+Will send a link message with integer [90200](/avsitter2_prop.html#message-90200--90220), string "Press Me" and the avatar's UUID.
 
-Same as: <code>llMessageLinked(LINK_SET,90200,"Press Me",&lt;avatar_uuid&gt;);</code>
+Same as: `llMessageLinked(LINK_SET,90200,"Press Me",&lt;avatar_uuid&gt;);`
+
 
 ### TEXT
 Placed once at the top of the notecard, this will add a line of custom text to your menu. The format is: 
@@ -159,16 +159,16 @@ Same as MTYPE 1, except the menu does not automatically return when a pose is se
 
 	MTYPE 3
 
-With MTYPE 3 the menu is completely switched off and cannot be accessed (except via <a href="/avsitter2_scripting.html#message-90005">link message 90005</a> or <a href="/avsitter2_utilities.html#avroot-script">[AV]root script</a> or <a href="/avsitter2_utilities.html#avroot-security-script">[AV]root-security</a>). You might want this if you have only one pose in the furniture, and don't want a menu.
+With MTYPE 3 the menu is completely switched off and cannot be accessed (except via [link message 90005](/avsitter2_scripting.html#message-90005) or [[AV]root script](/avsitter2_utilities.html#avroot-script) or [[AV]root-security](/avsitter2_utilities.html#avroot-security-script)). You might want this if you have only one pose in the furniture, and don't want a menu.
 
 	MTYPE 4
 
 Same as MTYPE 3, except the menu does not automatically return when a pose is selected.
 
-{% include important.html content="Please note that MTYPE will be ignored when using the <a href='/avsitter2_control.html'>AVcontrol&trade;</a> plugin." %}
+{% include important.html content="Please note that MTYPE will be ignored when using the [AVcontrol&trade;](/avsitter2_control.html) plugin." %}
 
 ### ETYPE
-Placed once at the top of the notecard, this controls the "exit type" for all SITTERs. Controls SYNC pose behavior when another pose is played in the same prim. NOTE: does not cancel a SYNC if an avatar simply stands up (for that see the <a href="/avsitter2_lsl_example_autoplay.html">Autoplay script example</a>).
+Placed once at the top of the notecard, this controls the "exit type" for all SITTERs. Controls SYNC pose behavior when another pose is played in the same prim. NOTE: does not cancel a SYNC if an avatar simply stands up (for that see the [Autoplay script example](/avsitter2_lsl_example_autoplay.html)).
 
 	ETYPE 0
 
@@ -203,7 +203,7 @@ POSE Sit1|animation1
 
 Each SITTER section must contain the entire menu for one sitting location.
 
-You may also name each SITTER by including your own text. This text will be shown in the menu dialog, and in the select menu as the button for the SITTER if you are using the <a href="/avsitter2_utilities.html#avselect-script">[AV]select script</a>.
+You may also name each SITTER by including your own text. This text will be shown in the menu dialog, and in the select menu as the button for the SITTER if you are using the [[AV]select script](/avsitter2_utilities.html#avselect-script).
 
 e.g.
 
@@ -219,22 +219,22 @@ POSE Sit1|animation1
 
 
 ### SET
-Placed once at the top of the notecard, this assigns a SET # to all SITTERs. Use only if you need to <a href="/avsitter2_sittargets.html">assign SitTargets</a>.
+Placed once at the top of the notecard, this assigns a SET # to all SITTERs. Use only if you need to [assign SitTargets](/avsitter2_sittargets.html).
 
 i.e.
 
 	SET 0
 
 ### SELECT
-Placed once at the top of the notecard, this controls menu behavior when using the <a href="/avsitter2_utilities.html#avselect-script">[AV]select script</a>.
+Placed once at the top of the notecard, this controls menu behavior when using the [[AV]select script](/avsitter2_utilities.html#avselect-script).
 
 	SELECT 0
 
-The default. The <a href="/avsitter2_utilities.html#avselect-script">[AV]select</a> menu shows a disabled symbol (<span style="font-size:150%;">&oslash;</span>) for an occupied seat. The symbol is shown only while solo POSE is being played and not during a SYNC.
+The default. The [[AV]select](/avsitter2_utilities.html#avselect-script) menu shows a disabled symbol (<span style="font-size:150%;">&oslash;</span>) for an occupied seat. The symbol is shown only while solo POSE is being played and not during a SYNC.
 
 	SELECT 1
 
-No disabled symbol will be shown in the <a href="/avsitter2_utilities.html#avselect-script">[AV]select</a> menu and avatars will always be able to swap into an occupied seat.
+No disabled symbol will be shown in the [[AV]select](/avsitter2_utilities.html#avselect-script) menu and avatars will always be able to swap into an occupied seat.
 
 	SELECT 2
 
@@ -245,7 +245,7 @@ Placed once at the top of the notecard, enables/disables the [SWAP] buttons in t
 
 	SWAP 0
 
-Disables [SWAP] in the menu. (note: you can still add your own custom swaps using <a href="/avsitter2_scripting.html#message-90030">link message 90030</a>).
+Disables [SWAP] in the menu. (note: you can still add your own custom swaps using [link message 90030](/avsitter2_scripting.html#message-90030)).
 
 	SWAP 1
 
@@ -255,13 +255,13 @@ Adds [SWAP] button at the top level of the menu. [SWAP] is only available when t
 
 The default. Adds [SWAP] in all submenus, not just the top level of the menu.
 
-{% include important.html content="When playing a POSE, [SWAP] will move the avatar to the first <i>unoccupied</i> SITTER (if available)." %}
+{% include important.html content="When playing a POSE, [SWAP] will move the avatar to the first *unoccupied* SITTER (if available)." %}
 
-{% include important.html content="When playing a SYNC, [SWAP] will exchange places with the first <i>occupied</i> SITTER (if available)." %}
+{% include important.html content="When playing a SYNC, [SWAP] will exchange places with the first *occupied* SITTER (if available)." %}
 
-{% include note.html content="You can override SWAP 0 or SWAP 1 and make [SWAP] appear for a specific submenu (see <a href='http://avsitter.com/qa/652'>here</a>)." %}
+{% include note.html content="You can override SWAP 0 or SWAP 1 and make [SWAP] appear for a specific submenu (see [here](http://avsitter.com/qa/652))." %}
 
-{% include warning.html content="The optional <a href='/avsitter2_utilities.html#avselect-script'>[AV]select script</a> completely replaces the normal [SWAP] buttons." %}
+{% include warning.html content="The optional [[AV]select script](/avsitter2_utilities.html#avselect-script) completely replaces the normal [SWAP] buttons." %}
 
 ### ADJUST
 Placed once at the top of the notecard, allows addition of custom buttons to the [ADJUST] menu.  When selected by an avatar, the button will send a "link message" that can be received by your own scripts. The format is:
@@ -289,10 +289,10 @@ Adds [ADJUST] button only at the top level of the menu.
 
 The default. Adds [ADJUST] in all submenus, not just the top level of the menu.
 
-{% include note.html content="You can override AMENU 0 or AMENU 1 and make [ADJUST] appear for a specific submenu (see <a href='http://avsitter.com/qa/652'>here</a>)." %}
+{% include note.html content="You can override AMENU 0 or AMENU 1 and make [ADJUST] appear for a specific submenu (see [here](http://avsitter.com/qa/652))." %}
 
 ### SEQUENCE
-Creates a button that starts a sequence specified in the [AV]sequence_settings notecard. See <a href="/avsitter2_sequence.html">sequence instructions</a> for details. e.g.
+Creates a button that starts a sequence specified in the [AV]sequence_settings notecard. See [sequence instructions](/avsitter2_sequence.html) for details. e.g.
 
 	SEQUENCE Scene1
 
@@ -424,7 +424,7 @@ SYNC Kiss3|couples6_Male
 
 ## "Built-In" animation sequence
 
-You can play animations in a series simply by adding extra animations to the <a href="/avsitter2_avpos.html#pose">POSE</a> (or <a href="/avsitter2_avpos.html#sync">SYNC</a>) commands. The animations all share the same position/rotation in the notecard, therefore they <i>must</i> be designed to be played together. This can be a continuous scene OR simply regular looped animations that were made as a sequence compatible set (all using use the same position/rotation).
+You can play animations in a series simply by adding extra animations to the [POSE](/avsitter2_avpos.html#pose) (or [SYNC](/avsitter2_avpos.html#sync)) commands. The animations all share the same position/rotation in the notecard, therefore they *must* be designed to be played together. This can be a continuous scene OR simply regular looped animations that were made as a sequence compatible set (all using use the same position/rotation).
 
 The format for the notecard is as follows:
 
@@ -446,13 +446,13 @@ Usually a sequence will loop, but if a dash ( - ) is entered instead of a durati
 
 {% include important.html content="Be sure to examine the sequence furniture examples provided in the AVsitter Examples [BOX]." %}
 
-{% include important.html content="For an alternate sequence method, see the <a href='/avsitter2_sequence.html'>AVsequence&trade;</a> script." %}
+{% include important.html content="For an alternate sequence method, see the [AVsequence&trade;](/avsitter2_sequence.html) script." %}
 
 ## Auto-assign by gender
-Determining the gender of an avatar's shape is <a href="http://wiki.secondlife.com/wiki/OBJECT_BODY_SHAPE_TYPE">now possible</a>, and can be used for automatic sitter and default pose assignment in AVsitter2. The gender of an avatar's shape can be set from the Appearance Editor in the SL viewer.  
+Determining the gender of an avatar's shape is [now possible](http://wiki.secondlife.com/wiki/OBJECT_BODY_SHAPE_TYPE), and can be used for automatic sitter and default pose assignment in AVsitter2. The gender of an avatar's shape can be set from the Appearance Editor in the SL viewer.  
 
 ### SITTER assignment
-You can designate a <a href="/avsitter2_avpos.html#sitter">SITTER</a> for male/female shaped avatars by adding an "M" or "F" after the sitter name. When an avatar sits, they will be assigned to the first unoccupied sitter that matches the gender of their shape, if available. e.g:
+You can designate a [SITTER](/avsitter2_avpos.html#sitter) for male/female shaped avatars by adding an "M" or "F" after the sitter name. When an avatar sits, they will be assigned to the first unoccupied sitter that matches the gender of their shape, if available. e.g:
 
 ```
 SITTER 0|Female seat|F
@@ -469,10 +469,10 @@ SITTER 2|Friend seat
 ...
 ```
 
-{% include important.html content="SITTER assignment will not work in cases where there are <a href='/avsitter2_sittargets.html'>SET</a> defined. Support for this may be added in future." %}
+{% include important.html content="SITTER assignment will not work in cases where there are [SET](/avsitter2_sittargets.html) defined. Support for this may be added in future." %}
 
 ### Pose assignment
-Normally, the default pose to play will be the first in the sitter's menu. However, you can specify a different <a href="/avsitter2_avpos.html#pose">POSE</a> or <a href="/avsitter2_avpos.html#sync">SYNC</a> as the default for male/female shaped avatars by adding an "M" or "F" after the animation file name. e.g:
+Normally, the default pose to play will be the first in the sitter's menu. However, you can specify a different [POSE](/avsitter2_avpos.html#pose) or [SYNC](/avsitter2_avpos.html#sync) as the default for male/female shaped avatars by adding an "M" or "F" after the animation file name. e.g:
 
 ```
 POSE SitF|Sit1|M
@@ -499,15 +499,13 @@ Pressing the << Softer & Harder >> buttons will change the speed to the slower/f
 ## Extra notecard commands
 Some additional notecard commands exist _([read here for more information](avsitter2_SpecialCommands_AVpos.html))_:
 
-<ul>
-<li/><a href="http://avsitter.com/qa/49">HELPER</a> - use the AVsitter1 style helper system, where you sit on the helper sticks.
-<li/><a href="http://avsitter.com/qa/259">KFM</a> - if the object uses <a href="http://wiki.secondlife.com/wiki/LlSetKeyframedMotion">llSetKeyframedMotion()</a>.
-<li/><a href="http://avsitter.com/qa/260">LROT</a> - positioning buttons to work relative to the local rotation of the root prim, instead of global co-ordinates.
-<li/><a href="http://avsitter.com/qa/47">WARN 0</a> - disable the warning when there aren't enough prims for all sitters.
-<li/><a href="http://avsitter.com/qa/867">WARN 2</a> - disable the next-owner check on prop permissions.
-<li/>DFLT 0 - don't revert to the default pose when all avatars stand (unless the last pose was a SYNC pose).
-<li/>NOWIPE - tells the scripts not to wipe sittargets in other prims (use only if you have a good reason as you may end up with prims that have unnecessary SitTargets).
-</ul>
+- [HELPER](/avsitter2_SpecialCommands_AVpos.html#helper) - use the AVsitter1 style helper system, where you sit on the helper sticks.
+- [KFM](/avsitter2_SpecialCommands_AVpos.html#kfm) - if the object uses [llSetKeyframedMotion()](http://wiki.secondlife.com/wiki/LlSetKeyframedMotion).
+- [LROT](/avsitter2_SpecialCommands_AVpos.html#lrot) - positioning buttons to work relative to the local rotation of the root prim, instead of global co-ordinates.
+- [WARN 0](https://avsitter.github.io/avsitter2_SpecialCommands_AVpos.html#warn-0) - disable the warning when there aren't enough prims for all sitters.
+- [WARN 2](https://avsitter.github.io/avsitter2_SpecialCommands_AVpos.html#warn-2) - disable the next-owner check on prop permissions.
+- DFLT 0 - don't revert to the default pose when all avatars stand (unless the last pose was a SYNC pose).
+- NOWIPE - tells the scripts not to wipe sittargets in other prims (use only if you have a good reason as you may end up with prims that have unnecessary SitTargets).
 
 {% include important.html content="Extra commands are not part of settings [DUMP] so you would need to remember to leave them at the top of your notecard." %}
 
