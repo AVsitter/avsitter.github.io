@@ -126,7 +126,17 @@ Will send a link message with integer [90200](/avsitter2_prop.html#message-90200
 
 Same as: `llMessageLinked(LINK_SET,90200,"Press Me",&lt;avatar_uuid&gt;);`
 
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i>
+<b>Note:</b> If you want to replace the system's functionality while keeping the default button label, it's possible to use the zero-width space Unicode character `U+200B` to make it different to the script but identical visually. You can copy/paste that character from here: <code>(​)</code>.
+<br />
+For example:
 
+<pre>
+BUTTON [SWAP]​|99
+</pre>
+
+places a button whose label is identical to the system [SWAP] label, but it will send a link message with integer 99. Our custom script would react to this.
+</div>
 ### TEXT
 Placed once at the top of the notecard, this will add a line of custom text to your menu. The format is: 
 
