@@ -92,7 +92,8 @@ e.g.
 
 - **ASK** - ask the avatar to choose between 'D' and 'S' roles. On choosing, the avatar will be moved to the first available sitter defined for that role by the ROLES setting, or unseated if no seats for that role are available. Choosing 'S' role will attempt to capture the avatar.
 - **ASKONLY** - same as ASK, but choosing the 'S' role will not attempt to capture. They can still be captured via the menu.
-- **CAPTURE** - sitting will attempt to capture the avatar (if they are wearing an RLV relay). (default)
+- **CAPTURE** - (default) Sitting will attempt to capture the avatar (if they are wearing an RLV relay). They will be automatically moved to a sitter with a submissive role (see ROLES). It will not capture if there are no sitters left with submissive role.
+- **CAPIFSUB** - only captures if the automatically assigned sitter position corresponds to a sub (as defined with the ROLES command) and does not move the sitter to a sub position.
 - **NONE** - sitting voluntarily on the furniture will not attempt to capture the avatar.
 
 e.g.
