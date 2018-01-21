@@ -199,7 +199,7 @@ Adding this optional script will provide additional RLV Restrict and Un/Dress me
 - **Undress** - remove individual clothing layers.
 - **Detach** - remove attachments from individual attachment points.
 
-{% include important.html content="Folders starting with a period ( . ) can not be browsed, and adding *(nostrip)* to an item's name or folder will prevent it from being removed. Many guides such as [OpenCollar's smartstrip guide](https://raw.githubusercontent.com/OpenCollar/opencollar/master/src/spares/readme_smartstrip) discuss #RLV folder setup." %}
+{% include important.html content="Folders starting with a period ( . ) can not be browsed, and adding *(nostrip)* to an item's name or folder will prevent it from being removed. Many guides such as [OpenCollar's smartstrip guide](https://raw.githubusercontent.com/OpenCollar/opencollar/9b4a6d3fcd85ae5f621a254e41688f484e9ba22b/src/spares/readme_smartstrip) discuss #RLV folder setup." %}
 
 ### LSL Scripting
 
