@@ -87,7 +87,8 @@ This creates a button that can be used for customization of your creations, so u
 - If &lt;custom_string&gt; is empty then &lt;menu_name&gt; will be used as the string.
 - If &lt;custom_integer&gt; is empty then 90200 will be used (90200 is used specifically by the [AVprop plugin](/avsitter2_prop.html)).
 - If &lt;custom_integer&gt; is set to [90005](/avsitter2_scripting.html#message-90005) then the menu will be returned automatically.
-- If &lt;custom_key&gt; is empty then the avatar's UUID will be used as the key. If a different avatar is controlling the menu with [AVcontrol](/avsitter2_control.html) then the key will include the controller and sitter UUIDs, separated by the pipe (`|`) character. 
+- If &lt;custom_key&gt; is empty then the avatar's UUID will be used as the key. If a different avatar is controlling the menu with [AVcontrol](/avsitter2_control.html) then the key will include the controller and sitter UUIDs, separated by the pipe (`|`) character.
+- If &lt;menu_name&gt; is empty, then an empty button will be created.
 
 e.g.
 
