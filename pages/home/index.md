@@ -19,7 +19,7 @@ The AVsitter Documentation covers the following topics:
 - <a href="/support.html">AVsitter support options</a>.
 
 <br>
-The AVsitter scripts can be freely obtained from the <a href='{{ site.script_github }}'>GitHub repository</a>, however if you would like to receive packaged versions of the latest release, and receive <a href='/updates.html'>in-world updates</a> of future releases, visit <a href='{{ site.marketplace }}'>SL Marketplace</a> or <a href='https://www.kitely.com/market?store=15535242'>Kitely Market</a>.
+The AVsitter scripts can be freely obtained from the <a href='{{ site.script_github }}'>GitHub repository</a>; however if you would like to receive packaged versions of the latest release, and receive <a href='/updates.html'>in-world updates</a> of future releases, visit <a href='{{ site.marketplace }}'>SL Marketplace</a> or <a href='https://www.kitely.com/market?store=15535242'>Kitely Market</a>.
 
 Proceeds are shared with open-source contributors and will help support continued development of AVsitter. Those who purchased AVsitter in the past will continue to receive <a href="/updates.html">in-world updates</a> without needing to purchase it again.
 
