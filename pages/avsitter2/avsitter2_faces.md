@@ -13,27 +13,17 @@ The [AV]faces script allows creators to add facial expressions to AVsitter&trade
 {% include important.html content="Facial expressions can be switched off via the [FACES] button in the [ADJUST] menu." %}
 
 ### Adding Facial Expressions
-To add facial expressions to your furniture, start with the <a href="/avsitter2_home.html#setup">normal setup</a> procedure, then:
+To add facial expressions to your furniture, start with the [normal setup](/avsitter2_home.html#setup) procedure, then:
 
-<ol>
-<li/>Ensure the [AV]helper and [AV]adjuster are in the prim.
-
-<li/>Drop the [AV]faces script into the prim.
-
-<li/>Sit on the furniture, then choose a pose from the menu that will trigger the facial expression.
-
-<li/>Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
-
-<li/>Choose [NEW] from the menu, then choose [FACE] and select an expression from the list.
-
-<li/>You should see the facial expression playing on your avatar.
-
-<li/>Repeat for each pose you want to give a facial expression.
-
-<li/>When you have finished adding all your facial expressions, click [DUMP] to output your settings into chat.
-
-<li/>Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
-</ol>
+- Ensure the [AV]helper and [AV]adjuster are in the prim.
+- Drop the [AV]faces script into the prim.
+- Sit on the furniture, then choose a pose from the menu that will trigger the facial expression.
+- Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
+- Choose [NEW] from the menu, then choose [FACE] and select an expression from the list.
+- You should see the facial expression playing on your avatar.
+- Repeat for each pose you want to give a facial expression.
+- When you have finished adding all your facial expressions, click [DUMP] to output your settings into chat.
+- Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
 
 {% include note.html content="Facial Expressions are defined separately for each SITTER." %}
 
@@ -86,13 +76,13 @@ In addition to SL facial expressions, you can also use any (non looped) animatio
 
 	ANIM Cheer|ArmsUp|-
 
-If you want to re-use an ANIM line that is already defined for the same sitter, then simply refer to that line instead of creating a new sequence. Requires box <a href="//avsitter.com/updates">2.1-12.05</a> or later. e.g.:
+If you want to re-use an ANIM line that is already defined for the same sitter, then simply refer to that line instead of creating a new sequence. Requires version [2.1-12.05](http://avsitter.com/updates) or later. e.g.:
 
 	ANIM pose1|express_laugh_emote|5|express_smile|1
 	...
 	ANIM pose2|pose1
 
-{% include note.html content="The full list of internal SL animations can be found <a href='http://wiki.secondlife.com/wiki/Internal_Animations'>here</a>, and examples of the facial expressions <a href='http://wiki.secondlife.com/wiki/File:SL_face_expressions.jpg'>here</a>." %}
+{% include note.html content="The full list of internal SL animations can be found [here](http://wiki.secondlife.com/wiki/Internal_Animations), and examples of the facial expressions [here](http://wiki.secondlife.com/wiki/File:SL_face_expressions.jpg)." %}
 
 {% include important.html content="We suggest a sensible maximum of 3 expressions per ANIM line, to conserve script memory and reduce clutter. Also, scripts can only read the first 255 characters (bytes) per notecard line." %}
 
