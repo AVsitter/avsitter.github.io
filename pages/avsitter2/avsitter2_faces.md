@@ -15,15 +15,15 @@ The [AV]faces script allows creators to add facial expressions to AVsitter&trade
 ### Adding Facial Expressions
 To add facial expressions to your furniture, start with the [normal setup](/avsitter2_home.html#setup) procedure, then:
 
-- Ensure the [AV]helper and [AV]adjuster are in the prim.
-- Drop the [AV]faces script into the prim.
-- Sit on the furniture, then choose a pose from the menu that will trigger the facial expression.
-- Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
-- Choose [NEW] from the menu, then choose [FACE] and select an expression from the list.
-- You should see the facial expression playing on your avatar.
-- Repeat for each pose you want to give a facial expression.
-- When you have finished adding all your facial expressions, click [DUMP] to output your settings into chat.
-- Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
+1. Ensure the [AV]helper and [AV]adjuster are in the prim.
+2. Drop the [AV]faces script into the prim.
+3. Sit on the furniture, then choose a pose from the menu that will trigger the facial expression.
+4. Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
+5. Choose [NEW] from the menu, then choose [FACE] and select an expression from the list.
+6. You should see the facial expression playing on your avatar.
+7. Repeat for each pose you want to give a facial expression.
+8. When you have finished adding all your facial expressions, click [DUMP] to output your settings into chat.
+9. Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
 
 {% include note.html content="Facial Expressions are defined separately for each SITTER." %}
 
