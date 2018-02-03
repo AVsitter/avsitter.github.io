@@ -7,13 +7,13 @@ permalink: avsitter2_scripting.html
 
 ## LSL Scripting
 
-AVsitter allows creators to trigger animations with their own scripts through "Link Messages" and provides the ability to add <a href="/avsitter2_avpos.html#button">BUTTONS</a> to menus that send user-defined Link Messages to custom scripts. The examples below are intended only as examples, and to use them correctly you first need to have a decent knowledge of <a href="http://wiki.secondlife.com/wiki/LSL_Portal">LSL scripting</a>.
+AVsitter allows creators to trigger animations with their own scripts through "Link Messages" and provides the ability to add [BUTTONS](/avsitter2_avpos.html#button) to menus that send user-defined Link Messages to custom scripts. The examples below are intended only as examples, and to use them correctly you first need to have a decent knowledge of [LSL scripting](http://wiki.secondlife.com/wiki/LSL_Portal).
 
-{% include warning.html content="Don't use this section without a knowledge of <a href=\"http://wiki.secondlife.com/wiki/LSL_Portal\">LSL scripting</a>. If you do not have a knowledge of scripting then please consult your own scripter." %}
+{% include warning.html content="Don't use this section without a knowledge of [LSL scripting](http://wiki.secondlife.com/wiki/LSL_Portal\). If you do not have a knowledge of scripting then please consult your own scripter." %}
 
 {% include important.html content="AVsitter uses Link Messages in the range 90000-90500." %}
 
-{% include note.html content="More scripting info can be found under the 'scripting' tag on the <a href=\"https://avsitter.com/qa/tag/scripting\">AVsitter Q&A</a> archive." %}
+{% include note.html content="More scripting info can be found under the 'scripting' tag on the [AVsitter Q&A](https://avsitter.com/qa/tag/scripting\) archive." %}
 
 ### Link Messages to Send
 
@@ -39,11 +39,11 @@ Give menu. Sent with a sitting avatar's UUID this will give the animation menu t
 
 	llMessageLinked(LINK_SET,90005,"",<avatar_uuid>);
 
-If the string includes a <a href="/avsitter2_avpos.html#menu">MENU</a> name then it will bring up that specific submenu (<a href="//avsitter.com/qa/761">more info</a>). e.g.
+If the string includes a [MENU](/avsitter2_avpos.html#menu) name then it will bring up that specific submenu ([more info](https://avsitter.com/qa/761)). e.g.
 
 	llMessageLinked(LINK_SET,90005,"My Submenu",<avatar_uuid>);
 
-If using <a href="/avsitter2_control.html">AVcontrol</a>, you can send the controlling avatar's UUID and the sitting avatar's UUID, separated by the pipe ( &#124; ) character. e.g.
+If using [AVcontrol](/avsitter2_control.html), you can send the controlling avatar's UUID and the sitting avatar's UUID, separated by the pipe (`|`) character. e.g.
 
 	llMessageLinked(LINK_SET,90005,"",<controller_uuid>|<sitter_uuid>);
 
@@ -63,11 +63,11 @@ Swap two sitters within a setup prim. e.g.
 
 The above will swap sitters 0 & 1.
 
-This link message can be achieved directly with a <a href="/avsitter2_avpos.html#button">BUTTON</a>. i.e.
+This link message can be achieved directly with a [BUTTON](/avsitter2_avpos.html#button). i.e.
 
 	BUTTON SWAP F|90030|0|1
 
-Also see the <a href="/avsitter2_avpos.html#swap">SWAP notecard command</a>.
+Also see the [SWAP notecard command](/avsitter2_avpos.html#swap).
 
 ### Link Messages to Receive
 
@@ -101,7 +101,7 @@ default{
 
 #### Message 90045
 
-Sent whenever a pose is played. The key field will include the UUID of the avatar. The string field includes several pieces of information each separated by the pipe ( &#124; ) character. See notes in the example below.
+Sent whenever a pose is played. The key field will include the UUID of the avatar. The string field includes several pieces of information each separated by the pipe (`|`) character. See notes in the example below.
 
 ```js
 default{
@@ -142,7 +142,7 @@ default{
 
 #### Message 90050
 
-Sent when a pose is manually selected from the menu. The key field will include the UUID of the avatar. The string field includes the SITTER #, pose name and SET #, separated by the pipe ( &#124; ) character (to separate this information, llParseStringKeepNulls(); is used). Here is an example of using this link message:
+Sent when a pose is manually selected from the menu. The key field will include the UUID of the avatar. The string field includes the SITTER #, pose name and SET #, separated by the pipe (`|`) character (to separate this information, llParseStringKeepNulls(); is used). Here is an example of using this link message:
 
 ```js
 default{
@@ -161,7 +161,7 @@ default{
 
 #### Message 90051
 
-Sent when a sub-<a href="/avsitter2_avpos.html#menu">MENU</a> is manually selected. Data is the same format as <a href="/avsitter2_scripting.html#message-90050">90050</a> (<a href="//avsitter.com/qa/760/">more info</a>).
+Sent when a sub-[MENU](/avsitter2_avpos.html#menu) is manually selected. Data is the same format as [90050](/avsitter2_scripting.html#message-90050) ([more info](https://avsitter.com/qa/760/)).
 
 ## Script Examples
 
