@@ -23,29 +23,29 @@ Start a pose. The pose must already be in a SITTER's menu for it to play.
 
 Leaving the key field blank will target all SITTERs. e.g.
 
-	llMessageLinked(LINK_SET, 90000, "Cuddle", "");
+    llMessageLinked(LINK_SET, 90000, "Cuddle", "");
 
 If the key is an avatar UUID, it will target only that avatar. e.g.
 
-	llMessageLinked(LINK_SET, 90000, "Sleep", <avatar_uuid>);
+    llMessageLinked(LINK_SET, 90000, "Sleep", <avatar_uuid>);
 
 If the key is an integer, it will target only that SITTER #. e.g.
 
-	llMessageLinked(LINK_SET, 90000, "Eat", "0");
+    llMessageLinked(LINK_SET, 90000, "Eat", "0");
 
 #### Message 90005
 
 Give menu. Sent with a sitting avatar's UUID this will give the animation menu to them. e.g.
 
-	llMessageLinked(LINK_SET, 90005, "", <avatar_uuid>);
+    llMessageLinked(LINK_SET, 90005, "", <avatar_uuid>);
 
 If the string includes a [MENU](/avsitter2_avpos.html#menu) name then it will bring up that specific submenu ([more info](https://avsitter.com/qa/761)). e.g.
 
-	llMessageLinked(LINK_SET, 90005, "My Submenu", <avatar_uuid>);
+    llMessageLinked(LINK_SET, 90005, "My Submenu", <avatar_uuid>);
 
 If using [AVcontrol](/avsitter2_control.html), you can send the controlling avatar's UUID and the sitting avatar's UUID, separated by the pipe (`|`) character. e.g.
 
-	llMessageLinked(LINK_SET, 90005, "", <controller_uuid>|<sitter_uuid>);
+    llMessageLinked(LINK_SET, 90005, "", <controller_uuid>|<sitter_uuid>);
 
 This will give the menu of &lt;sitter_uuid&gt; to &lt;controller_uuid&gt;.
 
@@ -53,19 +53,19 @@ This will give the menu of &lt;sitter_uuid&gt; to &lt;controller_uuid&gt;.
 
 Same as 90005 but sends the avatar back to the top level of the menu. e.g.
 
-	llMessageLinked(LINK_SET, 90004, "", <avatar_uuid>);
+    llMessageLinked(LINK_SET, 90004, "", <avatar_uuid>);
 
 #### Message 90030
 
 Swap two sitters within a setup prim. e.g.
-	
-	llMessageLinked(LINK_THIS, 90030, "0", "1");
+
+    llMessageLinked(LINK_THIS, 90030, "0", "1");
 
 The above will swap sitters 0 & 1.
 
 This link message can be achieved directly with a [BUTTON](/avsitter2_avpos.html#button). i.e.
 
-	BUTTON SWAP F|90030|0|1
+    BUTTON SWAP F|90030|0|1
 
 Also see the [SWAP notecard command](/avsitter2_avpos.html#swap).
 
@@ -78,13 +78,13 @@ Sent when an avatar sits. The string field includes the SITTER # and the key fie
 ```js
 default
 {
-	link_message(integer sender, integer num, string msg, key id)
-	{
-		if(num == 90060)
-		{
-			llSay(0, "Welcome, " + llKey2Name(id));
-		}
-	}
+    link_message(integer sender, integer num, string msg, key id)
+    {
+        if(num == 90060)
+        {
+            llSay(0, "Welcome, " + llKey2Name(id));
+        }
+    }
 }
 ```
 
@@ -95,13 +95,13 @@ Sent when an avatar stands. The string field includes the SITTER # and the key f
 ```js
 default
 {
-	link_message(integer sender, integer num, string msg, key id)
-	{
-		if(num == 90065)
-		{
-			llSay(0, "Goodbye, " + llKey2Name(id));
-		}
-	}
+    link_message(integer sender, integer num, string msg, key id)
+    {
+        if(num == 90065)
+        {
+            llSay(0, "Goodbye, " + llKey2Name(id));
+        }
+    }
 }
 ```
 
@@ -112,39 +112,38 @@ Sent whenever a pose is played. The key field will include the UUID of the avata
 ```js
 default
 {
-	link_message(integer sender, integer num, string msg, key id)
-	{
-		if(num == 90045)
-		{	
-			// The avatar UUID
-			key AVATAR_UUID = id;
-			
-			// Extract the data into a list
-			list data = llParseStringKeepNulls(msg, ["|"], []);
-			
-			// The SITTER# the pose is playing for
-			integer SITTER_NUMBER = (integer)llList2String(data, 0);
-			
-			// The name of the pose
-			string POSE_NAME = llList2String(data, 1);
-			
-			// The animation file
-			string ANIM_FILE = llList2String(data, 2);
-			
-			// The SET#
-			integer SET = (integer)llList2String(data, 3);
-			
-			// A list of UUIDs of all sitting avatars separated by the ( @ ) character
-			list ALL_SITTERS = llParseStringKeepNulls(llList2String(data, 4), ["@"], []);
-			
-			// The name the SYNC pose the avatar is leaving 
-			string OLD_SYNC_NAME = llList2String(data, 5);
-			
-			// TRUE if the pose is a SYNC pose
-			integer IS_SYNC = (integer)llList2String(data, 6);
-			
-		}
-	}
+    link_message(integer sender, integer num, string msg, key id)
+    {
+        if(num == 90045)
+        {
+            // The avatar UUID
+            key AVATAR_UUID = id;
+
+            // Extract the data into a list
+            list data = llParseStringKeepNulls(msg, ["|"], []);
+
+            // The SITTER# the pose is playing for
+            integer SITTER_NUMBER = (integer)llList2String(data, 0);
+
+            // The name of the pose
+            string POSE_NAME = llList2String(data, 1);
+
+            // The animation file
+            string ANIM_FILE = llList2String(data, 2);
+
+            // The SET#
+            integer SET = (integer)llList2String(data, 3);
+
+            // A list of UUIDs of all sitting avatars separated by the ( @ ) character
+            list ALL_SITTERS = llParseStringKeepNulls(llList2String(data, 4), ["@"], []);
+
+            // The name the SYNC pose the avatar is leaving
+            string OLD_SYNC_NAME = llList2String(data, 5);
+
+            // TRUE if the pose is a SYNC pose
+            integer IS_SYNC = (integer)llList2String(data, 6);
+        }
+    }
 }
 ```
 
@@ -155,17 +154,17 @@ Sent when a pose is manually selected from the menu. The key field will include 
 ```js
 default
 {
-	link_message(integer sender, integer num, string msg, key id)
-	{
-		if(num == 90050)
-		{
-			key AVATAR_UUID = id;
-			list data = llParseStringKeepNulls(msg,["|"], []);
-			string SITTER_NUMBER = llList2String(data, 0);
-			string POSE_NAME = llList2String(data, 1);
-			string SET = llList2String(data, 2);
-		}
-	}
+    link_message(integer sender, integer num, string msg, key id)
+    {
+        if(num == 90050)
+        {
+            key AVATAR_UUID = id;
+            list data = llParseStringKeepNulls(msg,["|"], []);
+            string SITTER_NUMBER = llList2String(data, 0);
+            string POSE_NAME = llList2String(data, 1);
+            string SET = llList2String(data, 2);
+        }
+    }
 }
 ```
 {% include note.html content="90050 is only sent when a pose is manually chosen from the menu. Actions based on which pose is playing should usually use 90045 instead." %}
