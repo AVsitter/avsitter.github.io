@@ -9,11 +9,11 @@ permalink: avsitter2_scripting.html
 
 AVsitter allows creators to trigger animations with their own scripts through "Link Messages" and provides the ability to add [BUTTONS](/avsitter2_avpos.html#button) to menus that send user-defined Link Messages to custom scripts. The examples below are intended only as examples, and to use them correctly you first need to have a decent knowledge of [LSL scripting](http://wiki.secondlife.com/wiki/LSL_Portal).
 
-{% include warning.html content="Don't use this section without a knowledge of [LSL scripting](http://wiki.secondlife.com/wiki/LSL_Portal\). If you do not have a knowledge of scripting then please consult your own scripter." %}
+{% include warning.html content="Don't use this section without a knowledge of [LSL scripting](http://wiki.secondlife.com/wiki/LSL_Portal). If you do not have a knowledge of scripting then please consult your own scripter." %}
 
 {% include important.html content="AVsitter uses Link Messages in the range 90000-90500." %}
 
-{% include note.html content="More scripting info can be found under the 'scripting' tag on the [AVsitter Q&A](https://avsitter.com/qa/tag/scripting\) archive." %}
+{% include note.html content="More scripting info can be found under the 'scripting' tag on the [AVsitter Q&A](https://avsitter.com/qa/tag/scripting) archive." %}
 
 ### Link Messages to Send
 
