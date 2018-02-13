@@ -35,11 +35,11 @@ LOOP
 
 For the above sequence, you'll need to add a matching SEQUENCE line to your [AVpos](/avsitter2_avpos.html) notecard. e.g.
 
-	SEQUENCE Lovescene
+    SEQUENCE Lovescene
 
 Alternately, make sure your [AVpos](/avsitter2_avpos.html) notecard has a POSE or SYNC that matches the sequence name. e.g.
 
-	SYNC Lovescene|<animation_filename>
+    SYNC Lovescene|<animation_filename>
 
 {% include note.html content="Sequences in the [AV]sequence_settings notecard are triggered by [SEQUENCE](/avsitter2_avpos.html#sequence), [POSE](/avsitter2_avpos.html#pose) or [SYNC](/avsitter2_avpos.html#sync) in the AVpos notecard." %}
 
@@ -55,36 +55,36 @@ Placed at the start of a new sequence. The name must match the name of a [SEQUEN
 
 e.g. in your [AV]sequence_settings notecard:
 
-	SEQUENCE Lovescene
+    SEQUENCE Lovescene
 
 ### PLAY
 Plays a [POSE](/avsitter2_avpos.html#pose) or [SYNC](/avsitter2_avpos.html#sync) that is defined in your AVpos notecard. It should refer to the menu name you have given your pose, not the animation file name.
 
 e.g.
 
-	PLAY Couples1
+    PLAY Couples1
 
 ### WAIT
 Wait for a given time, in seconds. Use this command after the PLAY command, so that a pose is played for the desired duration.
 
 e.g.
 
-	WAIT 5
+    WAIT 5
 
 Using WAIT 0 will cause it to wait until the user manually presses the forward button. e.g.
 
-	WAIT 0
+    WAIT 0
 
 {% include note.html content="If PLAY and WAIT are <ins>both</ins> used in a sequence that is triggered by a SEQUENCE line in the AVpos notecard, the user will be given a menu to control the sequence. Otherwise, the main animation menu is returned as soon as the sequence is selected." %}
 
 ### SAY / WHISPER
 Say or whisper some text in chat. Hearing range is 20m for say, and 5m for whisper. e.g.
 
-	SAY Everybody raises their glass!
+    SAY Everybody raises their glass!
 
 You can use /SITTER# to insert the first name of the avatar on a SITTER. e.g.
 
-	WHISPER /0 takes /1 by the hand.
+    WHISPER /0 takes /1 by the hand.
 
 ### LOOP
 The sequence will repeat when the end is reached.
@@ -117,11 +117,11 @@ WAIT 30
 ### SOUND
 Plays a sound file from the prim's inventory. The format is SOUND &lt;sound_file&gt;|&lt;volume&gt;. e.g.
 
-	SOUND giggle|0.5
+    SOUND giggle|0.5
 
 You can also specify a sound by its UUID. e.g.
 
-	SOUND 71a2b035-8a33-9cb3-e71b-895b515d119f|1
+    SOUND 71a2b035-8a33-9cb3-e71b-895b515d119f|1
 
 Here's an example of playing a different sound with each pose:
 
@@ -160,22 +160,22 @@ SL won't always play sounds on time unless sounds are pre-loaded to the avatar's
 
 To give users an option to switch sounds off, add an [ADJUST](/avsitter2_avpos.html#adjust) command to your AVpos notecard, using link message 90205. e.g: 
 
-	ADJUST [SOUND]|90205
+    ADJUST [SOUND]|90205
 
 {% include tip.html content="Be sure to examine the Piano example provided in the AVsitter Examples [BOX]." %}
 
 ### DEBUG
 Can assist with debugging your sequences by whispering sequence steps to chat.
 
-	DEBUG 0
+    DEBUG 0
 
 The default. No sequence information will be sent to chat.
 
-	DEBUG 1
+    DEBUG 1
 
 Will whisper in chat when sequences are started and stopped.
 
-	DEBUG 2
+    DEBUG 2
 
 All steps of a sequence will be whispered in chat.
 

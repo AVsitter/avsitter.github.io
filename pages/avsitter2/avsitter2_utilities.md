@@ -30,7 +30,7 @@ If you have a setup with more than one SITTER then you may prefer to offer a men
 - Simply place the [AV]select script in the prim that contains your SITTERs. [SWAP] is now removed and a [BACK] button is added to the top level of the pose menu. When an avatar chooses this [BACK] button they are taken to a menu of the sitters defined in the notecard.
 - When the SITTER has only one pose, then the pose name will be used as the button for the sitting location. When the SITTER has multiple poses the [AV]select menu name for a sitting location will be "Sitter 0", "Sitter 1", etc. To set your own name for a sitting location, add it to the end of the SITTER line in the AVpos notecard [as described in the Notecard Commands section](/avsitter2_avpos.html#sitter):
 
-	SITTER 0|Female
+    SITTER 0|Female
 
 - If a singles POSE is playing, [AV]select will show a disabled symbol (<span style="font-size:150%;">&oslash;</span>) in the menu if a seat is occupied by another avatar. When a couples SYNC pose is playing, [AV]select will allow swapping with an occupied seat. You can switch off the disabled symbol to always allow swapping by including [SELECT 1](/avsitter2_avpos.html#select) in your AVpos notecard.
 
