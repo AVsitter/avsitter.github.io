@@ -8,10 +8,10 @@ folder: avsitter2
 
 ## Utilities
 
-The following <i>optional</i> scripts are found in the AVsitter [BOX] or Utilities [BOX]:
+The following *optional* scripts are found in the AVsitter [BOX] or Utilities [BOX]:
 
 ### [AV]root script
-If your object does <i>not</i> include a SITTER <i>inside the root prim</i> then you can drop this script into the root prim. This will allow sitting avatars to touch anywhere on the furniture to get the menu, instead of having to touch the prim containing the AVsit scripts.
+If your object does *not* include a SITTER *inside the root prim* then you can drop this script into the root prim. This will allow sitting avatars to touch anywhere on the furniture to get the menu, instead of having to touch the prim containing the AVsit scripts.
 
 {% include note.html content="The root prim is the main prim of an object. When you select an object, the root prim is highlighted in yellow. The root prim is always defined as the last prim you selected before linking prims together in SL." %}
 
@@ -27,17 +27,14 @@ If you wish to include a security function, place this script in the root prim o
 ### [AV]select script
 If you have a setup with more than one SITTER then you may prefer to offer a menu of the different seats instead of having the usual [SWAP] ability which just moves an avatar to the next seat.  
 
-<ul>
-<li/>Simply place the [AV]select script in the prim that contains your SITTERs. [SWAP] is now removed and a [BACK] button is added to the top level of the pose menu. When an avatar chooses this [BACK] button they are taken to a menu of the sitters defined in the notecard.
-
-<li/>When the SITTER has only one pose, then the pose name will be used as the button for the sitting location. When the SITTER has multiple poses the [AV]select menu name for a sitting location will be "Sitter 0", "Sitter 1", etc. To set your own name for a sitting location, add it to the end of the SITTER line in the AVpos notecard <a href="/avsitter2_avpos.html#sitter">as described in the Notecard Commands section</a>:
+- Simply place the [AV]select script in the prim that contains your SITTERs. [SWAP] is now removed and a [BACK] button is added to the top level of the pose menu. When an avatar chooses this [BACK] button they are taken to a menu of the sitters defined in the notecard.
+- When the SITTER has only one pose, then the pose name will be used as the button for the sitting location. When the SITTER has multiple poses the [AV]select menu name for a sitting location will be "Sitter 0", "Sitter 1", etc. To set your own name for a sitting location, add it to the end of the SITTER line in the AVpos notecard [as described in the Notecard Commands section](/avsitter2_avpos.html#sitter):
 
 	SITTER 0|Female
 
-<li/>If a singles POSE is playing, [AV]select will show a disabled symbol (<span style="font-size:150%;">&oslash;</span>) in the menu if a seat is occupied by another avatar. When a couples SYNC pose is playing, [AV]select will allow swapping with an occupied seat. You can switch off the disabled symbol to always allow swapping by including <a href="/avsitter2_avpos.html#select">SELECT 1</a> in your AVpos notecard.
-</ul>
+- If a singles POSE is playing, [AV]select will show a disabled symbol (<span style="font-size:150%;">&oslash;</span>) in the menu if a seat is occupied by another avatar. When a couples SYNC pose is playing, [AV]select will allow swapping with an occupied seat. You can switch off the disabled symbol to always allow swapping by including [SELECT 1](/avsitter2_avpos.html#select) in your AVpos notecard.
 
-{% include important.html content="The [AV]select script is <i>NOT</i> compatible with the [AV]root-control script from the AVcontrol&trade; plugin!" %}
+{% include important.html content="The [AV]select script is *NOT* compatible with the [AV]root-control script from the AVcontrol&trade; plugin!" %}
 
 {% include tip.html content="For working examples, see the [AV]select examples provided to you in the Examples [BOX]." %}
 
@@ -61,7 +58,7 @@ Most animation vendors in SL require that you set permissions to either NO-COPY 
 Drop this script into a prim and it will read through your AVpos notecard and give a warning in chat for any animations that are either missing or not used in the notecard. Also gives the option to delete any animations that are not used.
 
 ### MLP-converter script
-When placed inside a prim that contains an MLP setup, this script will read through all notecards in the prim that start with .MENUITEMS or .POSITIONS (the standard names for MLP notecards) and generate text in chat. The text can then be pasted into an AVpos notecard. Only MLP's POSE lines will be converted, so you must manually add your MENU & TOMENU lines by <a href="/avsitter2_avpos.html">editing the notecard</a>. Props and facial expressions are not converted by this script.
+When placed inside a prim that contains an MLP setup, this script will read through all notecards in the prim that start with .MENUITEMS or .POSITIONS (the standard names for MLP notecards) and generate text in chat. The text can then be pasted into an AVpos notecard. Only MLP's POSE lines will be converted, so you must manually add your MENU & TOMENU lines by [editing the notecard](/avsitter2_avpos.html). Props and facial expressions are not converted by this script.
 
 {% include important.html content="When using the MLP-converter script you can enter a position vector in the prim description e.g. &lt;0,0,0.5&gt; and this will offset the converter's position results by that amount." %}
 

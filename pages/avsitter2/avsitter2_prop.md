@@ -11,60 +11,43 @@ folder: avsitter2
 
 {% include tip.html content="For examples that use props, see the AVprop examples in the Plugins Examples [BOX]." %}
 
-{% include important.html content="For answers to some common questions about props please see the <a href='//avsitter.com/qa'>AVsitter Q&A archive.</a>" %}
+{% include important.html content="For answers to some common questions about props please see the [AVsitter Q&A archive.](https://avsitter.com/qa)" %}
 
 
 ## Preparing Prop Objects
 
 Before adding a prop to your project, you'll need to create the prop object:
 
-<ol>
-<li/>Choose any object you want to use as a prop. e.g. Laptop Computer, Reading Book, Coffee Cup, etc. 
+1. Choose any object you want to use as a prop. e.g. Laptop Computer, Reading Book, Coffee Cup, etc. 
+2. Drop the **[AV]object** script into the object's root prim.
+3. Repeat for each object you plan to use as a prop.
 
-<li/>Drop the <b>[AV]object</b> script into the object's root prim.
+{% include important.html content="Normal props *must* be COPY-OK for NEXT OWNER." %}
 
-<li/>Repeat for each object you plan to use as a prop.
-</ol>
-
-{% include important.html content="Normal props <i>must</i> be COPY-OK for NEXT OWNER." %}
-
-{% include note.html content="If your prop is to be an avatar attachment, also see the <a href='/avsitter2_prop.html#attachment-props'>section about avatar attachments</a>." %}
+{% include note.html content="If your prop is to be an avatar attachment, also see the [section about avatar attachments](/avsitter2_prop.html#attachment-props)." %}
 
 {% include warning.html content="Remember to use the correct script: [AV]object goes inside your prop objects." %}
 
 ## Setting up a Prop with AVsitter&trade;
 
-To add props to your furniture, start with the <a href="/avsitter2_home.html#setup">normal setup</a> procedure, then:
+To add props to your furniture, start with the [normal setup](/avsitter2_home.html#setup) procedure, then:
 
-<ol>
-<li/>Ensure the [AV]helper and [AV]adjuster are in the prim.
-
-<li/>Drop the [AV]prop script and your prepared prop objects into the prim.
-
-<li/>Sit on the prim, then choose a pose from the menu that you want to trigger the prop.
-
-<li/>Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
-
-<li/>Choose [NEW] from the menu, then choose [PROP].
-
-<li/>Choose your prop object from the menu and the prop object will rez inworld.
-
-<li/>Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE].
-<info>Props can rez a maximum of 10 meters from the centre of the prim.</info> 
-
-<li/>Repeat for each prop.
-
-<li/>When you have finished saving all your props, click [DUMP] to output your settings into chat.
-
-<li/>Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
-</ol>
+1. Ensure the [AV]helper and [AV]adjuster are in the prim.
+2. Drop the [AV]prop script and your prepared prop objects into the prim.
+3. Sit on the prim, then choose a pose from the menu that you want to trigger the prop.
+4. Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
+5. Choose [NEW] from the menu, then choose [PROP].
+6. Choose your prop object from the menu and the prop object will rez inworld.
+7. Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE]. Props can rez a maximum of 10 meters from the centre of the prim.
+8. Repeat for each prop.
+9. When you have finished saving all your props, click [DUMP] to output your settings into chat.
+10 .Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
 
 {% include note.html content="Props are defined separately for each SITTER." %}
 
 {% include warning.html content="Remember to use the correct script: [AV]object goes inside your prop objects, [AV]prop goes inside your furniture." %}
 
-<br>
-<b>Props with AVsit Video</b>
+### Props with AVsit Video
 
 <iframe height="349" src="https://www.youtube.com/embed/dt2IcAweM2Y?rel=0" frameborder="0" width="560" allowfullscreen=""></iframe>
 
@@ -74,41 +57,29 @@ To add props to your furniture, start with the <a href="/avsitter2_home.html#set
 
 With AVmenu&trade; you can create menus in prims that don't have animations. The [AV]menu script can be used in spare prims of furniture or in stand-alone objects that don't have seating (e.g. lazy Susan, kitchen/bar, item dispenser, drinks machine).
 
-{% include important.html content="The [AV]menu script can be used in any prim that does <i>NOT</i> include the [AV]sit, [AV]root or [AV]root-security scripts." %}
+{% include important.html content="The [AV]menu script can be used in any prim that does *NOT* include the [AV]sit, [AV]root or [AV]root-security scripts." %}
 
-As with the [AV]sit scripts, [AV]menu is controlled by an AVpos notecard. [AV]menu allows BUTTON, TOMENU, MENU, TEXT and MTYPE 3 from the <a href="/avsitter2_avpos.html#notecard-commands">Notecard Commands</a> to be used to create menus and also reacts to the <a href = "/avsitter2_scripting.html#link-messages-to-send">90005 link message</a> in the same way as the [AV]sit scripts.
+As with the [AV]sit scripts, [AV]menu is controlled by an AVpos notecard. [AV]menu allows BUTTON, TOMENU, MENU, TEXT and MTYPE 3 from the [Notecard Commands](/avsitter2_avpos.html#notecard-commands) to be used to create menus and also reacts to the [90005 link message](/avsitter2_scripting.html#link-messages-to-send) in the same way as the [AV]sit scripts.
 
 To add props to a prim using [AV]menu:
 
-<ol>
-<li/>Drop the following into the prim:
-
-<ul>
-<li/>[AV]menu script
-<li/>[AV]prop script
-<li/>AVpos notecard
-<li/>Your prepared prop objects
-</ul>
-
-<li/>Touch the prim, choose [OWNER] to enter the owner menu.
-
-<li/>Choose [NEW] from the menu, then choose your prop object from the menu.
-
-<li/>The dialog will ask you to name your prop and then the prop object will rez.
-
-<li/>Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE].
+1. Drop the following into the prim:
+    -[AV]menu script
+    -[AV]prop script
+    -AVpos notecard
+    -Your prepared prop objects
+2. Touch the prim, choose [OWNER] to enter the owner menu.
+3. Choose [NEW] from the menu, then choose your prop object from the menu.
+4. The dialog will ask you to name your prop and then the prop object will rez.
+5. Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE].
 {% include note.html content="Props can be positioned a maximum of 10 meters from the centre of the prim." %}
+6. Repeat for each prop.
+7. When you have finished saving all your props, click [DUMP] to output your settings into chat.
+8. Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
 
-<li/>Repeat for each prop.
-
-<li/>When you have finished saving all your props, click [DUMP] to output your settings into chat.
-
-<li/>Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
-</ol>
 {% include warning.html content="End-users of objects made with [AV]menu & [AV]prop will see [NEW] and [DUMP] in [AV]menu's [OWNER] menu, unless you set the [AV]prop script to NO-COPY or NO-TRANSFER." %}
 
-<br>
-<b>Props with AVmenu Video</b>
+### Props with AVmenu Video
 
 <iframe height="349" src="https://www.youtube.com/embed/ynoFR8ZqEyo?rel=0" frameborder="0" width="560" allowfullscreen=""></iframe>
 
@@ -119,9 +90,9 @@ Props can be set to request permission to attach to the avatar after they rez in
 
 Before you place an attachment prop inside the furniture, you need to attach it and adjust it just like you would if editing prim clothing that you avatar wears. SL automatically remembers the attachment position for an object. When you are happy with the way it's attached, you then detach it and place it in the furniture.
 
-After setting up a prop, you can designate the prop to be an attachment by editing the AVpos notecard and changing its &lt;prop_type&gt; to PROP1 or PROP2 as described in the <a href="/avsitter2_prop.html#notecard-commands">Notecard Commands section</a>.
+After setting up a prop, you can designate the prop to be an attachment by editing the AVpos notecard and changing its &lt;prop_type&gt; to PROP1 or PROP2 as described in the [Notecard Commands section](/avsitter2_prop.html#notecard-commands).
 
-{% include important.html content="Attachment props <i>must</i> be COPY-OK & TRANSFER-OK for NEXT OWNER." %}
+{% include important.html content="Attachment props *must* be COPY-OK & TRANSFER-OK for NEXT OWNER." %}
 
 ## Notecard Commands
 You can edit the AVpos notecard to change how props will behave.
@@ -132,18 +103,17 @@ The format for the notecard is:
 
 &lt;prop_type&gt; can be any of:
 
-<ul>
-<li/><b>PROP</b> is a regular prop.
-<li/><b>PROP1</b> requests permission to attach to the avatar as soon as it is rezzed.
-<li/><b>PROP2</b> rezzes as a regular prop and requests permission to attach to an avatar when touched.
-<li/><b>PROP3</b> is a special type used only by the <a href="/avsitter2_lsl_examples_avprop.html">shared prop script examples</a>.
+- **PROP** is a regular prop.
+- **PROP1** requests permission to attach to the avatar as soon as it is rezzed.
+- **PROP2** rezzes as a regular prop and requests permission to attach to an avatar when touched.
+- **PROP3** is a special type used only by the [shared prop script examples](/avsitter2_lsl_examples_avprop.html).
 </ul>
 
 {% include note.html content="If you want to change a prop's &lt;prop_type&gt; then you'll need to edit the notecard." %}
 
 &lt;trigger_name&gt; must match the menu name of the pose (or BUTTON) that you want to trigger the prop.
 
-&lt;prop_group&gt; assigns the prop to a user-defined group. A prop will derez when a new prop is rezzed that has the same prop group. This is relevant when Rezzing/De-Rezzing props <a href="/avsitter2_prop.html#rezzing-props-by-button">by BUTTON</a> or <a href="/avsitter2_prop.html#lsl-scripting">by scripting</a>.
+&lt;prop_group&gt; assigns the prop to a user-defined group. A prop will derez when a new prop is rezzed that has the same prop group. This is relevant when Rezzing/De-Rezzing props [by BUTTON](/avsitter2_prop.html#rezzing-props-by-button) or [by scripting](/avsitter2_prop.html#lsl-scripting).
 
 &lt;attachment_point&gt; defines the attach point to use. Only needed when &lt;prop_type&gt; is set to PROP1 or PROP2.
 
@@ -156,14 +126,14 @@ Second Life has now enabled 'experiences' which will allow automatic attachments
 
 {% include important.html content="If you compiled [AV]object from GitHub yourself, this section doesn't apply, as the script won't have the AVsitter experience by Code Violet." %}
 
-For automatic attachments to work, Users will need to enable the experience <u>'AVsitter'</u> (created by Code Violet) on their land. An experience may be enabled at the Estate or Parcel level by <a href="//avsitter.com/pics/experiences.jpg">adding it to the <b>'Allowed Experiences'</b> list</a>. For an excellent explanation, <a href="https://www.youtube.com/watch?v=3gcy403FtAk">see this video by Froukje Hoorenbeek</a>. Be sure to choose <a href="//avsitter.com/pics/experiences2.jpg">the experience created by Code Violet</a> as anyone could have accidentally created an experience with the same name.
+For automatic attachments to work, Users will need to enable the experience <ins>'AVsitter'</ins> (created by Code Violet) on their land. An experience may be enabled at the Estate or Parcel level by [adding it to the **'Allowed Experiences'** list](https://avsitter.com/pics/experiences.jpg). For an excellent explanation, [see this video by Froukje Hoorenbeek](https://www.youtube.com/watch?v=3gcy403FtAk). Be sure to choose [the experience created by Code Violet](https://avsitter.com/pics/experiences2.jpg) as anyone could have accidentally created an experience with the same name.
 
-You can find out more about 'experiences' on the <a href="https://community.secondlife.com/t5/English-Knowledge-Base/Experiences-in-Second-Life/ta-p/2744686">SL blog</a> and in the <a href="http://wiki.secondlife.com/wiki/Category:Experience_Tools">SL scripting WIKI</a>.
+You can find out more about 'experiences' on the [SL blog](https://community.secondlife.com/t5/English-Knowledge-Base/Experiences-in-Second-Life/ta-p/2744686) and in the [SL scripting WIKI](http://wiki.secondlife.com/wiki/Category:Experience_Tools).
 
-{% include important.html content="If users do not enable the <u>'AVsitter' by Code Violet</u> experience then each prop will require permission to attach and the owner may receive the message \"To enable auto-attachments, please enable the experience in About Land.\" (<a href='//avsitter.com/qa/251/'>discussion</a>)" %}
+{% include important.html content="If users do not enable the <ins>'AVsitter' by Code Violet</ins> experience then each prop will require permission to attach and the owner may receive the message \"To enable auto-attachments, please enable the experience in About Land.\" ([discussion](https://avsitter.com/qa/251/))" %}
 
 ## Rezzing Props by BUTTON
-If you want a <a href="/avsitter2_avpos.html#button">BUTTON</a> to trigger a prop, first <a href="/avsitter2_prop.html#setting-up-a-prop-with-avsittertrade">create the prop as normal</a> so that it rezzes for a pose, then edit the notecard to change the &lt;trigger_name&gt; of the prop to match your BUTTON. Alternately, add the PROP line manually to your notecard. e.g.
+If you want a [BUTTON](/avsitter2_avpos.html#button) to trigger a prop, first [create the prop as normal](/avsitter2_prop.html#setting-up-a-prop-with-avsittertrade) so that it rezzes for a pose, then edit the notecard to change the &lt;trigger_name&gt; of the prop to match your BUTTON. Alternately, add the PROP line manually to your notecard. e.g.
 
 	BUTTON Rez Guitar
 	...
@@ -177,15 +147,15 @@ If you don't want the menu returned then use the 90220 link message in the BUTTO
 
 ## De-Rezzing Props by BUTTON
 
-If you want a <a href="/avsitter2_avpos.html#button">BUTTON</a> to clear all props then simply refer to a prop that does not exist. e.g.
+If you want a [BUTTON](/avsitter2_avpos.html#button) to clear all props then simply refer to a prop that does not exist. e.g.
 
 	BUTTON [CLEAR]
 
-To make a <a href="/avsitter2_avpos.html#button">BUTTON</a> to clear props by name then send remprop_&lt;trigger_name&gt; as the button's &lt;custom_string&gt; using integer 90200. e.g.
+To make a [BUTTON](/avsitter2_avpos.html#button) to clear props by name then send remprop_&lt;trigger_name&gt; as the button's &lt;custom_string&gt; using integer 90200. e.g.
 
 	BUTTON Clear Fruit|90200|remprop_Fruit
 
-If you want a <a href="/avsitter2_avpos.html#button">BUTTON</a> to clear all props in one &lt;prop_group&gt; then you can create a blank prop with the same &lt;prop_group&gt;. It's important to leave the &lt;prop_object&gt; for the blank prop empty as in the 'Clear Quilt' example below. e.g.
+If you want a [BUTTON](/avsitter2_avpos.html#button) to clear all props in one &lt;prop_group&gt; then you can create a blank prop with the same &lt;prop_group&gt;. It's important to leave the &lt;prop_object&gt; for the blank prop empty as in the 'Clear Quilt' example below. e.g.
 
 ```
 BUTTON Quilt1
@@ -213,7 +183,7 @@ PROP Clear Quilt||G1
 ## Example Notecards
 Following are some examples of notecard lines and complete notecards relating to AVprop&trade;
 
-<b>PROP line examples</b>
+### PROP line examples
 
 Rez the book object when the Reading pose is played:  
 
@@ -229,7 +199,7 @@ Rez two props when the Sit pose is played:
 	PROP Sit|prop2|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
 
 
-<b>One SITTER</b>
+### One SITTER
 
 Complete notecard for one SITTER. Includes poses, buttons, different prop types and prop groups:
 
@@ -252,7 +222,7 @@ PROP Wine|wine|G2|<0.778376, -0.371154, 0.302741>|<-0.020984, 9.899971, 0.006449
 PROP Juice|juice|G2|<0.760159, -0.371186, 0.198361>|<-0.020984, 9.899975, 0.006449>
 ```
 
-<b>Two SITTERs</b>
+### Two SITTERs
 
 Complete notecard for two SITTERs, including props for both SITTERs:
 
@@ -282,7 +252,7 @@ PROP Laptop|laptop|G1|<0.466172, -0.140335, 0.311097>|<98.181810, 13.074120, 178
 PROP Couples1|laptop|G1|<0.319954, 0.837922, 0.312684>|<-105.833200, -55.077900, -13.040110>
 ```
 
-<b>AVmenu&trade; Example</b>
+### AVmenu&trade; Example
 
 Example notecard for [AV]menu with [AV]prop. Demonstrates use of prop groups (shelf1,shelf2,shelf3).
 
@@ -308,7 +278,7 @@ PROP Vase|vase|shelf3|<-0.022728, -0.019066, 0.440918>|<0.000000, 0.000009, 174.
 ## LSL Scripting
 Scripting methods can be used to rez and remove props, and respond to prop related events.
 
-{% include warning.html content="Don't use this section without a knowledge of <a href='http://wiki.secondlife.com/wiki/LSL_Portal'>LSL scripting</a>." %}
+{% include warning.html content="Don't use this section without a knowledge of [LSL scripting](http://wiki.secondlife.com/wiki/LSL_Portal)." %}
 
 
 ### LSL Link Messages to Send
@@ -368,6 +338,6 @@ default{
 ```
 
 ### Script Examples
-For AVprop script examples click <a href="/avsitter2_lsl_examples_avprop.html">here</a>.
+For AVprop script examples click [here](/avsitter2_lsl_examples_avprop.html).
 
 {% include links.html %}
