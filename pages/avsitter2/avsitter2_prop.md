@@ -64,15 +64,15 @@ As with the [AV]sit scripts, [AV]menu is controlled by an AVpos notecard. [AV]me
 To add props to a prim using [AV]menu:
 
 1. Drop the following into the prim:
-    -[AV]menu script
-    -[AV]prop script
-    -AVpos notecard
-    -Your prepared prop objects
+  - [AV]menu script
+  - [AV]prop script
+  - AVpos notecard
+  - Your prepared prop objects
 2. Touch the prim, choose [OWNER] to enter the owner menu.
 3. Choose [NEW] from the menu, then choose your prop object from the menu.
 4. The dialog will ask you to name your prop and then the prop object will rez.
 5. Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE].
-{% include note.html content="Props can be positioned a maximum of 10 meters from the centre of the prim." %}
+    {% include note.html content="Props can be positioned a maximum of 10 meters from the centre of the prim." %}
 6. Repeat for each prop.
 7. When you have finished saving all your props, click [DUMP] to output your settings into chat.
 8. Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
@@ -99,7 +99,7 @@ You can edit the AVpos notecard to change how props will behave.
 
 The format for the notecard is:
 
-	<prop_type> <trigger_name>|<prop_object>|<prop_group>|<position>|<rotation>|<attachment_point>
+    <prop_type> <trigger_name>|<prop_object>|<prop_group>|<position>|<rotation>|<attachment_point>
 
 &lt;prop_type&gt; can be any of:
 
@@ -119,7 +119,7 @@ The format for the notecard is:
 
 Possible values:
 
-	chest, head, left shoulder, right shoulder, left hand, right hand, left foot, right foot, back, pelvis, mouth, chin, left ear, right ear, left eye, right eye, nose, right upper arm, right lower arm, left upper arm, left lower arm, right hip, right upper leg, right lower leg, left hip, left upper leg, left lower leg, stomach, left pectoral, right pectoral, HUD center 2, HUD top right, HUD top, HUD top left, HUD center, HUD bottom left, HUD bottom, HUD bottom right, neck, avatar center
+    chest, head, left shoulder, right shoulder, left hand, right hand, left foot, right foot, back, pelvis, mouth, chin, left ear, right ear, left eye, right eye, nose, right upper arm, right lower arm, left upper arm, left lower arm, right hip, right upper leg, right lower leg, left hip, left upper leg, left lower leg, stomach, left pectoral, right pectoral, HUD center 2, HUD top right, HUD top, HUD top left, HUD center, HUD bottom left, HUD bottom, HUD bottom right, neck, avatar center
 
 ## Experience Keys
 Second Life has now enabled 'experiences' which will allow automatic attachments (without need for any permission request).
@@ -135,25 +135,25 @@ You can find out more about 'experiences' on the [SL blog](https://community.sec
 ## Rezzing Props by BUTTON
 If you want a [BUTTON](/avsitter2_avpos.html#button) to trigger a prop, first [create the prop as normal](/avsitter2_prop.html#setting-up-a-prop-with-avsittertrade) so that it rezzes for a pose, then edit the notecard to change the &lt;trigger_name&gt; of the prop to match your BUTTON. Alternately, add the PROP line manually to your notecard. e.g.
 
-	BUTTON Rez Guitar
-	...
-	PROP Rez Guitar|guitar|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
+    BUTTON Rez Guitar
+    ...
+    PROP Rez Guitar|guitar|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
 
 When the "Rez Guitar" button is pressed, the guitar prop object will rez.
 
 If you don't want the menu returned then use the 90220 link message in the BUTTON. e.g.
 
-	BUTTON Rez Guitar|90220
+    BUTTON Rez Guitar|90220
 
 ## De-Rezzing Props by BUTTON
 
 If you want a [BUTTON](/avsitter2_avpos.html#button) to clear all props then simply refer to a prop that does not exist. e.g.
 
-	BUTTON [CLEAR]
+    BUTTON [CLEAR]
 
 To make a [BUTTON](/avsitter2_avpos.html#button) to clear props by name then send remprop_&lt;trigger_name&gt; as the button's &lt;custom_string&gt; using integer 90200. e.g.
 
-	BUTTON Clear Fruit|90200|remprop_Fruit
+    BUTTON Clear Fruit|90200|remprop_Fruit
 
 If you want a [BUTTON](/avsitter2_avpos.html#button) to clear all props in one &lt;prop_group&gt; then you can create a blank prop with the same &lt;prop_group&gt;. It's important to leave the &lt;prop_object&gt; for the blank prop empty as in the 'Clear Quilt' example below. e.g.
 
@@ -187,16 +187,16 @@ Following are some examples of notecard lines and complete notecards relating to
 
 Rez the book object when the Reading pose is played:  
 
-	PROP Reading|book|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
+    PROP Reading|book|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
 
 Attach pen to avatar's right hand when the Writing pose is played:
 
-	PROP1 Writing|pen|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>|right hand
+    PROP1 Writing|pen|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>|right hand
 
 Rez two props when the Sit pose is played:
 
-	PROP Sit|prop1|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
-	PROP Sit|prop2|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
+    PROP Sit|prop1|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
+    PROP Sit|prop2|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
 
 
 ### One SITTER
@@ -287,23 +287,23 @@ Scripting methods can be used to rez and remove props, and respond to prop relat
 
 Instructs [AV]prop to rez a prop by its &lt;trigger_name&gt;. e.g.
 
-	llMessageLinked(LINK_THIS,90220,"Fruit","");
+    llMessageLinked(LINK_THIS, 90220, "Fruit", "");
 
 By including an avatar's &lt;avatar_uuid&gt; you can rez the prop specifically for them. e.g.
 
-	llMessageLinked(LINK_THIS,90220,"Fruit",<avatar_uuid>);
+    llMessageLinked(LINK_THIS, 90220, "Fruit", <avatar_uuid>);
 
 By including an integer you can rez the prop specifically for that sitter. e.g.
 
-	llMessageLinked(LINK_THIS,90220,"Fruit","0");
+    llMessageLinked(LINK_THIS, 90220, "Fruit", "0");
 
 If you want to clear all props then use a &lt;trigger_name&gt; that does not match a prop. e.g.
 
-	llMessageLinked(LINK_THIS,90220,"[CLEAR]","");
+    llMessageLinked(LINK_THIS, 90220, "[CLEAR]", "");
 
 To derez a specific prop by name, just add "remprop_" to the beginning of the &lt;trigger_name&gt;. e.g.
 
-	llMessageLinked(LINK_THIS,90220,"remprop_Fruit","");
+    llMessageLinked(LINK_THIS, 90220, "remprop_Fruit", "");
 
 {% include important.html content="If you want the menu returned to the avatar, use 90200 instead of 90220." %}
 
@@ -320,20 +320,23 @@ To derez a specific prop by name, just add "remprop_" to the beginning of the &l
 e.g.
 
 ```js
-default{
-	link_message(integer sender, integer num, string msg, key id){
-		if(num==90500){
-			list data = llParseStringKeepNulls(msg,["|"],[]);
-			key AVATAR_UUID = id;
-			string EVENT = llList2String(data,0);
-			string SITTER_NUMBER = llList2String(data,1);
-			string PROP_NAME = llList2String(data,2);
-			string PROP_OBJECT = llList2String(data,3);
-			string PROP_GROUP = llList2String(data,4);
-			string PROP_UUID = llList2String(data,5);
-			llOwnerSay(llDumpList2String([EVENT, SITTER_NUMBER, PROP_NAME, PROP_OBJECT, PROP_GROUP, PROP_UUID, AVATAR_UUID],","));
-		}
-	}
+default
+{
+    link_message(integer sender, integer num, string msg, key id)
+    {
+        if(num == 90500)
+        {
+            list data = llParseStringKeepNulls(msg, ["|"], []);
+            key AVATAR_UUID = id;
+            string EVENT = llList2String(data, 0);
+            string SITTER_NUMBER = llList2String(data, 1);
+            string PROP_NAME = llList2String(data, 2);
+            string PROP_OBJECT = llList2String(data, 3);
+            string PROP_GROUP = llList2String(data, 4);
+            string PROP_UUID = llList2String(data, 5);
+            llOwnerSay(llDumpList2String([EVENT, SITTER_NUMBER, PROP_NAME, PROP_OBJECT, PROP_GROUP, PROP_UUID, AVATAR_UUID], ","));
+        }
+    }
 }
 ```
 

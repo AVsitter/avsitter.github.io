@@ -36,7 +36,7 @@ To override the default behavior:
     - To assign the SitTarget for SET 0, SITTER 1 to a prim, type 0-1 into the description of that prim.
     - To assign the SitTarget for SET 1, SITTER 1 to a prim, type 1-1 into the description of that prim.
 
-note: You must choose prims that are <b>distinctly separate and obvious places</b> for an avatar to sit.
+    note: You must choose prims that are <b>distinctly separate and obvious places</b> for an avatar to sit.
 
 3. Repeat for all setups in the furniture that are for more than one avatar.
 4. Unlink and re-link the object or reset scripts for your changes to take effect.
@@ -81,12 +81,15 @@ If your use of AVsitter includes any prims for multiple sitters then you will al
 As an alternate to placing -1 in the prim description you can add a custom script to the prim that uses the 90150 link message to replace the SitTarget in the prim when required. e.g:
 
 ```js
-default{
-	link_message(integer sender, integer num, string msg, key id){
-		if(num==90150){
-			llSitTarget(<0,0,0.1>,ZERO_ROTATION);	
-		}
-	}
+default
+{
+    link_message(integer sender, integer num, string msg, key id)
+    {
+        if(num == 90150)
+        {
+            llSitTarget(<0,0,0.1>, ZERO_ROTATION);	
+        }
+    }
 }
 ```
 
