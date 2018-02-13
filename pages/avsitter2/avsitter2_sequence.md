@@ -10,17 +10,15 @@ folder: avsitter2
 
 The [AV]sequence script allows for sequencing of poses, sounds and chat text to create a "scene". Each sequence is composed of any number of steps. If the sequence has multiple animations then a menu is given to control the sequence. You can also have sequences  that simply play a sound or some chat, whenever a pose is played.
 
-{% include important.html content="The [AV]sequence script is specifically made for couples or single-sitter setups. It is not suitable for controlling multiple solo sequences playing at the same time within the same setup prim or for playing sequences across separate prims. See the <a href='/avsitter2_avpos.html#built-in-animation-sequence'>'built-in' sequencing method</a> for another option. For Yoga / Tai-Chi / Line Dancing see <a href='//avsitter.com/qa/815'>here</a> instead." %}
+{% include important.html content="The [AV]sequence script is specifically made for couples or single-sitter setups. It is not suitable for controlling multiple solo sequences playing at the same time within the same setup prim or for playing sequences across separate prims. See the ['built-in' sequencing method](/avsitter2_avpos.html#built-in-animation-sequence) for another option. For Yoga / Tai-Chi / Line Dancing see [here](https://avsitter.com/qa/815) instead." %}
 
 {% include note.html content="The [AV]sequence script can be found in the Plugins [BOX]." %}
 
 ### Sequence Basics
 To begin creating sequences:
 
-<ol>
-<li/>Add the [AV]sequence script and [AV]sequence_settings notecard to a prim that already has working poses.
-<li/>Design the structure of your scene by typing sequence commands into the [AV]sequence_settings notecard.
-</ol>
+1. Add the [AV]sequence script and [AV]sequence_settings notecard to a prim that already has working poses.
+2. Design the structure of your scene by typing sequence commands into the [AV]sequence_settings notecard.
 
 The following is an example [AV]sequence_settings notecard with one sequence, "Lovescene".
 
@@ -35,17 +33,17 @@ WAIT 60
 LOOP
 ```
 
-For the above sequence, you'll need to add a matching SEQUENCE line to your <a href="/avsitter2_avpos.html">AVpos</a> notecard. e.g.
+For the above sequence, you'll need to add a matching SEQUENCE line to your [AVpos](/avsitter2_avpos.html) notecard. e.g.
 
 	SEQUENCE Lovescene
 
-Alternately, make sure your <a href="/avsitter2_avpos.html">AVpos</a> notecard has a POSE or SYNC that matches the sequence name. e.g.
+Alternately, make sure your [AVpos](/avsitter2_avpos.html) notecard has a POSE or SYNC that matches the sequence name. e.g.
 
 	SYNC Lovescene|<animation_filename>
 
-{% include note.html content="Sequences in the [AV]sequence_settings notecard are triggered by <a href='/avsitter2_avpos.html#sequence'>SEQUENCE</a>, <a href='/avsitter2_avpos.html#pose'>POSE</a> or <a href='/avsitter2_avpos.html#sync'>SYNC</a> in the AVpos notecard." %}
+{% include note.html content="Sequences in the [AV]sequence_settings notecard are triggered by [SEQUENCE](/avsitter2_avpos.html#sequence), [POSE](/avsitter2_avpos.html#pose) or [SYNC](/avsitter2_avpos.html#sync) in the AVpos notecard." %}
 
-{% include important.html content="For full sequence examples see the <a href='/avsitter2_sequence.html#sequence-examples'>examples section</a> further down this page." %}
+{% include important.html content="For full sequence examples see the [examples section](/avsitter2_sequence.html#sequence-examples) further down this page." %}
 
 {% include tip.html content="Be sure to examine the sequence furniture examples provided in the AVsitter Examples [BOX]." %}
 
@@ -53,14 +51,14 @@ Alternately, make sure your <a href="/avsitter2_avpos.html">AVpos</a> notecard h
 This section outlines each of the notecard commands you can use in the [AV]sequence_settings notecard.
 
 ### SEQUENCE
-Placed at the start of a new sequence. The name must match the name of a <a href="/avsitter2_avpos.html#sequence">SEQUENCE</a>, <a href="/avsitter2_avpos.html#pose">POSE</a> or <a href="/avsitter2_avpos.html#sync">SYNC</a> line in the AVpos notecard.
+Placed at the start of a new sequence. The name must match the name of a [SEQUENCE](/avsitter2_avpos.html#sequence), [POSE](/avsitter2_avpos.html#pose) or [SYNC](/avsitter2_avpos.html#sync) line in the AVpos notecard.
 
 e.g. in your [AV]sequence_settings notecard:
 
 	SEQUENCE Lovescene
 
 ### PLAY
-Plays a <a href="/avsitter2_avpos.html#pose">POSE</a> or <a href="/avsitter2_avpos.html#sync">SYNC</a> that is defined in your AVpos notecard. It should refer to the menu name you have given your pose, not the animation file name.
+Plays a [POSE](/avsitter2_avpos.html#pose) or [SYNC](/avsitter2_avpos.html#sync) that is defined in your AVpos notecard. It should refer to the menu name you have given your pose, not the animation file name.
 
 e.g.
 
@@ -77,7 +75,7 @@ Using WAIT 0 will cause it to wait until the user manually presses the forward b
 
 	WAIT 0
 
-{% include note.html content="If PLAY and WAIT are <u>both</u> used in a sequence that is triggered by a SEQUENCE line in the AVpos notecard, the user will be given a menu to control the sequence. Otherwise, the main animation menu is returned as soon as the sequence is selected." %}
+{% include note.html content="If PLAY and WAIT are <ins>both</ins> used in a sequence that is triggered by a SEQUENCE line in the AVpos notecard, the user will be given a menu to control the sequence. Otherwise, the main animation menu is returned as soon as the sequence is selected." %}
 
 ### SAY / WHISPER
 Say or whisper some text in chat. Hearing range is 20m for say, and 5m for whisper. e.g.
@@ -160,7 +158,7 @@ Sound clips that make up a song may fit together better if the WAIT between them
 
 SL won't always play sounds on time unless sounds are pre-loaded to the avatar's viewer. The sequence script will automatically pre-load sounds if there is a WAIT of at least 2 seconds above the SOUND line. To ensure pre-loading of the first sound in the song example above, we could add a new line "WAIT 2" above the first sound.
 
-To give users an option to switch sounds off, add an <a href="/avsitter2_avpos.html#adjust">ADJUST</a> command to your AVpos notecard, using link message 90205. e.g: 
+To give users an option to switch sounds off, add an [ADJUST](/avsitter2_avpos.html#adjust) command to your AVpos notecard, using link message 90205. e.g: 
 
 	ADJUST [SOUND]|90205
 
@@ -283,7 +281,7 @@ SEQUENCE Lovescene2
 ```
 
 ### Hiding Poses
-If you don't want individual poses shown in the menu (e.g. because they are part of a sequence) then you can hide them by placing them in a <a href="/avsitter2_avpos.html#menu">MENU</a> that has no corresponding <a href="/avsitter2_avpos.html#tomenu">TOMENU</a> in the AVpos notecard, such as MENU HIDDEN. e.g:
+If you don't want individual poses shown in the menu (e.g. because they are part of a sequence) then you can hide them by placing them in a [MENU](/avsitter2_avpos.html#menu) that has no corresponding [TOMENU](/avsitter2_avpos.html#tomenu) in the AVpos notecard, such as MENU HIDDEN. e.g:
 
 ```
 MENU HIDDEN
