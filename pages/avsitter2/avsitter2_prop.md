@@ -41,7 +41,7 @@ To add props to your furniture, start with the [normal setup](/avsitter2_home.ht
 7. Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE]. Props can rez a maximum of 10 meters from the centre of the prim.
 8. Repeat for each prop.
 9. When you have finished saving all your props, click [DUMP] to output your settings into chat.
-10 .Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
+10. Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
 
 {% include note.html content="Props are defined separately for each SITTER." %}
 
@@ -107,7 +107,6 @@ The format for the notecard is:
 - **PROP1** requests permission to attach to the avatar as soon as it is rezzed.
 - **PROP2** rezzes as a regular prop and requests permission to attach to an avatar when touched.
 - **PROP3** is a special type used only by the [shared prop script examples](/avsitter2_lsl_examples_avprop.html).
-</ul>
 
 {% include note.html content="If you want to change a prop's &lt;prop_type&gt; then you'll need to edit the notecard." %}
 
