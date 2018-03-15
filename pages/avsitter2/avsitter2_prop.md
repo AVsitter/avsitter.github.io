@@ -85,6 +85,13 @@ To add props to a prim using [AV]menu:
 
 {% include tip.html content="If English is not your language, the videos have captions for automatic translation." %}
 
+### AVmenu Advanced
+
+In addition to the basic use, we can use the following command in the `AVpos` notecard: `LMSOURCE` (box version: 2.2-04)
+
+- `LMSOURCE 0` means that it accepts script link messages from the current prim only.
+- `LMSOURCE 1` means it accepts script link messages from any prim.
+
 ## Attachment Props
 Props can be set to request permission to attach to the avatar after they rez inworld. Even if your prop is an attachment it must rez inworld before it asks the avatar for permisison to attach.
 
