@@ -4,7 +4,7 @@ permalink: avsitter2_lsl_example_shared_props_by_pose.html
 ---
 
 ```js
-//  Shared prop script (alpha) v0.04a
+//  Shared prop script (alpha) v0.04b
 //
 //  - Allows props to be "shared" i.e. props will rez while any one of a number
 //    of POSE/SYNC are playing for any avatar.
@@ -18,7 +18,7 @@ permalink: avsitter2_lsl_example_shared_props_by_pose.html
 //  - All props referenced by this script should be named different from pose
 //    names (unlike basic props, which do have names that match poses).
 //
-//  - SITTER_SITTER_PROPS_N_POSES is your list of SITTER#, PROP names, and
+//  - SITTER_PROPS_N_POSES is your list of SITTER#, PROP names, and
 //    POSE/SYNC names the props are for.
 //    e.g: 0, "weights", "stand1,stand2"
 //  - SITTER with -1 indicates the prop is for all sitters (i.e. shared prop,
@@ -61,7 +61,7 @@ rez_derez()
                 list SITTER_POSES_IN_PRIM = llParseStringKeepNulls(llList2String(SITTER_POSES_BY_PRIM, k), ["|"], []);
 
                 integer found = llListFindList(SITTER_POSES_IN_PRIM, [llList2String(poses, j)]);
-                if (~found || llList2String(poses, j) == "*")
+                if ((~found) || llList2String(poses, j) == "*")
                 {
                     list SITTERS_IN_PRIM = llParseStringKeepNulls(llList2String(SITTERS_BY_PRIM, k), ["|"], []);
 
@@ -214,7 +214,7 @@ default
             integer IS_SITTER;
 
 //          someone is sitting
-            if (llGetAgentSize(llGetLinkKey(llGetNumberOfPrims())))
+            if (llGetAgentSize(llGetLinkKey(llGetNumberOfPrims())) != <0,0,0>)
             {
                 IS_SITTER = TRUE;
             }
