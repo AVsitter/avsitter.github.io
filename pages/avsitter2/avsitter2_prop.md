@@ -123,7 +123,7 @@ Possible values:
 ## Experience Keys
 Second Life has now enabled 'experiences' which will allow automatic attachments (without need for any permission request).
 
-{% include important.html content="If you compiled [AV]object from GitHub yourself, this section doesn't apply, as the script won't have the AVsitter experience by Code Violet." %}
+{% include important.html content="The packaged version of AVsitter (inworld updates and marketplace) includes the [AV]object script compiled with the AVsitter experience by Code Violet. If you compiled [AV]object from GitHub yourself, this section doesn't apply, as the script won't have the experience enabled." %}
 
 For automatic attachments to work, Users will need to enable the experience <ins>'AVsitter'</ins> (created by Code Violet) on their land. An experience may be enabled at the Estate or Parcel level by [adding it to the **'Allowed Experiences'** list](https://avsitter.com/pics/experiences.jpg). For an excellent explanation, [see this video by Froukje Hoorenbeek](https://www.youtube.com/watch?v=3gcy403FtAk). Be sure to choose [the experience created by Code Violet](https://avsitter.com/pics/experiences2.jpg) as anyone could have accidentally created an experience with the same name.
 
