@@ -513,8 +513,7 @@ Some additional notecard commands exist _([read here for more information](avsit
 - [HELPER](/avsitter2_SpecialCommands_AVpos.html#helper) - use the AVsitter1 style helper system, where you sit on the helper sticks.
 - [KFM](/avsitter2_SpecialCommands_AVpos.html#kfm) - if the object uses [llSetKeyframedMotion()](http://wiki.secondlife.com/wiki/LlSetKeyframedMotion).
 - [LROT](/avsitter2_SpecialCommands_AVpos.html#lrot) - positioning buttons to work relative to the local rotation of the root prim, instead of global co-ordinates.
-- [WARN 0](https://avsitter.github.io/avsitter2_SpecialCommands_AVpos.html#warn-0) - disable the warning when there aren't enough prims for all sitters.
-- [WARN 2](https://avsitter.github.io/avsitter2_SpecialCommands_AVpos.html#warn-2) - disable the next-owner check on prop permissions.
+- [WARN](/avsitter2_SpecialCommands_AVpos.html#warn) - disable the warning when there aren't enough prims for all sitters or checks for prop permissions.
 - DFLT 0 - don't revert to the default pose when all avatars stand (unless the last pose was a SYNC pose).
 - NOWIPE - tells the scripts not to wipe sittargets in other prims (use only if you have a good reason as you may end up with prims that have unnecessary SitTargets).
 
