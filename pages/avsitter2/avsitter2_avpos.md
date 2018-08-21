@@ -96,7 +96,7 @@ e.g.
 
 Will send a link message with integer 99, string "Press Me" and the avatar's UUID.
 
-Same as: `llMessageLinked(LINK_SET,99,"Press Me",&lt;avatar_uuid&gt;);`
+Same as: `llMessageLinked(LINK_SET,99,"Press Me",<avatar_uuid>);`
 
 e.g.
 
@@ -109,7 +109,7 @@ e.g.
 
 Will send a link message with integer 99, string "Hello" and the avatar's UUID.
 
-Same as: `llMessageLinked(LINK_SET,99,"Hello",&lt;avatar_uuid&gt;);`
+Same as: `llMessageLinked(LINK_SET,99,"Hello",<avatar_uuid>);`
 
 e.g.
 
@@ -125,7 +125,7 @@ e.g.
 	
 Will send a link message with integer [90200](/avsitter2_prop.html#message-90200--90220), string "Press Me" and the avatar's UUID.
 
-Same as: `llMessageLinked(LINK_SET,90200,"Press Me",&lt;avatar_uuid&gt;);`
+Same as: `llMessageLinked(LINK_SET,90200,"Press Me",<avatar_uuid>);`
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i>
 <b>Note:</b> If you want to replace the system's functionality while keeping the default button label, it's possible to use the zero-width space Unicode character `U+200B` to make it different to the script but identical visually. You can copy/paste that character from here: <code>(​)</code>.
