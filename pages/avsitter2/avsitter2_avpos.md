@@ -88,6 +88,7 @@ This creates a button that can be used for customization of your creations, so u
 - If &lt;custom_integer&gt; is empty then 90200 will be used (90200 is used specifically by the [AVprop plugin](/avsitter2_prop.html)).
 - If &lt;custom_integer&gt; is set to [90005](/avsitter2_scripting.html#message-90005) then the menu will be returned automatically.
 - If &lt;custom_key&gt; is empty then the avatar's UUID will be used as the key. If a different avatar is controlling the menu with [AVcontrol](/avsitter2_control.html) then the key will include the controller and sitter UUIDs, separated by the pipe (`|`) character.
+- Two special values have been added for &lt;custom_key&gt;: `<C>` and `<S>`, which will be replaced with CONTROLLER and SITTER respectively. This is to avoid issues with generic scripts that respond to a link message without being specifically designed for AVsitter, because they don't expect the extra UUID.
 - If &lt;menu_name&gt; is empty, then an empty button will be created.
 
 e.g.
@@ -285,6 +286,10 @@ The link message will send the &lt;button_name&gt;, &lt;custom_integer&gt;, and 
 
 Will add the buttons [COLOR] and [TEXTURE] to the [ADJUST] menu.
 
+The UUID of the avatar is also sent. When a different avatar is controlling the menu with [AVcontrol](/avsitter2_control.html), then [ADJUST] sends the controller and sitter UUIDs, separated by the pipe (`|`) character.
+
+To override this and provide compatibility with generic scripts that respond to link messages, see [AMENU](#amenu).
+
 ### AMENU
 Placed once at the top of the notecard, enables and disables the [ADJUST] menu.
 
@@ -299,6 +304,20 @@ Adds [ADJUST] button only at the top level of the menu.
 	AMENU 2
 
 The default. Adds [ADJUST] in all submenus, not just the top level of the menu.
+
+    AMENU 4
+
+Same as `AMENU 0`, but custom buttons under the [ADJUST] menu will not send the second UUID (see [ADJUST](#adjust))
+
+    AMENU 5
+
+Same as `AMENU 1`, but custom buttons under the [ADJUST] menu will not send the second UUID (see [ADJUST](#adjust))
+
+    AMENU 6
+
+Same as `AMENU 2`, but custom buttons under the [ADJUST] menu will not send the second UUID (see [ADJUST](#adjust))
+
+(As we can see, what we're doing is adding 4 when we don't want to send the second UUID.)
 
 {% include note.html content="You can override AMENU 0 or AMENU 1 and make [ADJUST] appear for a specific submenu (see [here](http://avsitter.com/qa/652))." %}
 
