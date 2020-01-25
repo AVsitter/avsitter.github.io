@@ -20,28 +20,28 @@ permalink: avsitter2_lsl_example_looped_sound_by_button.html
 ******************************************************************/
 
 string button_name = "Fire Crackle";
-string sound = "fire_crackle";	
+string sound = "fire_crackle";
 float volume = 1.0;
 
 integer playing;
 
 default {
-	state_entry(){
-		llStopSound(); //stop sounds
-	}
-	link_message(integer sender, integer num, string msg, key id){
-		if(msg==button_name){
-			if(playing){
-				llStopSound(); //stop sounds
-				llRegionSayTo(id,0,"Sound switched off.");
-			}
-			else{
-				llLoopSound(sound,volume); //start looping the sound
-				llRegionSayTo(id,0,"Sound switched on.");
-			}
-			llMessageLinked(LINK_SET,90005,"",id); // give back the menu
-			playing=!playing;
-		}
-	}
+    state_entry(){
+        llStopSound(); //stop sounds
+    }
+    link_message(integer sender, integer num, string msg, key id){
+        if(msg==button_name){
+            if(playing){
+                llStopSound(); //stop sounds
+                llRegionSayTo(id,0,"Sound switched off.");
+            }
+            else{
+                llLoopSound(sound,volume); //start looping the sound
+                llRegionSayTo(id,0,"Sound switched on.");
+            }
+            llMessageLinked(LINK_SET,90005,"",id); // give back the menu
+            playing=!playing;
+        }
+    }
 }
 ```

@@ -16,10 +16,10 @@ permalink: avsitter2_lsl_example_rez_same_prop_for_several_poses.html
 *
 * 2. Change the PROP's <trigger_name> in the notecard to be a completely new name.
 * The new name should *NOT* match a pose name so the prop will rez *ONLY* by this script.
-*	   e.g. PROP PicnicProp...
+*      e.g. PROP PicnicProp...
 *
 * 3. Edit the "prop_trigger" string below to match this name.
-*	   e.g. string prop_trigger = "PicnicProp";
+*      e.g. string prop_trigger = "PicnicProp";
 *
 * 4. Edit "poses" list below to include all the POSE or SYNC that you want to rez the prop for.
 * 
@@ -42,33 +42,33 @@ integer SITTER = 0;
 integer rezzed;
 
 default{
-	link_message(integer sender, integer num, string msg, key id){
-		if(sender==llGetLinkNumber()){
-			if(num==90045){
-				list data = llParseStringKeepNulls(msg,["|"],[]);
-				string POSE_NAME = llList2String(data,1);
-				integer SITTER_NUMBER = (integer)llList2String(data,0);
-				key uuid = "";
-				if(SITTER!=-1){
-					uuid=id;
-				}
-				if(SITTER_NUMBER==SITTER || SITTER==-1){
-					if(llListFindList(poses,[POSE_NAME])!=-1){
-						if(rezzed==FALSE){
-							llMessageLinked(LINK_THIS,90220,prop_trigger,uuid);
-							rezzed=TRUE;	
-						}
-					}
-					else{
-						llMessageLinked(LINK_THIS,90220,"remprop_"+prop_trigger,uuid); // clear the prop
-						rezzed=FALSE;	
-					}
-				}
-			}
-			else if((num==90065 && (integer)msg==SITTER) || num==90030){ //sitter stands or swaps
-				rezzed=FALSE;
-			}
-		}
-	}
+    link_message(integer sender, integer num, string msg, key id){
+        if(sender==llGetLinkNumber()){
+            if(num==90045){
+                list data = llParseStringKeepNulls(msg,["|"],[]);
+                string POSE_NAME = llList2String(data,1);
+                integer SITTER_NUMBER = (integer)llList2String(data,0);
+                key uuid = "";
+                if(SITTER!=-1){
+                    uuid=id;
+                }
+                if(SITTER_NUMBER==SITTER || SITTER==-1){
+                    if(llListFindList(poses,[POSE_NAME])!=-1){
+                        if(rezzed==FALSE){
+                            llMessageLinked(LINK_THIS,90220,prop_trigger,uuid);
+                            rezzed=TRUE;
+                        }
+                    }
+                    else{
+                        llMessageLinked(LINK_THIS,90220,"remprop_"+prop_trigger,uuid); // clear the prop
+                        rezzed=FALSE;
+                    }
+                }
+            }
+            else if((num==90065 && (integer)msg==SITTER) || num==90030){ //sitter stands or swaps
+                rezzed=FALSE;
+            }
+        }
+    }
 }
 ```

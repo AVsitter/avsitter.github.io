@@ -16,14 +16,14 @@ integer SITTER = 0;
 default{
     link_message(integer sender, integer num, string msg, key id){
         if(num==90045){
-        	list data = llParseStringKeepNulls(msg,["|"],[]);
-        	integer SITTER_NUMBER = (integer)llList2String(data,0);
-        	string POSE_NAME = llList2String(data,1);
-        	if(SITTER_NUMBER==SITTER || SITTER==-1){
-        		if(POSE_NAME==posename){
-					llGiveInventory(id,itemname);
-        		}
-        	}
+            list data = llParseStringKeepNulls(msg,["|"],[]);
+            integer SITTER_NUMBER = (integer)llList2String(data,0);
+            string POSE_NAME = llList2String(data,1);
+            if(SITTER_NUMBER==SITTER || SITTER==-1){
+                if(POSE_NAME==posename){
+                    llGiveInventory(id,itemname);
+                }
+            }
         }
     }
 }

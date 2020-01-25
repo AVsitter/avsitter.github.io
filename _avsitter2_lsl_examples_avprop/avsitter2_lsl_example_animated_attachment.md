@@ -18,40 +18,40 @@ float TIMER = 10.0; // how often to play the animation
 ******************************************************************/
 
 check_attached(){
-	if(llGetAttached()){
-		llRequestPermissions(llGetOwner(),PERMISSION_TRIGGER_ANIMATION);
-	}
-	else{
-		integer perms = llGetPermissions();
-		if(perms & PERMISSION_TRIGGER_ANIMATION){
-			llStopAnimation(llGetInventoryName(INVENTORY_ANIMATION,0));
-		}
-		llSetTimerEvent(0);
-	}	
+    if(llGetAttached()){
+        llRequestPermissions(llGetOwner(),PERMISSION_TRIGGER_ANIMATION);
+    }
+    else{
+        integer perms = llGetPermissions();
+        if(perms & PERMISSION_TRIGGER_ANIMATION){
+            llStopAnimation(llGetInventoryName(INVENTORY_ANIMATION,0));
+        }
+        llSetTimerEvent(0);
+    }
 }
 
 default{
-	attach(key id){
- 		check_attached();
-	}
-	
-	timer(){
-		if(llGetAttached()){
-			integer perms = llGetPermissions();
-			if(perms & PERMISSION_TRIGGER_ANIMATION){
-				llStartAnimation(llGetInventoryName(INVENTORY_ANIMATION,0));
-			}
-		}
-	}
-	
-	run_time_permissions(integer perm){
-		if(perm & PERMISSION_TRIGGER_ANIMATION){
-			llSetTimerEvent(TIMER);
-		}
-	}
-	
-	on_rez(integer x){
-		check_attached();
-	}
+    attach(key id){
+        check_attached();
+    }
+
+    timer(){
+        if(llGetAttached()){
+            integer perms = llGetPermissions();
+            if(perms & PERMISSION_TRIGGER_ANIMATION){
+                llStartAnimation(llGetInventoryName(INVENTORY_ANIMATION,0));
+            }
+        }
+    }
+
+    run_time_permissions(integer perm){
+        if(perm & PERMISSION_TRIGGER_ANIMATION){
+            llSetTimerEvent(TIMER);
+        }
+    }
+
+    on_rez(integer x){
+        check_attached();
+    }
 }
 ```

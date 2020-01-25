@@ -66,11 +66,11 @@ The AVpos notecard can include the following RLV related settings, placed at the
 
 **RLV** - if the RLV capture and menu restrictions should be enabled (default is 1). Switch off to adjust poses. e.g.
 
-	RLV 0
+    RLV 0
 
 **ROLES** - the roles (either 'D' for 'Dominant' or 'S' for 'Submissive') for each avatar, separated by the pipe (`|`) character. e.g. 
 
-	ROLES D|S
+    ROLES D|S
 
 The number of entries must correspond exactly to the number of SITTER lines in the AVpos notecard. For multiple solo-sitter setups in child prims the entries must correspond to the number of separate solo-sitter prims and must all be defined as 'S'.
 
@@ -86,7 +86,7 @@ The number of entries must correspond exactly to the number of SITTER lines in t
 
 e.g.
 
-	ONTOUCH CAPTURE
+    ONTOUCH CAPTURE
 
 **ONSIT** - what happens when someone sits voluntarily. Options are:
 
@@ -98,51 +98,51 @@ e.g.
 
 e.g.
 
-	ONSIT ASK
+    ONSIT ASK
 
 {% include note.html content="When using ONSIT ASK or ONSIT ASKONLY, the regular [SWAP] button is removed from the menu." %}
 
 **ONCAPTURE** - a list of [RLV commands](http://wiki.secondlife.com/wiki/LSL_Protocol/RestrainedLoveAPI) to issue when an avatar is captured, each separated by the pipe (`|`) character (default is `@unsit=n`). e.g.
 
-	ONCAPTURE @unsit=n|@fartouch=n|@rez=n|@edit=n|@acceptpermission=add
+    ONCAPTURE @unsit=n|@fartouch=n|@rez=n|@edit=n|@acceptpermission=add
 
 **ONRELEASE** - a list of [RLV commands](http://wiki.secondlife.com/wiki/LSL_Protocol/RestrainedLoveAPI) to issue when an avatar is released, each separated by the pipe (`|`) character (default is `@unsit=force`). If you don't want to unsit avatars when they are released then define ONRELEASE <ins>not</ins> to use `@unsit=force`. e.g.
 
-	ONRELEASE @unsit=y
+    ONRELEASE @unsit=y
 
 **WAITPOSE** - optional POSE to play while waiting for the avatar to choose their role. Only applicable when using ONSIT ASK. e.g.
 
-	WAITPOSE standby
+    WAITPOSE standby
 
 When used, a pose of the specified name (e.g. 'POSE standby') should be present in all sitter menus. If you don't want the WAITPOSE showing in the menu then you can place it in a MENU that has no corresponding TOMENU in the AVpos notecard, as described [here](avsitter2_sequence.html#hiding-poses).
 
 **DOMPOSE** - optional POSE to play when an avatar chooses the 'D' role. Only applicable when using ONSIT ASK. e.g.
 
-	DOMPOSE Dom1
+    DOMPOSE Dom1
 
 **SUBPOSE** - optional POSE to play when an avatar chooses the 'S' role. Only applicable when using ONSIT ASK. e.g.
 
-	SUBPOSE cross
+    SUBPOSE cross
 
 **RECAPTURE** - if captives should be automatically re-captured if they log out before being released (default is 0). e.g.
 
-	RECAPTURE 1
+    RECAPTURE 1
 
 {% include important.html content="Note that for recapture to work, it must be supported by the RLV Relay being used (see [here](http://avsitter.com/qa/955))." %}
 
 **TIMELOCK** - the initial setting for the timelock in minutes (default is 0). e.g.
 
-	TIMELOCK 5
+    TIMELOCK 5
 
 **SUBCONTROL** - if submissives should be allowed to access their own pose menu (default is 0). e.g.
 
-	SUBCONTROL 1
+    SUBCONTROL 1
 
 You can also put `@touchworld=n` in your ONCAPTURE list to prevent submissives touching the furniture for menu when captured. 
 
 **HTEXT** - if hovertext should be set on the root prim showing the RLV status (default is 1). Offset height by using a number >1. e.g.
 
-	HTEXT 0 or HTEXT 10
+    HTEXT 0 or HTEXT 10
 
 If you want to show the hovertext on a different prim then use HTEXT 0 and link message 90207 in your own script. e.g:
 

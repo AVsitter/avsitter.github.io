@@ -32,7 +32,7 @@ You can edit the notecard to add/remove camera settings.
 
 The format for the notecard is:
 
-	CAMERA <trigger_name>|<camera_position>|<camera_rotation>
+    CAMERA <trigger_name>|<camera_position>|<camera_rotation>
 
 &lt;trigger_name&gt; must match the menu name of the pose that you want to trigger the camera setting.
 
@@ -40,13 +40,13 @@ The format for the notecard is:
 
 e.g.
 
-	CAMERA Sit1|<-0.02579, -2.34928, 1.61621>|<-0.00772, -1.49104, 1.10328>
+    CAMERA Sit1|<-0.02579, -2.34928, 1.61621>|<-0.00772, -1.49104, 1.10328>
 
 You can set a camera setting to be the default for all poses by renaming its &lt;trigger_name&gt; to DEFAULT (uppercase).
 
 e.g.
 
-	CAMERA DEFAULT|<-0.02579, -2.34928, 1.61621>|<-0.00772, -1.49104, 1.10328>
+    CAMERA DEFAULT|<-0.02579, -2.34928, 1.61621>|<-0.00772, -1.49104, 1.10328>
 
 ### Example Notecard
 

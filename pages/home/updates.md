@@ -64,12 +64,12 @@ If you have purchased AVsitter from Kitely Market, updates can be collected by v
 
 ### AVsitter2, box 2.1-10 - 07 Nov 2015
 - Several changes to AVcontrol plugin including the following updates to the <a href="/avsitter2_control.html">AVcontrol instructions</a>:
-	- Added ONRELEASE and ONSIT ASKONLY options.
-	- Default is now to unsit RLV captives when released (if you don't want this see info for ONRELEASE).
-	- If a Dom is sitting, then non-sitting avatars can't control the menu even if furniture is 'unlocked'.
-	- SWAP now enabled by default unless using ONSIT ASK or ONSIT ASKONLY.
-	- Added new <a href="/avsitter2_examples.html">AVcontrol examples</a>.
-	- Updated scripts include: [AV]sitA, [AV]sitB, [AV]root-security, [AV]root-control, [AV]root-RLV, [AV]root-RLV-extra
+    - Added ONRELEASE and ONSIT ASKONLY options.
+    - Default is now to unsit RLV captives when released (if you don't want this see info for ONRELEASE).
+    - If a Dom is sitting, then non-sitting avatars can't control the menu even if furniture is 'unlocked'.
+    - SWAP now enabled by default unless using ONSIT ASK or ONSIT ASKONLY.
+    - Added new <a href="/avsitter2_examples.html">AVcontrol examples</a>.
+    - Updated scripts include: [AV]sitA, [AV]sitB, [AV]root-security, [AV]root-control, [AV]root-RLV, [AV]root-RLV-extra
 - [AV]sequence - only stops sounds if the last played sequence includes sounds (for compatability with other sound scripts).
 - [AV]camera - added <a href="/avsitter2_camera.html">[AV]camera script</a> to the Utilities box.
 

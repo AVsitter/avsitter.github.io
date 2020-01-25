@@ -32,7 +32,7 @@ Facial expressions added via the [NEW] menu will simply repeat the expression ev
 
 The format for the notecard is:
 
-	ANIM <trigger_name>|<expression>|<duration>|<expression>|<duration>|<expression>|<duration> ...
+    ANIM <trigger_name>|<expression>|<duration>|<expression>|<duration>|<expression>|<duration> ...
 
 &lt;trigger_name&gt; must match the menu name of the pose that you want to trigger the facial expression sequence.
 
@@ -40,47 +40,47 @@ The format for the notecard is:
 
 For example in the following notecard line:
 
-	ANIM Anim1|express_smile|1
+    ANIM Anim1|express_smile|1
 
 When the "Anim1" pose is selected from the menu the script will play the expression "express_smile" every 1 second.
 
 Another example:
 
-	ANIM Happy|express_laugh_emote|5|express_smile|1|express_wink_emote|2
+    ANIM Happy|express_laugh_emote|5|express_smile|1|express_wink_emote|2
 
 When the "Happy" pose is selected from the menu the script will play the expression "express_laugh_emote". Then after 5 seconds play "express_smile", then "express_wink_emote", then loop to the start after 2 seconds.
 
 Another example:
 
-	ANIM Sleep|express_smile|1|express_disdain|1
+    ANIM Sleep|express_smile|1|express_disdain|1
 
 When the "Sleep" pose is selected, this alternates between "express_smile" and "express_disdain" every second. SL does not offer a facial expression for sleeping but combining these animations gives a close approximation.
 
 Usually a sequence will loop, but if a dash ( - ) is entered instead of a duration then the sequence will stop after playing. e.g.
 
-	ANIM Happy|express_laugh_emote|5|express_smile|-
+    ANIM Happy|express_laugh_emote|5|express_smile|-
 
 If you want to continually re-apply an expression every second, then begin it's duration with a dash ( - ). e.g:
 
-	ANIM Happy|express_laugh_emote|-5|express_smile|-3
+    ANIM Happy|express_laugh_emote|-5|express_smile|-3
 
 You can use 'none' for the name of an animation file if you need to create a pause. e.g.
 
-	ANIM Happy|express_laugh_emote|-5|none|5
+    ANIM Happy|express_laugh_emote|-5|none|5
 
 The facial expressions available in SL include:
 
-	express_afraid_emote, express_anger_emote, express_laugh_emote, express_bored_emote, express_cry_emote, express_embarrassed_emote, express_sad_emote, express_toothsmile, express_smile, express_surprise_emote, express_worry_emote, express_repulsed_emote, express_shrug_emote, express_wink_emote, express_disdain, express_frown, express_kiss, express_open_mouth, express_tongue_out
+    express_afraid_emote, express_anger_emote, express_laugh_emote, express_bored_emote, express_cry_emote, express_embarrassed_emote, express_sad_emote, express_toothsmile, express_smile, express_surprise_emote, express_worry_emote, express_repulsed_emote, express_shrug_emote, express_wink_emote, express_disdain, express_frown, express_kiss, express_open_mouth, express_tongue_out
 
 In addition to SL facial expressions, you can also use any (non looped) animation that is in the furniture. e.g:
 
-	ANIM Cheer|ArmsUp|-
+    ANIM Cheer|ArmsUp|-
 
 If you want to re-use an ANIM line that is already defined for the same sitter, then simply refer to that line instead of creating a new sequence. Requires version [2.1-12.05](http://avsitter.com/updates) or later. e.g.:
 
-	ANIM pose1|express_laugh_emote|5|express_smile|1
-	...
-	ANIM pose2|pose1
+    ANIM pose1|express_laugh_emote|5|express_smile|1
+    ...
+    ANIM pose2|pose1
 
 {% include note.html content="The full list of internal SL animations can be found [here](http://wiki.secondlife.com/wiki/Internal_Animations), and examples of the facial expressions [here](http://wiki.secondlife.com/wiki/File:SL_face_expressions.jpg)." %}
 

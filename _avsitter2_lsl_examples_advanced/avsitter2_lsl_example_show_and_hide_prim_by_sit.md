@@ -11,19 +11,19 @@ permalink: avsitter2_lsl_example_show_and_hide_prim_by_sit.html
 ******************************************************************/
 
 default{
-	changed(integer change){
-		if(change & CHANGED_LINK){
-			// if no avatars sitting
-			if(llGetAgentSize(llGetLinkKey(llGetNumberOfPrims()))==ZERO_VECTOR){
-				//make prim visible
-				llSetAlpha(1,ALL_SIDES);
-			}
-			// if avatars are sitting
-			else{
-				//make prim invisible
-				llSetAlpha(0,ALL_SIDES);	
-			}
-		}
-	}
+    changed(integer change){
+        if(change & CHANGED_LINK){
+            // if no avatars sitting
+            if(llGetAgentSize(llGetLinkKey(llGetNumberOfPrims()))==ZERO_VECTOR){
+                //make prim visible
+                llSetAlpha(1,ALL_SIDES);
+            }
+            // if avatars are sitting
+            else{
+                //make prim invisible
+                llSetAlpha(0,ALL_SIDES);
+            }
+        }
+    }
 }
 ```
