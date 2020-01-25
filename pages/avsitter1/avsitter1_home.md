@@ -355,19 +355,19 @@ Below are listed the various link messages and then a selection of example scrip
 -  <b>90000</b> - Plays an animation. Sending a link message of 90000 will play the animation of the name you give in the link message in all scripts that have it in their menu. If the animation is a SYNC, you must prefix the name given in the link message with "S:", i.e.
 
    ```
-    llMessageLinked(LINK_SET,90000,"S:Cuddle","");
+   llMessageLinked(LINK_SET,90000,"S:Cuddle","");
    ```
 -  <b>90005</b> - Give menu. Sending this link message with an avatar key will give the animation menu to that avatar if they are sitting, i.e.
 
    ```
-    llMessageLinked(LINK_SET,90005,"",<AVATAR's UUID>);
+   llMessageLinked(LINK_SET,90005,"",<AVATAR's UUID>);
    ```
    {% include note.html content="If you are using the MTYPE 3 option then 90005 will not work unless you send an integer greater than 2 in the string component of the link message." %}
 
 -  <b>90200</b> - If the "AVplus" script exists in the prim this link message is sent from, then "AVplus" will attempt to rez a PROP, if one is defined with the same name as the string text sent, i.e.
 
    ```
-    llMessageLinked(LINK_SET,90200,"guitar","");
+   llMessageLinked(LINK_SET,90200,"guitar","");
    ```
 
 ## SCRIPT EXAMPLES
