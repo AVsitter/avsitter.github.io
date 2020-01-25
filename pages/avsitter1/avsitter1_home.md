@@ -102,25 +102,25 @@ The following are notecard commands you can use:
 
 <b>POSE</b> - Use this command to add an animation. The format is: 
 
-	POSE <name in menu>|<animation file name>
+    POSE <name in menu>|<animation file name>
 
 {% include tip.html content="Keeping your animation names and menu names short will conserve script memory!" %}
 
 <b>SYNC</b> - Use this command for couple/group animations (e.g. cuddles, kisses). When a SYNC animation is selected by an avatar it will play all SYNC animations that have the same &lt;name in menu&gt;, even if they have different &lt;animation file names&gt;. The format is: 
 
-	SYNC <name in menu>|<animation file name>
+    SYNC <name in menu>|<animation file name>
 
 <b>TOMENU</b> - This creates a link to a submenu. All MENU commands should have a corresponding TOMENU line above them (unless you want the items in that submenu to be hidden from the menu for some reason). The format is: 
 
-	TOMENU <your menu name>
+    TOMENU <your menu name>
 
 <b>MENU</b> - Begins a submenu. All POSE, SYNC, TOMENU and BUTTON commands that come under the MENU line will be placed in that submenu. The format is: 
 
-	MENU <your menu name>
+    MENU <your menu name>
 
 <b>BUTTON</b> - This creates a button that can be used for customization of your creations, so users can do more than just choose animations with your menus. When selected by an avatar, a button will send a "link message" that can be received by your own scripts. The format is: 
 
-	BUTTON <name in menu>|<custom integer>
+    BUTTON <name in menu>|<custom integer>
 
 The link message will include the &lt;name in menu&gt;, &lt;custom_integer&gt;, and the UUID of the avatar that pressed the button. See the <a href="http://wiki.secondlife.com/wiki/LSL_Portal">Linden Lab Script Reference</a> for more information on "link messages".
 
@@ -138,7 +138,7 @@ The link message will include the &lt;name in menu&gt;, &lt;custom_integer&gt;, 
 
 <b>SITTER</b> - If you are using the setup style where all your "AVsit" scripts are in one prim then the SITTER command is used to separate your notecard sections. The number of SITTER sections will match the number of "AVsit" scripts. The format is: 
 
-	SITTER <n>|<optional text>
+    SITTER <n>|<optional text>
 
 where &lt;n&gt; matches the numbering of the AVsit scripts.
 
@@ -161,8 +161,8 @@ If your setup does not include an "AVsit" script inside the root prim of your ob
 ## "Root-Security" SCRIPT
 
 If you wish to include an optional security function, place this script in the root prim of your object. If you would otherwise be using the "Root" script, delete it and replace it with this. If you use this script you must add "MTYPE 3" to your AVpos notecard. You also need to add a button to each menu in the form of 
-	
-	BUTTON [SECURITY]|0
+    
+    BUTTON [SECURITY]|0
 
 in all SITTER sections of your notecard, so that the owner can change the security level. Security cycles between ALL, GROUP ONLY, and OWNER ONLY. Avatars who do not meet the security level will be unseated.
 
@@ -221,7 +221,7 @@ To set up an object as a prop, first place the "AVprop" script inside the root p
 
 The format for the notecard is:
 
-	PROP <menu name>|<object name>|<position>|<rotation>
+    PROP <menu name>|<object name>|<position>|<rotation>
 
 &lt;menu name&gt; must match the name of the POSE or SYNC that you want to trigger the prop.
 
@@ -229,17 +229,17 @@ The format for the notecard is:
 
 An example that rezzes an object "guitar" when the pose "Sing1" is played would be:
 
-	PROP Sing1|guitar|<1,0,0>|<0,0,0>
+    PROP Sing1|guitar|<1,0,0>|<0,0,0>
 
 Props which are triggered by selecting a pose are automatically removed when another pose is selected from the menu, or when all sitters stand up.
 
 An alternative method of rezzing props is to create a BUTTON in your menu (<a href="/avsitter1.html#notecard-commands">see Notecard Commands section above</a>) and use the special link number 90200 along with the <menu name> of your prop. This will rez the prop with the corresponding &lt;object name&gt; when the BUTTON is pressed. For example:
 
-	BUTTON Rez Guitar|90200
+    BUTTON Rez Guitar|90200
 
 then
 
-	PROP Rez Guitar|guitar|<1,0,0>|<0,0,0>
+    PROP Rez Guitar|guitar|<1,0,0>|<0,0,0>
 
 When the "Rez Guitar" button is pressed, the guitar prop will rez.
 
@@ -249,7 +249,7 @@ Props rezzed using a BUTTON stay rezzed until another prop is rezzed, or until a
 
 If you want to clear props with a BUTTON then simply use link message 90200 to refer to a prop that does not exist. For example:
 
-	BUTTON ClearProps|90200
+    BUTTON ClearProps|90200
 
 ### PLAYING SOUNDS
 
@@ -257,7 +257,7 @@ Through the "[EXTRAS]" menu, choose "[SOUNDS]" and then select a sound from the 
 
 The format for the notecard is:
 
-	SOUND <pose name>|<sound>|<loop sound>|<volume>
+    SOUND <pose name>|<sound>|<loop sound>|<volume>
 
 &lt;pose name&gt; must match the name of the POSE or SYNC that you want to trigger the sound.
 
@@ -273,7 +273,7 @@ Through the "[EXTRAS]" menu, choose "[ITEMS]" and then select an object from the
 
 The format for the notecard is:
 
-	ITEM <menu name>|<object name>|<animation file>
+    ITEM <menu name>|<object name>|<animation file>
 
 &lt;menu name&gt; must match the name of the POSE or SYNC that you want to trigger the item.
 
@@ -283,11 +283,11 @@ The format for the notecard is:
 
 An alternative method of giving items is to create a BUTTON in your menu (<a href="/avsitter1.html#notecard-commands">see Notecard Commands section above</a>) and use the special link number 90045 along with the &lt;menu name&gt; of your item. This will give the item when BUTTON is pressed. For example:
 
-	BUTTON Give Item|90045
+    BUTTON Give Item|90045
 
 then
 
-	ITEM Give Item|Object
+    ITEM Give Item|Object
 
 A completely alternate method to give items is to use the "Menu Button to Give item" script from the <a href="/avsitter1.html#script-examples">scripting examples</a>.
 
@@ -297,7 +297,7 @@ Through the "[EXTRAS]" menu, choose "[FACES]" and then select an expression from
 
 The format for the notecard is:
 
-	ANIM <pose name>|<animation sequence>|<animation file>
+    ANIM <pose name>|<animation sequence>|<animation file>
 
 &lt;pose name&gt; must match the name of the POSE or SYNC that you want to trigger the sequence.
 
@@ -307,13 +307,13 @@ The format for the notecard is:
 
 For example in the following notecard line:
 
-	ANIM Fun1|express_laugh_emote:5:express_tongue_out:1|fun2_f
+    ANIM Fun1|express_laugh_emote:5:express_tongue_out:1|fun2_f
 
 When the "Fun1" pose is selected from the menu and the animation file played on the avatar is "fun2_f", then AVplus will play the animation "express_laugh_emote" on that avatar, then wait 5 seconds, play "express_tongue_out", then wait 1 second, then start again.
 
 Another example:
 
-	ANIM Sleep1|express_smile:1:express_disdain:1
+    ANIM Sleep1|express_smile:1:express_disdain:1
 
 When the "Sleep1" pose is selected, this alternates between "express_smile" and "express_disdain" every second, and appears to give a smooth continuous facial expression for sleeping, with eyes closed.
 
@@ -321,7 +321,7 @@ Any animation can be specified in these sequences. Also, for the full list of in
 
 The facial expresssions available in SL include:
 
-	express_afraid_emote, express_anger_emote, express_laugh_emote, express_bored_emote, express_cry_emote, express_embarrassed_emote, express_sad_emote, express_toothsmile, express_smile, express_surprise_emote, express_worry_emote, express_repulsed_emote, express_shrug_emote, express_wink_emote, express_disdain, express_frown, express_kiss, express_open_mouth, express_tongue_out
+    express_afraid_emote, express_anger_emote, express_laugh_emote, express_bored_emote, express_cry_emote, express_embarrassed_emote, express_sad_emote, express_toothsmile, express_smile, express_surprise_emote, express_worry_emote, express_repulsed_emote, express_shrug_emote, express_wink_emote, express_disdain, express_frown, express_kiss, express_open_mouth, express_tongue_out
 
 ### SETTING THE CAMERA
 
@@ -355,19 +355,19 @@ Below are listed the various link messages and then a selection of example scrip
 -  <b>90000</b> - Plays an animation. Sending a link message of 90000 will play the animation of the name you give in the link message in all scripts that have it in their menu. If the animation is a SYNC, you must prefix the name given in the link message with "S:", i.e. 
 
    ```
-	llMessageLinked(LINK_SET,90000,"S:Cuddle","");
+    llMessageLinked(LINK_SET,90000,"S:Cuddle","");
    ```
 -  <b>90005</b> - Give menu. Sending this link message with an avatar key will give the animation menu to that avatar if they are sitting, i.e. 
 
    ```
-	llMessageLinked(LINK_SET,90005,"",<AVATAR's UUID>);
+    llMessageLinked(LINK_SET,90005,"",<AVATAR's UUID>);
    ```
    {% include note.html content="If you are using the MTYPE 3 option then 90005 will not work unless you send an integer greater than 2 in the string component of the link message." %}
 
 -  <b>90200</b> - If the "AVplus" script exists in the prim this link message is sent from, then "AVplus" will attempt to rez a PROP, if one is defined with the same name as the string text sent, i.e. 
 
    ```
-	llMessageLinked(LINK_SET,90200,"guitar","");
+    llMessageLinked(LINK_SET,90200,"guitar","");
    ```
 
 ## SCRIPT EXAMPLES

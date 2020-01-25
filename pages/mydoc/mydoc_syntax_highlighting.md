@@ -19,12 +19,12 @@ import java.util.Scanner;
 public class ScannerAndKeyboard
 {
 
-	public static void main(String[] args)
-	{	Scanner s = new Scanner(System.in);
-		System.out.print( "Enter your name: "  );
-		String name = s.nextLine();
-		System.out.println( "Hello " + name + "!" );
-	}
+    public static void main(String[] args)
+    {   Scanner s = new Scanner(System.in);
+        System.out.print( "Enter your name: "  );
+        String name = s.nextLine();
+        System.out.println( "Hello " + name + "!" );
+    }
 }
 ```
 </pre>
@@ -37,12 +37,12 @@ import java.util.Scanner;
 public class ScannerAndKeyboard
 {
 
-	public static void main(String[] args)
-	{	Scanner s = new Scanner(System.in);
-		System.out.print( "Enter your name: "  );
-		String name = s.nextLine();
-		System.out.println( "Hello " + name + "!" );
-	}
+    public static void main(String[] args)
+    {   Scanner s = new Scanner(System.in);
+        System.out.print( "Enter your name: "  );
+        String name = s.nextLine();
+        System.out.println( "Hello " + name + "!" );
+    }
 }
 ```
 
@@ -57,12 +57,12 @@ import java.util.Scanner;
 public class ScannerAndKeyboard
 {
 
-	public static void main(String[] args)
-	{	Scanner s = new Scanner(System.in);
-		System.out.print( "Enter your name: "  );
-		String name = s.nextLine();
-		System.out.println( "Hello " + name + "!" );
-	}
+    public static void main(String[] args)
+    {   Scanner s = new Scanner(System.in);
+        System.out.print( "Enter your name: "  );
+        String name = s.nextLine();
+        System.out.println( "Hello " + name + "!" );
+    }
 }
 {% endhighlight %}{% endraw %}
 </pre> 
@@ -75,12 +75,12 @@ import java.util.Scanner;
 public class ScannerAndKeyboard
 {
 
-	public static void main(String[] args)
-	{	Scanner s = new Scanner(System.in);
-		System.out.print( "Enter your name: "  );
-		String name = s.nextLine();
-		System.out.println( "Hello " + name + "!" );
-	}
+    public static void main(String[] args)
+    {   Scanner s = new Scanner(System.in);
+        System.out.print( "Enter your name: "  );
+        String name = s.nextLine();
+        System.out.println( "Hello " + name + "!" );
+    }
 }
 {% endhighlight %}
 

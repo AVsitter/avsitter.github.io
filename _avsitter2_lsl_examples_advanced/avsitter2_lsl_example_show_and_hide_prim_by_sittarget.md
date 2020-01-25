@@ -10,15 +10,15 @@ permalink: avsitter2_lsl_example_show_and_hide_prim_by_sittarget.html
 ******************************************************************/
 
 default{
-	changed(integer change){
-		if(change & CHANGED_LINK){
-			if(llAvatarOnSitTarget() == NULL_KEY){
-				llSetAlpha(1,ALL_SIDES);//visible
-			}
-			else{
-				llSetAlpha(0,ALL_SIDES);//invisible	
-			}
-		}
-	}
+    changed(integer change){
+        if(change & CHANGED_LINK){
+            if(llAvatarOnSitTarget() == NULL_KEY){
+                llSetAlpha(1,ALL_SIDES);//visible
+            }
+            else{
+                llSetAlpha(0,ALL_SIDES);//invisible
+            }
+        }
+    }
 }
 ```

@@ -17,13 +17,13 @@ integer SITTER = -1;
 default{
     link_message(integer sender, integer num, string msg, key id){
         if(num==90045){
-        	list data = llParseStringKeepNulls(msg,["|"],[]);
-        	integer SITTER_NUMBER = (integer)llList2String(data,0);
+            list data = llParseStringKeepNulls(msg,["|"],[]);
+            integer SITTER_NUMBER = (integer)llList2String(data,0);
             if(SITTER_NUMBER==SITTER || SITTER==-1){
-            	if(llList2String(data,1)==posename){
-            		llSleep(2);
-                	llGiveInventoryList(id,foldername,items);
-            	}
+                if(llList2String(data,1)==posename){
+                    llSleep(2);
+                    llGiveInventoryList(id,foldername,items);
+                }
             }
         }
     }

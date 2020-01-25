@@ -43,60 +43,60 @@ string DESCRIPTION = "";
 key AVATAR;
 
 default_position(){
-	AVATAR=NULL_KEY; 
-	if(llGetLinkNumber()>1){// only move the prim if the script is in a child prim.
-		llSetPrimitiveParams([PRIM_POS_LOCAL,llList2Vector(DEFAULT,0),PRIM_ROT_LOCAL,llEuler2Rot(llList2Vector(DEFAULT,1)*DEG_TO_RAD)]);
-	}	
+    AVATAR=NULL_KEY; 
+    if(llGetLinkNumber()>1){// only move the prim if the script is in a child prim.
+        llSetPrimitiveParams([PRIM_POS_LOCAL,llList2Vector(DEFAULT,0),PRIM_ROT_LOCAL,llEuler2Rot(llList2Vector(DEFAULT,1)*DEG_TO_RAD)]);
+    }
 }
 
 default{
-	state_entry(){
-		//default_position();
-	}
+    state_entry(){
+        //default_position();
+    }
     link_message(integer sender, integer num, string msg, key id){
-    	if(DESCRIPTION=="" || llList2String(llGetObjectDetails(llGetLinkKey(sender),[OBJECT_DESC]),0)==DESCRIPTION){//check the sender prim's description
-    		if(llGetLinkNumber()>1){// only move the prim if the script is in a child prim.
-		        if (num==90045){ // a pose is played!
-		            list data = llParseStringKeepNulls(msg,["|"],[]);
-		            integer SITTER_NUMBER = (integer)llList2String(data,0);
-		            string POSE_NAME = llList2String(data,1);
-		            if(SITTER_NUMBER==SITTER || llListFindList(SYNCS,[POSE_NAME])!=-1){ // correct SITTER or in SYNC list
-		            	integer index = llListFindList(CUSTOM,[POSE_NAME]);
-		            	if(index!=-1){ // move prim to a custom position
-		            		AVATAR = id;
-							llSetPrimitiveParams([PRIM_POS_LOCAL,llList2Vector(CUSTOM,index+1),PRIM_ROT_LOCAL,llEuler2Rot(llList2Vector(CUSTOM,index+2)*DEG_TO_RAD)]);
-		            	}
-		            	else{ // move prim to default position
-							default_position();		
-		            	}
+        if(DESCRIPTION=="" || llList2String(llGetObjectDetails(llGetLinkKey(sender),[OBJECT_DESC]),0)==DESCRIPTION){//check the sender prim's description
+            if(llGetLinkNumber()>1){// only move the prim if the script is in a child prim.
+                if (num==90045){ // a pose is played!
+                    list data = llParseStringKeepNulls(msg,["|"],[]);
+                    integer SITTER_NUMBER = (integer)llList2String(data,0);
+                    string POSE_NAME = llList2String(data,1);
+                    if(SITTER_NUMBER==SITTER || llListFindList(SYNCS,[POSE_NAME])!=-1){ // correct SITTER or in SYNC list
+                        integer index = llListFindList(CUSTOM,[POSE_NAME]);
+                        if(index!=-1){ // move prim to a custom position
+                            AVATAR = id;
+                            llSetPrimitiveParams([PRIM_POS_LOCAL,llList2Vector(CUSTOM,index+1),PRIM_ROT_LOCAL,llEuler2Rot(llList2Vector(CUSTOM,index+2)*DEG_TO_RAD)]);
+                        }
+                        else{ // move prim to default position
+                            default_position();
+                        }
                         // llMessageLinked(LINK_THIS,90000,POSE_NAME,(key)((string)SITTER_NUMBER)); // uncomment this line if you are moving the prim that contains the sit script!
-		            }
-		            else if(id==AVATAR){ // our avatar has swapped sitters.
-		            	default_position();
-		            }
-		        }
-		        else if(num==90065 && (integer)msg==SITTER){ // avatar stands up!
-					default_position();
-		        }
-	    	}
-    	}
+                    }
+                    else if(id==AVATAR){ // our avatar has swapped sitters.
+                        default_position();
+                    }
+                }
+                else if(num==90065 && (integer)msg==SITTER){ // avatar stands up!
+                    default_position();
+                }
+            }
+        }
     }
     touch_start(integer touched){  
-    	if(llDetectedKey(0)==llGetOwner() && DEBUG==TRUE){
-    		if(llGetLinkNumber()>1){
-    			llOwnerSay((string)llList2Vector(llGetPrimitiveParams([PRIM_POS_LOCAL]),0)+","+(string)(llRot2Euler(llList2Rot(llGetPrimitiveParams([PRIM_ROT_LOCAL]),0))*RAD_TO_DEG));
-    		}
-    		else{
-    			llOwnerSay("This script should only be used in a child prim.");	
-    		}
-    	}
+        if(llDetectedKey(0)==llGetOwner() && DEBUG==TRUE){
+            if(llGetLinkNumber()>1){
+                llOwnerSay((string)llList2Vector(llGetPrimitiveParams([PRIM_POS_LOCAL]),0)+","+(string)(llRot2Euler(llList2Rot(llGetPrimitiveParams([PRIM_ROT_LOCAL]),0))*RAD_TO_DEG));
+            }
+            else{
+                llOwnerSay("This script should only be used in a child prim.");
+            }
+        }
     }
     changed(integer change){ 
-		if(change & CHANGED_LINK){
-			if(llGetAgentSize(llGetLinkKey(llGetNumberOfPrims()))==ZERO_VECTOR){// if no avatars are sitting.
-				default_position();
-			}
-		}
+        if(change & CHANGED_LINK){
+            if(llGetAgentSize(llGetLinkKey(llGetNumberOfPrims()))==ZERO_VECTOR){// if no avatars are sitting.
+                default_position();
+            }
+        }
     }
 }
 ```

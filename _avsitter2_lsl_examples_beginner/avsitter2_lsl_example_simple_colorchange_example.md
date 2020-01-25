@@ -23,18 +23,18 @@ list  COLOR_NAMES = ["Red","White","Blue"];
 list  COLOR_VECTORS = [<1,0,0>,<1,1,1>,<0,0,1>];
 
 default{
-	link_message(integer sender, integer num, string msg, key id){
-		integer index = llListFindList(COLOR_NAMES,[msg]);
-		if(~index){ // color button was pressed
-			if(id==llGetOwner()){ // it was owner
-				llSetColor(llList2Vector(COLOR_VECTORS,index),ALL_SIDES);
-			}
-			else{ // it was not owner
-				llRegionSayTo(id,0,"Sorry this is owner only.");
-			}
-			// give back the menu
-			llMessageLinked(LINK_SET,90005,"",id);//return menu
-		}
-	}
+    link_message(integer sender, integer num, string msg, key id){
+        integer index = llListFindList(COLOR_NAMES,[msg]);
+        if(~index){ // color button was pressed
+            if(id==llGetOwner()){ // it was owner
+                llSetColor(llList2Vector(COLOR_VECTORS,index),ALL_SIDES);
+            }
+            else{ // it was not owner
+                llRegionSayTo(id,0,"Sorry this is owner only.");
+            }
+            // give back the menu
+            llMessageLinked(LINK_SET,90005,"",id);//return menu
+        }
+    }
 }
 ```

@@ -25,22 +25,22 @@ string message = "This prop should only be rezzed by the furniture it came with!
 
 default{
     on_rez(integer param){
-		if(param==0){
-			if(llGetOwner()!=llGetInventoryCreator(llGetScriptName())){
-				llRegionSayTo(llGetOwner(),0,message);
-				if(llGetAttached()){
-					llRequestPermissions(llGetOwner(),PERMISSION_ATTACH);
-				}
-				else{
-					llDie();	
-				}
-			}
-		}
+        if(param==0){
+            if(llGetOwner()!=llGetInventoryCreator(llGetScriptName())){
+                llRegionSayTo(llGetOwner(),0,message);
+                if(llGetAttached()){
+                    llRequestPermissions(llGetOwner(),PERMISSION_ATTACH);
+                }
+                else{
+                    llDie();
+                }
+            }
+        }
     }
     run_time_permissions(integer perm){
-    	if(perm & PERMISSION_ATTACH){
-    		llDetachFromAvatar();
-    	}
+        if(perm & PERMISSION_ATTACH){
+            llDetachFromAvatar();
+        }
     }
 }
 ```

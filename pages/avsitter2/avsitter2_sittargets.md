@@ -87,7 +87,7 @@ default
     {
         if(num == 90150)
         {
-            llSitTarget(<0,0,0.1>, ZERO_ROTATION);	
+            llSitTarget(<0,0,0.1>, ZERO_ROTATION);
         }
     }
 }
