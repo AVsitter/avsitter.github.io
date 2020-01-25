@@ -177,7 +177,7 @@ Sent when a sub-[MENU](/avsitter2_avpos.html#menu) is manually selected. Data is
 
 See the following pages for AVsitter2 script examples:
 
-- [LSL Examples (Beginner)](avsitter2_lsl_examples_beginner.html) 
+- [LSL Examples (Beginner)](avsitter2_lsl_examples_beginner.html)
 - [LSL Examples (Advanced)](avsitter2_lsl_examples_advanced.html)
 
 {% include note.html content="Advanced scripters can [check here for the complete list of messages](https://github.com/AVsitter/AVsitter/blob/master/AVsitter2/avsitter2_link_message_reference.md). You may need to consult the AVsitter source code about what some messages do specifically. Keep in mind that the messages listed in there may change without warning." %}

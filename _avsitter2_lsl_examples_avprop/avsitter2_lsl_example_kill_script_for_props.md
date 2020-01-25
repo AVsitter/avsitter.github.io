@@ -17,7 +17,7 @@ permalink: avsitter2_lsl_example_kill_script_for_props.html
 * Provided as an example only, without any guarantee.
 ******************************************************************/
 
-string message = "This prop should only be rezzed by the furniture it came with!"; 
+string message = "This prop should only be rezzed by the furniture it came with!";
 
 /******************************************************************
 * DON'T EDIT BELOW THIS UNLESS YOU KNOW WHAT YOU'RE DOING!

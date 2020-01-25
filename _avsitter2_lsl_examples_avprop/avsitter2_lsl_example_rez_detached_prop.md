@@ -16,7 +16,7 @@ default{
             string PROP_NAME = llList2String(data,2);
             if(EVENT == "DETACHED"){
                 llMessageLinked(LINK_THIS,90220,PROP_NAME,"");
-            }           
+            }
         }
      }
 }

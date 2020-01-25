@@ -5,13 +5,13 @@ permalink: news-2017-07-31.html
 tags: [news]
 ---
 
-The AVsitter scripts have now been released to the community as an open-source project. For up-to-date instructions and the latest scripts and development news, please visit <a href="https://avsitter.github.io">https://avsitter.github.io</a>. 
+The AVsitter scripts have now been released to the community as an open-source project. For up-to-date instructions and the latest scripts and development news, please visit <a href="https://avsitter.github.io">https://avsitter.github.io</a>.
 
-The AVsitter scripts (and plugins) have been released under the <a href="https://www.mozilla.org/en-US/MPL/2.0">MPL 2.0 license</a>. 
+The AVsitter scripts (and plugins) have been released under the <a href="https://www.mozilla.org/en-US/MPL/2.0">MPL 2.0 license</a>.
 
 The move to open-source allows users to continue development of AVsitter: to adapt it to their needs, use it in teaching/education, to keep pace with upcoming Second Life features, and to use it in Opensim.
 
-Existing users of AVsitter can obtain the open-source AVsitter2 via our <a href="/updates.html">inworld update system</a>. There is no need to update existing furniture, as any AVsitter scripts you may already have will continue to work as usual. 
+Existing users of AVsitter can obtain the open-source AVsitter2 via our <a href="/updates.html">inworld update system</a>. There is no need to update existing furniture, as any AVsitter scripts you may already have will continue to work as usual.
 
 ### Getting help with using AVsitter
 If you need advice with AVsitter, we suggest:

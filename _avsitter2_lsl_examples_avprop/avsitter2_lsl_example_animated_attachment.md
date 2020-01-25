@@ -7,8 +7,8 @@ permalink: avsitter2_lsl_example_animated_attachment.html
 /******************************************************************
 * This optional script can be added to attachment props.
 * Triggers an animation placed inside the attachment prop at regular intervals when attachment is worn (e.g. for sipping/drinking).
-* Use with caution! The animation can easily interfere with other animations already playing. 
-* Animation should be uploaded with animation priority >= other animations that are playing. 
+* Use with caution! The animation can easily interfere with other animations already playing.
+* Animation should be uploaded with animation priority >= other animations that are playing.
 ******************************************************************/
 
 float TIMER = 10.0; // how often to play the animation

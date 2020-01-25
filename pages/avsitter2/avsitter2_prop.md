@@ -18,7 +18,7 @@ folder: avsitter2
 
 Before adding a prop to your project, you'll need to create the prop object:
 
-1. Choose any object you want to use as a prop. e.g. Laptop Computer, Reading Book, Coffee Cup, etc. 
+1. Choose any object you want to use as a prop. e.g. Laptop Computer, Reading Book, Coffee Cup, etc.
 2. Drop the **[AV]object** script into the object's root prim.
 3. Repeat for each object you plan to use as a prop.
 
@@ -184,7 +184,7 @@ Following are some examples of notecard lines and complete notecards relating to
 
 ### PROP line examples
 
-Rez the book object when the Reading pose is played:  
+Rez the book object when the Reading pose is played:
 
     PROP Reading|book|G1|<0.000000, 0.000000, 1.000000>|<0.000000, 0.000000, 0.000000>
 

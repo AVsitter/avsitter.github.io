@@ -106,7 +106,6 @@ defaults:
       search: true
       sidebar: home_sidebar
       topnav: topnav
-      
   -
     scope:
       path: ""

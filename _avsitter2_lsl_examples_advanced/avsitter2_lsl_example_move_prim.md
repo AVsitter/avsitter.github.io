@@ -11,8 +11,8 @@ permalink: avsitter2_lsl_example_move_prim.html
 
 // DEBUG: if set TRUE then touching the prim will read the prims local position/rotation to chat.
 // DEBUG mode allows you to get the data for the DEFAULT and CUSTOM lists below.
-// DEBUG should be set to TRUE while you're building and then set to FALSE when you're finished. 
-integer DEBUG = TRUE; 
+// DEBUG should be set to TRUE while you're building and then set to FALSE when you're finished.
+integer DEBUG = TRUE;
 
 // SITTER: the SITTER# the script responds to.
 integer SITTER = 0;
@@ -28,12 +28,12 @@ list CUSTOM = [
     "Pose2",<-0.03568, 0.00000, 1.50464>,<-90.00000, 0.00000, 0.00000>,
     "Pose3",<0.14161, 0.88953, 1.97498>,<-151.00680, -4.00000, 0.00000>,
     "Pose4",<0.04294, -0.00032, 2.58356>,<0.00000, 89.98022, -179.98020>
-]; 
+];
 
 // list of poses to ignore SITTER setting and move anyway (e.g. for SYNC poses)
 list SYNCS = [];
 
-// DESCRIPTION: if given, then script reacts only to link messages from prim with matching description 
+// DESCRIPTION: if given, then script reacts only to link messages from prim with matching description
 string DESCRIPTION = "";
 
 /******************************************************************
@@ -43,7 +43,7 @@ string DESCRIPTION = "";
 key AVATAR;
 
 default_position(){
-    AVATAR=NULL_KEY; 
+    AVATAR=NULL_KEY;
     if(llGetLinkNumber()>1){// only move the prim if the script is in a child prim.
         llSetPrimitiveParams([PRIM_POS_LOCAL,llList2Vector(DEFAULT,0),PRIM_ROT_LOCAL,llEuler2Rot(llList2Vector(DEFAULT,1)*DEG_TO_RAD)]);
     }
@@ -81,7 +81,7 @@ default{
             }
         }
     }
-    touch_start(integer touched){  
+    touch_start(integer touched){
         if(llDetectedKey(0)==llGetOwner() && DEBUG==TRUE){
             if(llGetLinkNumber()>1){
                 llOwnerSay((string)llList2Vector(llGetPrimitiveParams([PRIM_POS_LOCAL]),0)+","+(string)(llRot2Euler(llList2Rot(llGetPrimitiveParams([PRIM_ROT_LOCAL]),0))*RAD_TO_DEG));
@@ -91,7 +91,7 @@ default{
             }
         }
     }
-    changed(integer change){ 
+    changed(integer change){
         if(change & CHANGED_LINK){
             if(llGetAgentSize(llGetLinkKey(llGetNumberOfPrims()))==ZERO_VECTOR){// if no avatars are sitting.
                 default_position();

@@ -18,7 +18,7 @@ entries:
     - title: AVsitter1
       url: /avsitter1_home.html
       output: web
-      
+
   - title: News & Updates
     output: web
     folderitems:

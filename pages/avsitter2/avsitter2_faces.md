@@ -8,7 +8,7 @@ folder: avsitter2
 
 ## AVfaces&trade;
 
-The [AV]faces script allows creators to add facial expressions to AVsitter&trade; furniture. 
+The [AV]faces script allows creators to add facial expressions to AVsitter&trade; furniture.
 
 {% include important.html content="Facial expressions can be switched off via the [FACES] button in the [ADJUST] menu." %}
 

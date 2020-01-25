@@ -158,7 +158,7 @@ Sound clips that make up a song may fit together better if the WAIT between them
 
 SL won't always play sounds on time unless sounds are pre-loaded to the avatar's viewer. The sequence script will automatically pre-load sounds if there is a WAIT of at least 2 seconds above the SOUND line. To ensure pre-loading of the first sound in the song example above, we could add a new line "WAIT 2" above the first sound.
 
-To give users an option to switch sounds off, add an [ADJUST](/avsitter2_avpos.html#adjust) command to your AVpos notecard, using link message 90205. e.g: 
+To give users an option to switch sounds off, add an [ADJUST](/avsitter2_avpos.html#adjust) command to your AVpos notecard, using link message 90205. e.g:
 
     ADJUST [SOUND]|90205
 

@@ -51,7 +51,7 @@ The Control menu contains the following options:
 
 - **Capture!** - capture the avatar.
 - **Release!** - release the captive avatar.
-- **Take Keys/Drop Keys** - allows the controlling avatar to "lock" or "unlock" the menu.  
+- **Take Keys/Drop Keys** - allows the controlling avatar to "lock" or "unlock" the menu.
 - **Timelock** - start/stop/change the countdown timer for automatic release.
 - **Restrict** - available only if the [AV]root-RLV-extra script is included (see below).
 - **Un/Dress** - available only if the [AV]root-RLV-extra script is included (see below).
@@ -68,7 +68,7 @@ The AVpos notecard can include the following RLV related settings, placed at the
 
     RLV 0
 
-**ROLES** - the roles (either 'D' for 'Dominant' or 'S' for 'Submissive') for each avatar, separated by the pipe (`|`) character. e.g. 
+**ROLES** - the roles (either 'D' for 'Dominant' or 'S' for 'Submissive') for each avatar, separated by the pipe (`|`) character. e.g.
 
     ROLES D|S
 
@@ -138,7 +138,7 @@ When used, a pose of the specified name (e.g. 'POSE standby') should be present 
 
     SUBCONTROL 1
 
-You can also put `@touchworld=n` in your ONCAPTURE list to prevent submissives touching the furniture for menu when captured. 
+You can also put `@touchworld=n` in your ONCAPTURE list to prevent submissives touching the furniture for menu when captured.
 
 **HTEXT** - if hovertext should be set on the root prim showing the RLV status (default is 1). Offset height by using a number >1. e.g.
 
@@ -161,7 +161,7 @@ default
 
 #### Example settings
 
-Example for 1 submissive sitter: 
+Example for 1 submissive sitter:
 
 ```
 RLV 1
@@ -194,7 +194,7 @@ ONCAPTURE @unsit=n|@fartouch=n
 Adding this optional script will provide additional RLV Restrict and Un/Dress menus, which include the following options:
 
 - **Restrict** - toggle various RLV restrictions on the captive.
-- **Browse #RLV** - browse the avatar's #RLV folder and wear/unwear folders they have set up.  
+- **Browse #RLV** - browse the avatar's #RLV folder and wear/unwear folders they have set up.
 - **Fast Strip** - remove every item of clothing and attachments from all attachment points (except skull).
 - **Undress** - remove individual clothing layers.
 - **Detach** - remove attachments from individual attachment points.
@@ -221,7 +221,7 @@ This optional script allows you to make your AVsitter&trade; furniture work with
 The following Examples are provided in the AVcontrol box:
 
 - **Photo Stand**
-Basic example of the [AV]root-control script for a non-RLV situation.  
+Basic example of the [AV]root-control script for a non-RLV situation.
 - **Photo Stand, multiple setup prims**
 Example of the [AV]root-control script for a non-RLV situation, with multiple setup prims.
 - **RLV & LockGuard, 1 sub**

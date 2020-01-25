@@ -190,7 +190,7 @@ If you have purchased AVsitter from Kitely Market, updates can be collected by v
 - [AV]sitA & [AV]adjuster - simplified default SitTargets: assigns avis to sitters in the order in which they sit (<a href="/avsitter2_sittargets.html">see SitTargets</a>).
 
 ### AVsitter2, box 2.0-05 - 31 Jan 2014
-- [AV]sitA & [AV]sitB - <a href="/avsitter2_scripting.html#link-messages-to-receive">scripting link messages</a> now use LINK_SET. 
+- [AV]sitA & [AV]sitB - <a href="/avsitter2_scripting.html#link-messages-to-receive">scripting link messages</a> now use LINK_SET.
 - Added <a href="/avsitter2_utilities.html#anim-perm-checker-script">Anim perm checker</a> to Utilities [BOX].
 
 ### AVsitter2, box 2.0-04 - 29 Jan 2014

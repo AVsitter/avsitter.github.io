@@ -25,7 +25,7 @@ default{
             llSleep(1);
             integer avatar_count = llGetNumberOfPrims() - llGetObjectPrimCount(llGetKey());
             if(avatar_count>1){ // more than one avatar sitting
-                if(!IS_SYNC){ // initial avatar had not selected a SYNC pose 
+                if(!IS_SYNC){ // initial avatar had not selected a SYNC pose
                     llMessageLinked(LINK_SET,90000,COUPLES_POSE,""); // play couples pose
                 }
             }

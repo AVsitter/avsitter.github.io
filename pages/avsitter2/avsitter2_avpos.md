@@ -21,7 +21,7 @@ POSE Sit1|animation1
 POSE Sit2|animation2
 ```
 
-After you adjust and [SAVE] each of the poses and [DUMP] the settings, it would look like this: 
+After you adjust and [SAVE] each of the poses and [DUMP] the settings, it would look like this:
 
 ```
 POSE Sit1|animation1
@@ -50,7 +50,7 @@ i.e.
 {% include note.html content="[Internal SL animations](http://wiki.secondlife.com/wiki/Internal_Animations) can be used in AVsitter without the animation file existing in the furniture." %}
 
 ### SYNC
-Use the SYNC command for couple/group animations (e.g. cuddles). When a SYNC animation is played it will play all SYNC poses of the same &lt;menu_name&gt; in all SITTERs within the prim. Usually you would add a SYNC of the same name to each SITTER, using different animations for each SITTER (e.g. Female in *first* SITTER, male in *second* SITTER). The format is: 
+Use the SYNC command for couple/group animations (e.g. cuddles). When a SYNC animation is played it will play all SYNC poses of the same &lt;menu_name&gt; in all SITTERs within the prim. Usually you would add a SYNC of the same name to each SITTER, using different animations for each SITTER (e.g. Female in *first* SITTER, male in *second* SITTER). The format is:
 
     SYNC <menu_name>|<animation_filename>
 
@@ -59,7 +59,7 @@ i.e.
     SYNC Cuddle|hug_female
 
 ### TOMENU
-This creates a button that leads to a submenu. You will need to have a corresponding MENU line. The format is: 
+This creates a button that leads to a submenu. You will need to have a corresponding MENU line. The format is:
 
     TOMENU <menu_name>
 
@@ -68,7 +68,7 @@ i.e.
     TOMENU SITS
 
 ### MENU
-Begins a submenu. All POSE, SYNC, TOMENU and BUTTON commands that come under a MENU line will be placed in the submenu. You must use a TOMENU command somewhere higher up in the notecard to be able to access the submenu. The format is: 
+Begins a submenu. All POSE, SYNC, TOMENU and BUTTON commands that come under a MENU line will be placed in the submenu. You must use a TOMENU command somewhere higher up in the notecard to be able to access the submenu. The format is:
 
     MENU <menu_name>
 
@@ -79,7 +79,7 @@ i.e.
 {% include note.html content="To hide poses from the menu (e.g. because they are triggered by a sequence or script and you don't want them to appear individually), place them under a MENU line that has no corresponding TOMENU line (e.g. [MENU HIDDEN](/avsitter2_sequence.html#hiding-poses))." %}
 
 ### BUTTON
-This creates a button that can be used for customization of your creations, so users can do more than just choose animations with your menus. When selected by an avatar, a button will send a "link message" that can be received by your own scripts. The format is: 
+This creates a button that can be used for customization of your creations, so users can do more than just choose animations with your menus. When selected by an avatar, a button will send a "link message" that can be received by your own scripts. The format is:
 
     BUTTON <menu_name>|<custom_integer>|<custom_string>|<custom_key>
 
@@ -123,7 +123,7 @@ Same as: `llMessageLinked(LINK_SET,90030,"0","1");`
 e.g.
 
     BUTTON Press Me
-    
+
 Will send a link message with integer [90200](/avsitter2_prop.html#message-90200--90220), string "Press Me" and the avatar's UUID.
 
 Same as: `llMessageLinked(LINK_SET,90200,"Press Me",<avatar_uuid>);`
@@ -140,7 +140,7 @@ BUTTON [SWAP]​|99
 places a button whose label is identical to the system [SWAP] label, but it will send a link message with integer 99. Our custom script would react to this.
 </div>
 ### TEXT
-Placed once at the top of the notecard, this will add a line of custom text to your menu. The format is: 
+Placed once at the top of the notecard, this will add a line of custom text to your menu. The format is:
 
     TEXT <custom_text>
 
@@ -148,7 +148,7 @@ i.e.
 
     TEXT Welcome to my creation!
 
-You can also include "\n" to start a new line. 
+You can also include "\n" to start a new line.
 
 i.e.
 
@@ -328,7 +328,7 @@ Creates a button that starts a sequence specified in the [AV]sequence_settings n
 
 ## Example Notecards
 
-Following are some example notecards, to help with understanding the menu structure. The position/rotation data lines have been omitted.  
+Following are some example notecards, to help with understanding the menu structure. The position/rotation data lines have been omitted.
 
 ### One SITTER
 A notecard for one SITTER, and a choice of two poses.
@@ -467,7 +467,7 @@ or
 e.g.
 
     POSE Solo-SEQ|anim1|30|anim2|30|anim3|30
-    
+
 When "Solo-SEQ" is selected, the animations will cycle between anim1, anim2 and anim3, playing each for 30 seconds.
 
 Usually a sequence will loop, but if a dash ( - ) is entered instead of a duration then the sequence will stop after playing. e.g.
@@ -479,7 +479,7 @@ Usually a sequence will loop, but if a dash ( - ) is entered instead of a durati
 {% include important.html content="For an alternate sequence method, see the [AVsequence&trade;](/avsitter2_sequence.html) script." %}
 
 ## Auto-assign by gender
-Determining the gender of an avatar's shape is [now possible](http://wiki.secondlife.com/wiki/OBJECT_BODY_SHAPE_TYPE), and can be used for automatic sitter and default pose assignment in AVsitter2. The gender of an avatar's shape can be set from the Appearance Editor in the SL viewer.  
+Determining the gender of an avatar's shape is [now possible](http://wiki.secondlife.com/wiki/OBJECT_BODY_SHAPE_TYPE), and can be used for automatic sitter and default pose assignment in AVsitter2. The gender of an avatar's shape can be set from the Appearance Editor in the SL viewer.
 
 ### SITTER assignment
 You can designate a [SITTER](/avsitter2_avpos.html#sitter) for male/female shaped avatars by adding an "M" or "F" after the sitter name. When an avatar sits, they will be assigned to the first unoccupied sitter that matches the gender of their shape, if available. e.g:
@@ -492,7 +492,7 @@ SITTER 1|Male seat|M
 ...
 ```
 
-If the seat is not gender specific, then don't assign a gender. e.g:  
+If the seat is not gender specific, then don't assign a gender. e.g:
 
 ```
 SITTER 2|Friend seat
@@ -511,7 +511,7 @@ POSE SitM|Sit2|F
 
 ## Variable speed animations
 
-You can include animations of variable speed by naming them with + or - at the end of the file name and including them in the furniture. These files will be used in place of the default when the speed setting is changed by use of << Softer & Harder >> buttons. 
+You can include animations of variable speed by naming them with + or - at the end of the file name and including them in the furniture. These files will be used in place of the default when the speed setting is changed by use of << Softer & Harder >> buttons.
 
 e.g. if you have a POSE/SYNC as follows:
 

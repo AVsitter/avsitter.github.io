@@ -147,7 +147,7 @@ To create a submenu...
 
 ### Camera
 
-To save a camera position... 
+To save a camera position...
 
 <ol>
 <li/>In the [NEW] menu, choose [CAMERA] then [SAVE]. This will save your camera view for all sitters in the prim.
@@ -170,7 +170,7 @@ The following chat commands can be typed into local chat while the [AV]adjuster 
 
 <li/>/5 cleanup - deletes the [AV]adjuster & [AV]helper from the prim.
 
-<li/>/5 &lt;avatar uuid&gt; - moves the helper into the exact position of another avatar. Useful for copying positions from poseballs. 
+<li/>/5 &lt;avatar uuid&gt; - moves the helper into the exact position of another avatar. Useful for copying positions from poseballs.
 
 <li/>/5 targets - briefly shows the <a href="/avsitter2_sittargets.html">SitTargets</a> in hovertext.</ul>
 
@@ -185,7 +185,7 @@ If you do not get things right the first time, you can always make corrections o
 
 <li/>To delete a pose, you must manually remove the lines from the <a href="/avsitter2_avpos.html">the AVpos notecard</a>.
 
-<li/>As with all building in SL, you should take a backup of your work regularly to avoid losing progress.  
+<li/>As with all building in SL, you should take a backup of your work regularly to avoid losing progress.
 
 </ul>
 
