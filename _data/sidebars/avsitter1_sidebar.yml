@@ -30,7 +30,7 @@ entries:
     - title: LSL Examples (Beginner)
       url: /avsitter1_lsl_examples_beginner.html
       output: web, pdf
-      
+
     - title: LSL Examples (Advanced)
       url: /avsitter1_lsl_examples_advanced.html
       output: web, pdf

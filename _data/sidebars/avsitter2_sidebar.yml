@@ -27,7 +27,7 @@ entries:
     - title: Introduction
       url: /avsitter2_home.html
       output: web
-      
+
     - title: AVpos
       url: /avsitter2_avpos.html
       output: web
@@ -39,23 +39,23 @@ entries:
     - title: SitTargets
       url: /avsitter2_sittargets.html
       output: web
-      
+
     - title: Scripting
       url: /avsitter2_scripting.html
       output: web
-      
+
     - title: Example Items
       url: /avsitter2_examples.html
       output: web, pdf
-      
+
     - title: LSL Examples (Beginner)
       url: /avsitter2_lsl_examples_beginner.html
       output: web, pdf
-      
+
     - title: LSL Examples (Advanced)
       url: /avsitter2_lsl_examples_advanced.html
       output: web, pdf
-      
+
   - title: Plugins
     output: web, pdf
     folderitems:
@@ -75,7 +75,7 @@ entries:
     - title: AVsequence
       url: /avsitter2_sequence.html
       output: web, pdf
-      
+
     - title: AVcontrol
       url: /avsitter2_control.html
       output: web, pdf

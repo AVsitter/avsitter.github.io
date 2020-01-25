@@ -8,7 +8,7 @@ permalink: avsitter2_lsl_example_looped_sound_by_button.html
 * For most sounds and songs, use the sequence script (http://avsitter.github.io/avsitter2_sequence.html)
 *
 * This example will loop a sound continuously after a button is pressed in the menu.
-* e.g. for switching on a constant sound like a crackling fire in the background. 
+* e.g. for switching on a constant sound like a crackling fire in the background.
 *
 * Prim should contain a sound file that matches "sound".
 * or you can use the sound's UUID for "sound" and not have it in the prim.

@@ -18,7 +18,7 @@ default{
             list data = llParseStringKeepNulls(msg,["|"],[]);
             string command = llList2String(data,0);
             string group = llList2String(data,4);
-            
+
             if(group==PROP_GROUP){
                 if(command=="REZ"){ // prop rezzed
                     llSetLinkAlpha(LINK_THIS,0,ALL_SIDES); //hide prim

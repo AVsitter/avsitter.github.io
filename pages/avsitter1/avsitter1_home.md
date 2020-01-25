@@ -100,25 +100,25 @@ SYNC Cuddle|hug_male
 
 The following are notecard commands you can use:
 
-<b>POSE</b> - Use this command to add an animation. The format is: 
+<b>POSE</b> - Use this command to add an animation. The format is:
 
     POSE <name in menu>|<animation file name>
 
 {% include tip.html content="Keeping your animation names and menu names short will conserve script memory!" %}
 
-<b>SYNC</b> - Use this command for couple/group animations (e.g. cuddles, kisses). When a SYNC animation is selected by an avatar it will play all SYNC animations that have the same &lt;name in menu&gt;, even if they have different &lt;animation file names&gt;. The format is: 
+<b>SYNC</b> - Use this command for couple/group animations (e.g. cuddles, kisses). When a SYNC animation is selected by an avatar it will play all SYNC animations that have the same &lt;name in menu&gt;, even if they have different &lt;animation file names&gt;. The format is:
 
     SYNC <name in menu>|<animation file name>
 
-<b>TOMENU</b> - This creates a link to a submenu. All MENU commands should have a corresponding TOMENU line above them (unless you want the items in that submenu to be hidden from the menu for some reason). The format is: 
+<b>TOMENU</b> - This creates a link to a submenu. All MENU commands should have a corresponding TOMENU line above them (unless you want the items in that submenu to be hidden from the menu for some reason). The format is:
 
     TOMENU <your menu name>
 
-<b>MENU</b> - Begins a submenu. All POSE, SYNC, TOMENU and BUTTON commands that come under the MENU line will be placed in that submenu. The format is: 
+<b>MENU</b> - Begins a submenu. All POSE, SYNC, TOMENU and BUTTON commands that come under the MENU line will be placed in that submenu. The format is:
 
     MENU <your menu name>
 
-<b>BUTTON</b> - This creates a button that can be used for customization of your creations, so users can do more than just choose animations with your menus. When selected by an avatar, a button will send a "link message" that can be received by your own scripts. The format is: 
+<b>BUTTON</b> - This creates a button that can be used for customization of your creations, so users can do more than just choose animations with your menus. When selected by an avatar, a button will send a "link message" that can be received by your own scripts. The format is:
 
     BUTTON <name in menu>|<custom integer>
 
@@ -136,7 +136,7 @@ The link message will include the &lt;name in menu&gt;, &lt;custom_integer&gt;, 
 
 <b>LOOP</b> - This is an advanced command which only has any effect with MTYPE2. It causes the animations to cycle back to the first animation or previous LOOP, rather than cycling to the next animation. Used with the "Auto-Play" script example, it allows you to make furniture where couples animations are not available unless the correct number of avatars are sitting.
 
-<b>SITTER</b> - If you are using the setup style where all your "AVsit" scripts are in one prim then the SITTER command is used to separate your notecard sections. The number of SITTER sections will match the number of "AVsit" scripts. The format is: 
+<b>SITTER</b> - If you are using the setup style where all your "AVsit" scripts are in one prim then the SITTER command is used to separate your notecard sections. The number of SITTER sections will match the number of "AVsit" scripts. The format is:
 
     SITTER <n>|<optional text>
 
@@ -160,8 +160,8 @@ If your setup does not include an "AVsit" script inside the root prim of your ob
 
 ## "Root-Security" SCRIPT
 
-If you wish to include an optional security function, place this script in the root prim of your object. If you would otherwise be using the "Root" script, delete it and replace it with this. If you use this script you must add "MTYPE 3" to your AVpos notecard. You also need to add a button to each menu in the form of 
-    
+If you wish to include an optional security function, place this script in the root prim of your object. If you would otherwise be using the "Root" script, delete it and replace it with this. If you use this script you must add "MTYPE 3" to your AVpos notecard. You also need to add a button to each menu in the form of
+
     BUTTON [SECURITY]|0
 
 in all SITTER sections of your notecard, so that the owner can change the security level. Security cycles between ALL, GROUP ONLY, and OWNER ONLY. Avatars who do not meet the security level will be unseated.
@@ -195,13 +195,13 @@ Features of the AVselect script:
    SITTER <sitter number>|<optional text>
    ```
    e.g.
-    
+
    ```
    SITTER 0|Green Pillow
    ```
 -  If a singles POSE is playing, AVselect will show a disabled symbol (ø) in the menu for a seat that is occupied by another avatar. When a couples SYNC pose is playing, AVselect will allow swapping with an occupied seat. You can switch off the disabled symbol by including SELECT 1 anywhere in your AVpos notecard.
 
-Please note that the AVselect script should not be used with the <a href="/avsitter1.html#root-security-script">Root-Security script</a>. 
+Please note that the AVselect script should not be used with the <a href="/avsitter1.html#root-security-script">Root-Security script</a>.
 
 ## THE "AVplus" SCRIPT
 
@@ -352,19 +352,19 @@ Below are listed the various link messages and then a selection of example scrip
 
 ### Link messages your scripts can send to AVsitter:
 
--  <b>90000</b> - Plays an animation. Sending a link message of 90000 will play the animation of the name you give in the link message in all scripts that have it in their menu. If the animation is a SYNC, you must prefix the name given in the link message with "S:", i.e. 
+-  <b>90000</b> - Plays an animation. Sending a link message of 90000 will play the animation of the name you give in the link message in all scripts that have it in their menu. If the animation is a SYNC, you must prefix the name given in the link message with "S:", i.e.
 
    ```
     llMessageLinked(LINK_SET,90000,"S:Cuddle","");
    ```
--  <b>90005</b> - Give menu. Sending this link message with an avatar key will give the animation menu to that avatar if they are sitting, i.e. 
+-  <b>90005</b> - Give menu. Sending this link message with an avatar key will give the animation menu to that avatar if they are sitting, i.e.
 
    ```
     llMessageLinked(LINK_SET,90005,"",<AVATAR's UUID>);
    ```
    {% include note.html content="If you are using the MTYPE 3 option then 90005 will not work unless you send an integer greater than 2 in the string component of the link message." %}
 
--  <b>90200</b> - If the "AVplus" script exists in the prim this link message is sent from, then "AVplus" will attempt to rez a PROP, if one is defined with the same name as the string text sent, i.e. 
+-  <b>90200</b> - If the "AVplus" script exists in the prim this link message is sent from, then "AVplus" will attempt to rez a PROP, if one is defined with the same name as the string text sent, i.e.
 
    ```
     llMessageLinked(LINK_SET,90200,"guitar","");
@@ -374,7 +374,7 @@ Below are listed the various link messages and then a selection of example scrip
 
 See the following pages for AVsitter1 script examples:
 
-- [LSL Examples (Beginner)](avsitter1_lsl_examples_beginner.html) 
+- [LSL Examples (Beginner)](avsitter1_lsl_examples_beginner.html)
 - [LSL Examples (Advanced)](avsitter1_lsl_examples_advanced.html)
 
 {% include links.html %}

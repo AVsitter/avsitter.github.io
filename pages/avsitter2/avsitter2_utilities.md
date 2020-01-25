@@ -25,7 +25,7 @@ If you wish to include a security function, place this script in the root prim o
 {% include note.html content="In GROUP ONLY mode, the avatar must have set their active group to the same group the furniture is set to." %}
 
 ### [AV]select script
-If you have a setup with more than one SITTER then you may prefer to offer a menu of the different seats instead of having the usual [SWAP] ability which just moves an avatar to the next seat.  
+If you have a setup with more than one SITTER then you may prefer to offer a menu of the different seats instead of having the usual [SWAP] ability which just moves an avatar to the next seat.
 
 - Simply place the [AV]select script in the prim that contains your SITTERs. [SWAP] is now removed and a [BACK] button is added to the top level of the pose menu. When an avatar chooses this [BACK] button they are taken to a menu of the sitters defined in the notecard.
 - When the SITTER has only one pose, then the pose name will be used as the button for the sitting location. When the SITTER has multiple poses the [AV]select menu name for a sitting location will be "Sitter 0", "Sitter 1", etc. To set your own name for a sitting location, add it to the end of the SITTER line in the AVpos notecard [as described in the Notecard Commands section](/avsitter2_avpos.html#sitter):
@@ -41,7 +41,7 @@ If you have a setup with more than one SITTER then you may prefer to offer a men
 ### AVhipfix animation
 Some animations in SL are not properly designed for furniture, made especially clear when there is no "Hip-Joint" rotation in the animation. In this case the animation will adopt the hip rotation of whichever animation was played last, causing unreliable rotation. If you are experiencing this problem with an animation, you can drop the AVhipfix animation into your setup. AVsitter will automatically recognize this animation and apply a neutral rotation to the "Hip-Joint".
 
-After adding AVhipfix you should re-adjust and [SAVE] the positions of all affected poses so that they are positioned correctly. This is because the original saved position may have been based on the broken "Hip-Joint". If this fixes the issue then we know it was due to a missing "Hip-Joint" rotation in the animation file. 
+After adding AVhipfix you should re-adjust and [SAVE] the positions of all affected poses so that they are positioned correctly. This is because the original saved position may have been based on the broken "Hip-Joint". If this fixes the issue then we know it was due to a missing "Hip-Joint" rotation in the animation file.
 
 {% include warning.html content="Not all animations are designed for furniture, as the whole body isn't animated (like drinking or waving animations). Animations missing rotations in other joints will cause unpredictability, and they should not be used with furniture." %}
 

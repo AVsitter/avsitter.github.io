@@ -7,16 +7,16 @@ permalink: avsitter2_lsl_example_simple_colorchange_example.html
 /******************************************************************
 * This example will change color when a BUTTON is selected.
 * Your AVpos notecard should have buttons for each color e.g.
-* 
+*
 * TOMENU Colors
 * ...
 * MENU Colors
 * BUTTON Red|0
 * BUTTON White|0
 * BUTTON Blue|0
-* 
-* This is a basic example to show concept only. 
-* If you need custom texture change you should contact your scripter. 
+*
+* This is a basic example to show concept only.
+* If you need custom texture change you should contact your scripter.
 ******************************************************************/
 
 list  COLOR_NAMES = ["Red","White","Blue"];

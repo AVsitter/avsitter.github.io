@@ -32,7 +32,7 @@ default{
                 else{
                     llSetAlpha(1,ALL_SIDES);//visible
                 }
-            }            
+            }
         }
         else if(num==90065){//sitter stands up
             if(llGetAgentSize(llGetLinkKey(llGetNumberOfPrims()))==ZERO_VECTOR || (integer)msg==SITTER){

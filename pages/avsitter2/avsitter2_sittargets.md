@@ -31,7 +31,7 @@ AVsitter will assign SitTargets to prims using the following method:
 To override the default behavior:
 
 1. Assign <a href="/avsitter2_avpos.html#set">a SET #</a> in the AVpos notecard.
-2. Assign each SITTER to a prim by typing the SET # and SITTER # into the description of the prim you want to assign that SITTER to, separated by a dash (-). e.g: 
+2. Assign each SITTER to a prim by typing the SET # and SITTER # into the description of the prim you want to assign that SITTER to, separated by a dash (-). e.g:
     - To assign the SitTarget for SET 0, SITTER 0 to a prim, type 0-0 into the description of that prim.
     - To assign the SitTarget for SET 0, SITTER 1 to a prim, type 0-1 into the description of that prim.
     - To assign the SitTarget for SET 1, SITTER 1 to a prim, type 1-1 into the description of that prim.

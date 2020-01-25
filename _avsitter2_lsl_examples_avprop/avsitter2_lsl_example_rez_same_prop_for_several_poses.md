@@ -6,7 +6,7 @@ permalink: avsitter2_lsl_example_rez_same_prop_for_several_poses.html
 ```js
 /******************************************************************
 * Requires [AV]prop script from box 2.1-07 or later!
-* 
+*
 * This example uses 90220 to rez a prop while any one of a number of poses are playing.
 * Useful if you want the same prop to remain rezzed for several poses.
 * May help save prop script memory in cases you are re-using the same prop over and over.
@@ -22,7 +22,7 @@ permalink: avsitter2_lsl_example_rez_same_prop_for_several_poses.html
 *      e.g. string prop_trigger = "PicnicProp";
 *
 * 4. Edit "poses" list below to include all the POSE or SYNC that you want to rez the prop for.
-* 
+*
 * 5. Edit "SITTER" below to match the sitter # the props are for (or use -1 to ignore sitter #).
 *
 * If you are rezzing props from two or more of these scripts at same time (some poses are in
