@@ -11,7 +11,7 @@ folder: contribute
 ## Scripting contributions
 
 - Script contributions should be submitted via pull request on the [AVsitter GitHub repository](https://github.com/AVsitter/AVsitter).
-- There is a link message guide for AVsitter2 [here](https://github.com/AVsitter/AVsitter/blob/master/AVsitter2/avsitter2_link_message_reference.md).
+- There is a link message guide for AVsitter2 [here](https://github.com/AVsitter/AVsitter/blob/2.2r04/AVsitter2/avsitter2_link_message_reference.md).
 - AVsitter LSL scripts are licensed under the [Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/) and must include the following header:
 <pre>/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
