@@ -80,6 +80,14 @@ entries:
       url: /avsitter2_control.html
       output: web, pdf
 
+    - title: AVfavs
+      url: /avsitter2_plugin_AVfavs.html
+      output: web, pdf
+
+    - title: LockMeister
+      url: /avsitter2_plugin_LockMeister.html
+      output: web, pdf
+ 
     - title: LSL Examples (AVprop)
       url: /avsitter2_lsl_examples_avprop.html
       output: web, pdf
