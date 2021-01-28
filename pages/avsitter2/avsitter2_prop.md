@@ -38,7 +38,7 @@ To add props to your furniture, start with the [normal setup](/avsitter2_home.ht
 4. Choose [ADJUST] then [HELPER] from the menu, and the [AV]helper stick will rez.
 5. Choose [NEW] from the menu, then choose [PROP].
 6. Choose your prop object from the menu and the prop object will rez inworld.
-7. Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE]. Props can rez a maximum of 10 meters from the centre of the prim.
+7. Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE]. Props can rez a maximum of 10 metres from the border of the prim.
 8. Repeat for each prop.
 9. When you have finished saving all your props, click [DUMP] to output your settings into chat.
 10. Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
@@ -72,7 +72,7 @@ To add props to a prim using [AV]menu:
 3. Choose [NEW] from the menu, then choose your prop object from the menu.
 4. The dialog will ask you to name your prop and then the prop object will rez.
 5. Move the prop object with the SL building tools to where you want it to rez inworld, then click [SAVE].
-    {% include note.html content="Props can be positioned a maximum of 10 meters from the centre of the prim." %}
+    {% include note.html content="Props can be positioned a maximum of 10 metres from the border of the prim." %}
 6. Repeat for each prop.
 7. When you have finished saving all your props, click [DUMP] to output your settings into chat.
 8. Copy-paste the [DUMP] result into your AVpos notecard, replacing the contents of the notecard.
