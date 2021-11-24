@@ -12,7 +12,7 @@ If you have purchased AVsitter in Second Life, please collect the latest package
 
 ## Updates in OpenSim
 
-If you have purchased AVsitter from Kitely Market, updates can be collected by visiting <a href="hop://grid.kitely.com:8002/AVsitter%20sandbox/128/127/23">AVsitter sandbox</a> region in Kitely and clicking on the update giver in the center of the sim.
+If you have purchased AVsitter for OpenSim from Kitely Market, we suggest you manage any updates manually by taking any updated scripts from the <a href='https://github.com/AVsitter/AVsitter/releases'>the project release page</a> however to request a packaged update please IM AVsitter Resident in Kitely.
 
 ## Notes about updates
 
