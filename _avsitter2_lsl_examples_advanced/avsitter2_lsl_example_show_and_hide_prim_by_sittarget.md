@@ -14,9 +14,11 @@ default{
         if(change & CHANGED_LINK){
             if(llAvatarOnSitTarget() == NULL_KEY){
                 llSetAlpha(1,ALL_SIDES);//visible
+                llSetLinkPrimitiveParamsFast(LINK_THIS, [PRIM_GLTF_BASE_COLOR, ALL_SIDES, "", "", "", "", "", "", "", "", ""]);
             }
             else{
                 llSetAlpha(0,ALL_SIDES);//invisible
+                llSetLinkPrimitiveParamsFast(LINK_THIS, [PRIM_GLTF_BASE_COLOR, ALL_SIDES, "", "", "", "", "", 0.0, PRIM_GLTF_ALPHA_MODE_MASK, 1.0, ""]);
             }
         }
     }
