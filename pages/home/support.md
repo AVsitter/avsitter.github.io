@@ -29,7 +29,7 @@ The current Development/Support Team consists of the following members:
 
 ### Inworld Group Support:
   * [Kyra Ishtari](http://world.secondlife.com/resident/e20a9909-3a42-4c0a-8c1d-ddf8bed72d0e)
-  * [Laz Longfall](http://world.secondlife.com/resident/637249f8-40ab-4a0b-be68-94c5f1e165bd)
+  * [trewdie](http://world.secondlife.com/resident/1a443f12-94f4-466c-90b5-5fd77f29c888)
   * *(wanted)*
 
 ### Second Life Release Tester:
@@ -43,7 +43,7 @@ The current Development/Support Team consists of the following members:
   * *(wanted)*
 
 ### Documentation Maintainer:
-  * [Auryn Beorn](http://world.secondlife.com/resident/766f3817-2f2a-469d-acfa-9789080ecc85)
+  * *(wanted)*
 
 ### Project Management:
   * [Code Violet](http://world.secondlife.com/resident/b30c9262-9abf-4cd1-9476-adcf5723c029)
