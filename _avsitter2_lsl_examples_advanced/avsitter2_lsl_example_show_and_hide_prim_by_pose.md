@@ -28,9 +28,11 @@ default{
                 string POSE_NAME = llList2String(data,1);
                 if(llListFindList(POSES,[POSE_NAME])!=-1){
                     llSetAlpha(0,ALL_SIDES);//invisible
+                    llSetLinkPrimitiveParamsFast(LINK_THIS, [PRIM_GLTF_BASE_COLOR, ALL_SIDES, "", "", "", "", "", 0.0, PRIM_GLTF_ALPHA_MODE_MASK, 1.0, ""]);
                 }
                 else{
                     llSetAlpha(1,ALL_SIDES);//visible
+                    llSetLinkPrimitiveParamsFast(LINK_THIS, [PRIM_GLTF_BASE_COLOR, ALL_SIDES, "", "", "", "", "", "", "", "", ""]);
                 }
             }
         }
